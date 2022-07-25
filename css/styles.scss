@@ -1,0 +1,20 @@
+$colores: (
+    "casiBlanco" : #E5E5E5,
+    "celeste" : #08A6E4,
+    "rosaRojo" : #FB3B64,
+    "verde" : #55DFB4,
+    "negro" : black,
+    "gris" : #A5A5A5,
+    "azulFB" : #3B5998
+);
+
+$fuentes:(
+    "titulo" : Raleway,
+    "textos" : "Open sans"
+)
+;
+//ejemplo de como usar las variables con el map-get
+//p{
+//    color: map-get($colores , "rosaRojo");
+//    font-family: map-get($fuentes, "titulo" );
+//}
