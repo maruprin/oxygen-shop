@@ -5,7 +5,10 @@ $colores: (
     "verde" : #55DFB4,
     "negro" : black,
     "gris" : #A5A5A5,
-    "azulFB" : #3B5998
+    "azulFB" : #3B5998,
+    "blanco" : white,
+    "grisMenos" : #e8e9ed,
+    "grisClaro" : #F7F7F7
 );
 
 $fuentes:(
@@ -18,3 +21,525 @@ $fuentes:(
 //    color: map-get($colores , "rosaRojo");
 //    font-family: map-get($fuentes, "titulo" );
 //}
+body{
+    font-family: map-get($fuentes, "textos" );
+    width: 375px;
+    height: 4679px;
+    background-color: map-get($colores, "blanco" );
+}
+.header{
+    width: 375px;
+    height: 70px;
+    box-shadow: 0px 3px 6px rgba(0, 0, 0, 0.29);
+    &__titulo{
+        color: map-get($colores, "celeste" );
+        font-family: map-get($fuentes, "titulo" );
+        font-style: normal;
+        font-weight: 300;
+        font-size: 32px;
+        margin-top: 15px;
+        padding-left: 23px;
+        display: inline-block;
+    }
+    &__menu{
+        display: inline-block;
+        margin-left: 100px;
+        position: relative;
+        top: -5px;
+    }
+}
+
+.shop{
+    height: 1420px;
+    &__titulo{
+        font-family: map-get($fuentes, "titulo" );
+        font-style: normal;
+        font-weight: 400;
+        font-size: 35px;
+        margin-top: 100px;
+        margin-left: 30%;
+    }
+    &__texto{
+        font-style: normal;
+        font-weight: 400;
+        font-size: 16px;
+        text-align: center;
+        width: 250px;
+        margin-left: 20%;
+    }
+    &__button{
+        width: 310px;
+        height: 67px;
+        background-color: map-get($colores, "celeste" );
+        box-shadow: 5px 10px 14px rgba(7, 172, 230, 0.29);
+        border-radius: 40px;
+        color: map-get($colores, "blanco" );
+        font-style: normal;
+        font-weight: 700;
+        font-size: 16px;
+        margin-left: 10%;
+        margin-top: 25px;
+
+    }
+    &__image{
+        width: 100%; 
+        margin-top: 40px;
+    }
+    &__titulo2{
+        font-family: map-get($fuentes, "titulo" );
+        font-style: normal;
+        font-weight: 300;
+        font-size: 30px;
+        text-align: center;
+        width: 300px;
+        margin-left: 10%;
+    }
+}
+.rating{
+    width: 375px;
+    &__item1{
+        margin-left: 140px;
+        width: 45px;
+        height: 45px;
+        padding: 20px;
+        border: 1px solid map-get($colores , "rosaRojo");
+        background-color: map-get($colores , "rosaRojo");
+        border-radius: 50%;
+}
+    &__icon1{
+        height: 70px;
+        position: relative;
+        top: -80px;
+        left: 180px;
+    }
+    &__number1{
+        font-family: map-get($fuentes, "titulo" );
+        font-style: normal;
+        font-weight: 800;
+        font-size: 20px;
+        text-align: center;
+        position: relative;
+        top: -75px;   
+    }
+    &__comment1{
+        color: map-get($colores , "gris");
+        font-family: map-get($fuentes, "titulo" );
+        font-style: normal;
+        font-weight: 400;
+        font-size: 17px;
+        text-align: center;
+        position: relative;
+        top: -80px;
+    }
+}
+.rating2{
+    width: 375px;
+    &__item2{
+        margin-left: 140px;
+        width: 45px;
+        height: 45px;
+        padding: 20px;
+        border: 1px solid map-get($colores , "celeste");
+        background-color: map-get($colores , "celeste");
+        border-radius: 50%;
+}
+    &__icon2{
+        height: 50px;
+        position: relative;
+        top: -70px;
+        left: 165px;
+    }
+    &__number2{
+        font-family: map-get($fuentes, "titulo" );
+        font-style: normal;
+        font-weight: 800;
+        font-size: 20px;
+        text-align: center;
+        position: relative;
+        top: -75px;   
+    }
+    &__comment2{
+        color: map-get($colores , "gris");
+        font-family: map-get($fuentes, "titulo" );
+        font-style: normal;
+        font-weight: 400;
+        font-size: 17px;
+        text-align: center;
+        position: relative;
+        top: -80px;
+    }
+}
+.rating3{
+    width: 375px;
+    &__item3{
+        margin-left: 140px;
+        width: 45px;
+        height: 45px;
+        padding: 20px;
+        border: 1px solid map-get($colores , "verde");
+        background-color: map-get($colores , "verde");
+        border-radius: 50%;
+}
+    &__icon3{
+        width: 65px;
+        position: relative;
+        top: -75px;
+        left: 190px;
+    }
+    &__number3{
+        font-family: map-get($fuentes, "titulo" );
+        font-style: normal;
+        font-weight: 800;
+        font-size: 20px;
+        text-align: center;
+        position: relative;
+        top: -75px;   
+    }
+    &__comment3{
+        color: map-get($colores , "gris");
+        font-family: map-get($fuentes, "titulo" );
+        font-style: normal;
+        font-weight: 400;
+        font-size: 17px;
+        text-align: center;
+        position: relative;
+        top: -80px;
+    }
+}
+.news{
+    width: 375px;
+    height: 1395.66px;
+    background-color: map-get($colores, "grisClaro" );
+
+    &__block1{
+        width: 314px;
+        height: 370px;
+        background:map-get($colores , "blanco" );
+        border: 1px solid map-get($colores , "grisMenos" );
+        border-radius: 5px;
+       position: relative;
+       top: 40px;
+       left: 25px;
+    }
+    &__item1{
+        width: 90.12px;
+        height: 90.12px;
+        background: map-get($colores , "rosaRojo");
+        border-radius: 41px;
+        transform: rotate(-45deg);
+        position: relative;
+        top: 20px;
+        left: 170px;
+    }
+    &__img1{
+        width: 192.76px;
+        height: 109.93px;
+        background-image: url("../assets/img/macbook.png");
+        background-position: center;
+        background-repeat: no-repeat; 
+        background-size: cover; 
+        position: relative;
+        top: -50px;
+        left: 60px;
+    }
+    &__titulo1{
+        font-family: map-get($fuentes, "titulo" );
+        font-style: normal;
+        font-weight: 400;
+        font-size: 30px;
+        margin-left: 20px;
+        margin-top: 0px;
+    }
+    &__texto1{
+        font-style: normal;
+        font-weight: 400;
+        font-size: 14px;
+        margin-left: 20px;
+        margin-right: 20px;
+    }
+
+    &__block2{
+        width: 314px;
+        height: 370px;
+        background:map-get($colores , "blanco" );
+        border: 1px solid map-get($colores , "grisMenos" );
+        border-radius: 5px;
+       position: relative;
+       top: 40px;
+       left: 25px;
+       margin-top: 30px;
+    }
+    &__item2{
+        width: 131.88px;
+        height: 131.7px;
+        background: map-get($colores , "celeste");
+        border-radius: 50%;
+        position: relative;
+        top: 10px;
+        left: 90px;
+    }
+    &__img2{
+        width: 175px;
+        height: 134.99px;
+        background-image: url("../assets/img/iphone.png");
+        background-position: center;
+        background-repeat: no-repeat; 
+        background-size: cover; 
+        position: relative;
+        top: -110px;
+        left: 90px;
+    }
+    &__titulo2{
+        font-family: map-get($fuentes, "titulo" );
+        font-style: normal;
+        font-weight: 400;
+        font-size: 30px;
+        margin-left: 20px;
+        margin-top: -90px;
+        margin-right: 50px;
+    }
+    &__texto2{
+        font-style: normal;
+        font-weight: 400;
+        font-size: 14px;
+        margin-left: 20px;
+        margin-right: 20px;
+        margin-top: -10px;
+    }
+
+    &__block3{
+        width: 314px;
+        height: 498px;
+        background:map-get($colores , "blanco" );
+        border: 1px solid map-get($colores , "grisMenos" );
+        border-radius: 5px;
+       position: relative;
+       top: 40px;
+       left: 25px;
+       margin-top: 30px;
+    }
+     &__titulo3{
+        font-family: map-get($fuentes, "titulo" );
+        font-style: normal;
+        font-weight: 400;
+        font-size: 30px;
+        margin-left: 20px;
+        margin-top: 30px;
+        margin-right: 50px;
+    }
+    &__texto3{
+        font-style: normal;
+        font-weight: 400;
+        font-size: 14px;
+        margin-left: 20px;
+        margin-right: 60px;
+        margin-top: -10px;
+    }
+    &__item3{
+        box-sizing: border-box;
+
+        position: absolute;
+        width: 314px;
+        height: 195px;
+        border: 1px solid map-get($colores, "grisMenos" );
+        border-radius: 5px;
+        background: map-get($colores , "verde");
+        position: relative;
+        top: 34px;
+        left: 0px;
+    }
+    &__img3{
+        width: 250px;
+        height: 150.72px;
+        background-image: url("../assets/img/bg-trumpet.png");
+        background-position: center;
+        background-repeat: no-repeat; 
+        background-size: cover; 
+        position: relative;
+        top: -135px;
+        left: 20px;
+    }
+   
+}
+.pricing{
+    width: 375px;
+
+    &__titulo{
+        font-family: map-get($fuentes, "titulo" );
+        font-style: normal;
+        font-weight: 400;
+        font-size: 36px;
+        line-height: 42px;
+        text-align: center;
+       
+    }
+}
+    .pricing1{
+        box-sizing: border-box;
+        position: absolute;
+        width: 293px;
+        height: 251px;
+        border: 1px solid map-get($colores , "rosaRojo");
+        border-radius: 18px;
+        margin-left: 40px;
+
+        &__type{
+            font-family: map-get($fuentes, "titulo" );
+            font-style: normal;
+            font-weight: 700;
+            font-size: 20px;
+            line-height: 24px;
+            margin-top: 80px;
+            margin-left: 50px;
+        }
+        &__price{
+            color: map-get($colores , "rosaRojo");
+            font-style: normal;
+            font-weight: 300;
+            font-size: 46px;
+            margin-top: -30px;
+            margin-left: 50px;
+
+        }
+        &__icono1{
+            margin-left: 140px;
+            position: relative;
+            top: -200px;
+            left: -10px;
+            
+        }
+        &__item1{
+            margin-left: 140px;
+            position: relative;
+            top: -223px;
+            left: 14px;
+            
+        }
+        &__button{
+            background-color: map-get($colores, "rosaRojo" );
+            position: relative;
+            width: 150px;
+            height: 50px;
+            border-radius: 23px;
+            top: -215px;
+            left: 70px;
+        }
+    }
+    .pricing2{
+        box-sizing: border-box;
+        position: relative;
+        width: 339px;
+        height: 277px;
+        border: 1px solid map-get($colores , "celeste");
+        border-radius: 18px;
+        margin-left: 17px;
+        top: 320px;
+        box-shadow: 5px 10px 27px rgba(7, 172, 230, 0.29);
+
+        &__type{
+            font-family: map-get($fuentes, "titulo" );
+            font-style: normal;
+            font-weight: 700;
+            font-size: 20px;
+            line-height: 24px;
+            margin-top: 80px;
+            margin-left: 25px;
+        }
+        &__price{
+            color: map-get($colores , "celeste");
+            font-style: normal;
+            font-weight: 300;
+            font-size: 46px;
+            margin-top: -30px;
+            margin-left: 40px;
+
+        }
+        &__info{
+            position: relative;
+            top: -40px;
+            left: 40px;
+        }
+        &__icono2{
+            margin-left: 140px;
+            position: relative;
+            top: -230px;
+            left: 20px;
+            margin-top: 25px;
+            
+        }
+        &__item2{
+            position: relative;
+            top: -230px;
+            left: 30px;
+            
+        }
+        &__button{
+            background-color: map-get($colores, "celeste" );
+            position: relative;
+            width: 150px;
+            height: 50px;
+            border-radius: 23px;
+            top: -210px;
+            left: 85px;
+        }
+    }
+
+    .pricing3{
+        box-sizing: border-box;
+        position: relative;
+        width: 293px;
+        height: 251px;
+        border: 1px solid map-get($colores , "verde");
+        border-radius: 18px;
+        margin-left: 40px;
+        top: 380px;
+
+       
+
+        &__type{
+            font-family: map-get($fuentes, "titulo" );
+            font-style: normal;
+            font-weight: 700;
+            font-size: 20px;
+            line-height: 24px;
+            margin-top: 80px;
+            margin-left: 30px;
+        }
+        &__price{
+            color: map-get($colores , "verde");
+            font-style: normal;
+            font-weight: 300;
+            font-size: 46px;
+            margin-top: -30px;
+            margin-left: 32px;
+
+        }
+        &__info{
+            position: relative;
+            top: -40px;
+            left: 27px;
+        }
+        &__icono3{
+            margin-left: 135px;
+            position: relative;
+            top: -240px;
+            margin-top: 22px;
+            
+        }
+        &__item3{
+            margin-left: -10px;
+            position: relative;
+            top: -240px;
+            left: 12px;
+            
+        }
+        &__button{
+            background-color: map-get($colores, "verde" );
+            position: relative;
+            width: 150px;
+            height: 50px;
+            border-radius: 23px;
+            top: -220px;
+            left: 70px;
+        }
+    }

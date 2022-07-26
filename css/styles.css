@@ -1,3 +1,447 @@
+body {
+  font-family: "Open sans";
+  width: 375px;
+  height: 4679px;
+  background-color: white; }
 
+.header {
+  width: 375px;
+  height: 70px;
+  box-shadow: 0px 3px 6px rgba(0, 0, 0, 0.29); }
+  .header__titulo {
+    color: #08A6E4;
+    font-family: Raleway;
+    font-style: normal;
+    font-weight: 300;
+    font-size: 32px;
+    margin-top: 15px;
+    padding-left: 23px;
+    display: inline-block; }
+  .header__menu {
+    display: inline-block;
+    margin-left: 100px;
+    position: relative;
+    top: -5px; }
+
+.shop {
+  height: 1420px; }
+  .shop__titulo {
+    font-family: Raleway;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 35px;
+    margin-top: 100px;
+    margin-left: 30%; }
+  .shop__texto {
+    font-style: normal;
+    font-weight: 400;
+    font-size: 16px;
+    text-align: center;
+    width: 250px;
+    margin-left: 20%; }
+  .shop__button {
+    width: 310px;
+    height: 67px;
+    background-color: #08A6E4;
+    box-shadow: 5px 10px 14px rgba(7, 172, 230, 0.29);
+    border-radius: 40px;
+    color: white;
+    font-style: normal;
+    font-weight: 700;
+    font-size: 16px;
+    margin-left: 10%;
+    margin-top: 25px; }
+  .shop__image {
+    width: 100%;
+    margin-top: 40px; }
+  .shop__titulo2 {
+    font-family: Raleway;
+    font-style: normal;
+    font-weight: 300;
+    font-size: 30px;
+    text-align: center;
+    width: 300px;
+    margin-left: 10%; }
+
+.rating {
+  width: 375px; }
+  .rating__item1 {
+    margin-left: 140px;
+    width: 45px;
+    height: 45px;
+    padding: 20px;
+    border: 1px solid #FB3B64;
+    background-color: #FB3B64;
+    border-radius: 50%; }
+  .rating__icon1 {
+    height: 70px;
+    position: relative;
+    top: -80px;
+    left: 180px; }
+  .rating__number1 {
+    font-family: Raleway;
+    font-style: normal;
+    font-weight: 800;
+    font-size: 20px;
+    text-align: center;
+    position: relative;
+    top: -75px; }
+  .rating__comment1 {
+    color: #A5A5A5;
+    font-family: Raleway;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 17px;
+    text-align: center;
+    position: relative;
+    top: -80px; }
+
+.rating2 {
+  width: 375px; }
+  .rating2__item2 {
+    margin-left: 140px;
+    width: 45px;
+    height: 45px;
+    padding: 20px;
+    border: 1px solid #08A6E4;
+    background-color: #08A6E4;
+    border-radius: 50%; }
+  .rating2__icon2 {
+    height: 50px;
+    position: relative;
+    top: -70px;
+    left: 165px; }
+  .rating2__number2 {
+    font-family: Raleway;
+    font-style: normal;
+    font-weight: 800;
+    font-size: 20px;
+    text-align: center;
+    position: relative;
+    top: -75px; }
+  .rating2__comment2 {
+    color: #A5A5A5;
+    font-family: Raleway;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 17px;
+    text-align: center;
+    position: relative;
+    top: -80px; }
+
+.rating3 {
+  width: 375px; }
+  .rating3__item3 {
+    margin-left: 140px;
+    width: 45px;
+    height: 45px;
+    padding: 20px;
+    border: 1px solid #55DFB4;
+    background-color: #55DFB4;
+    border-radius: 50%; }
+  .rating3__icon3 {
+    width: 65px;
+    position: relative;
+    top: -75px;
+    left: 190px; }
+  .rating3__number3 {
+    font-family: Raleway;
+    font-style: normal;
+    font-weight: 800;
+    font-size: 20px;
+    text-align: center;
+    position: relative;
+    top: -75px; }
+  .rating3__comment3 {
+    color: #A5A5A5;
+    font-family: Raleway;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 17px;
+    text-align: center;
+    position: relative;
+    top: -80px; }
+
+.news {
+  width: 375px;
+  height: 1395.66px;
+  background-color: #F7F7F7; }
+  .news__block1 {
+    width: 314px;
+    height: 370px;
+    background: white;
+    border: 1px solid #e8e9ed;
+    border-radius: 5px;
+    position: relative;
+    top: 40px;
+    left: 25px; }
+  .news__item1 {
+    width: 90.12px;
+    height: 90.12px;
+    background: #FB3B64;
+    border-radius: 41px;
+    transform: rotate(-45deg);
+    position: relative;
+    top: 20px;
+    left: 170px; }
+  .news__img1 {
+    width: 192.76px;
+    height: 109.93px;
+    background-image: url("../assets/img/macbook.png");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    position: relative;
+    top: -50px;
+    left: 60px; }
+  .news__titulo1 {
+    font-family: Raleway;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 30px;
+    margin-left: 20px;
+    margin-top: 0px; }
+  .news__texto1 {
+    font-style: normal;
+    font-weight: 400;
+    font-size: 14px;
+    margin-left: 20px;
+    margin-right: 20px; }
+  .news__block2 {
+    width: 314px;
+    height: 370px;
+    background: white;
+    border: 1px solid #e8e9ed;
+    border-radius: 5px;
+    position: relative;
+    top: 40px;
+    left: 25px;
+    margin-top: 30px; }
+  .news__item2 {
+    width: 131.88px;
+    height: 131.7px;
+    background: #08A6E4;
+    border-radius: 50%;
+    position: relative;
+    top: 10px;
+    left: 90px; }
+  .news__img2 {
+    width: 175px;
+    height: 134.99px;
+    background-image: url("../assets/img/iphone.png");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    position: relative;
+    top: -110px;
+    left: 90px; }
+  .news__titulo2 {
+    font-family: Raleway;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 30px;
+    margin-left: 20px;
+    margin-top: -90px;
+    margin-right: 50px; }
+  .news__texto2 {
+    font-style: normal;
+    font-weight: 400;
+    font-size: 14px;
+    margin-left: 20px;
+    margin-right: 20px;
+    margin-top: -10px; }
+  .news__block3 {
+    width: 314px;
+    height: 498px;
+    background: white;
+    border: 1px solid #e8e9ed;
+    border-radius: 5px;
+    position: relative;
+    top: 40px;
+    left: 25px;
+    margin-top: 30px; }
+  .news__titulo3 {
+    font-family: Raleway;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 30px;
+    margin-left: 20px;
+    margin-top: 30px;
+    margin-right: 50px; }
+  .news__texto3 {
+    font-style: normal;
+    font-weight: 400;
+    font-size: 14px;
+    margin-left: 20px;
+    margin-right: 60px;
+    margin-top: -10px; }
+  .news__item3 {
+    box-sizing: border-box;
+    position: absolute;
+    width: 314px;
+    height: 195px;
+    border: 1px solid #e8e9ed;
+    border-radius: 5px;
+    background: #55DFB4;
+    position: relative;
+    top: 34px;
+    left: 0px; }
+  .news__img3 {
+    width: 250px;
+    height: 150.72px;
+    background-image: url("../assets/img/bg-trumpet.png");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    position: relative;
+    top: -135px;
+    left: 20px; }
+
+.pricing {
+  width: 375px; }
+  .pricing__titulo {
+    font-family: Raleway;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 36px;
+    line-height: 42px;
+    text-align: center; }
+
+.pricing1 {
+  box-sizing: border-box;
+  position: absolute;
+  width: 293px;
+  height: 251px;
+  border: 1px solid #FB3B64;
+  border-radius: 18px;
+  margin-left: 40px; }
+  .pricing1__type {
+    font-family: Raleway;
+    font-style: normal;
+    font-weight: 700;
+    font-size: 20px;
+    line-height: 24px;
+    margin-top: 80px;
+    margin-left: 50px; }
+  .pricing1__price {
+    color: #FB3B64;
+    font-style: normal;
+    font-weight: 300;
+    font-size: 46px;
+    margin-top: -30px;
+    margin-left: 50px; }
+  .pricing1__icono1 {
+    margin-left: 140px;
+    position: relative;
+    top: -200px;
+    left: -10px; }
+  .pricing1__item1 {
+    margin-left: 140px;
+    position: relative;
+    top: -223px;
+    left: 14px; }
+  .pricing1__button {
+    background-color: #FB3B64;
+    position: relative;
+    width: 150px;
+    height: 50px;
+    border-radius: 23px;
+    top: -215px;
+    left: 70px; }
+
+.pricing2 {
+  box-sizing: border-box;
+  position: relative;
+  width: 339px;
+  height: 277px;
+  border: 1px solid #08A6E4;
+  border-radius: 18px;
+  margin-left: 17px;
+  top: 320px;
+  box-shadow: 5px 10px 27px rgba(7, 172, 230, 0.29); }
+  .pricing2__type {
+    font-family: Raleway;
+    font-style: normal;
+    font-weight: 700;
+    font-size: 20px;
+    line-height: 24px;
+    margin-top: 80px;
+    margin-left: 25px; }
+  .pricing2__price {
+    color: #08A6E4;
+    font-style: normal;
+    font-weight: 300;
+    font-size: 46px;
+    margin-top: -30px;
+    margin-left: 40px; }
+  .pricing2__info {
+    position: relative;
+    top: -40px;
+    left: 40px; }
+  .pricing2__icono2 {
+    margin-left: 140px;
+    position: relative;
+    top: -230px;
+    left: 20px;
+    margin-top: 25px; }
+  .pricing2__item2 {
+    position: relative;
+    top: -230px;
+    left: 30px; }
+  .pricing2__button {
+    background-color: #08A6E4;
+    position: relative;
+    width: 150px;
+    height: 50px;
+    border-radius: 23px;
+    top: -210px;
+    left: 85px; }
+
+.pricing3 {
+  box-sizing: border-box;
+  position: relative;
+  width: 293px;
+  height: 251px;
+  border: 1px solid #55DFB4;
+  border-radius: 18px;
+  margin-left: 40px;
+  top: 380px; }
+  .pricing3__type {
+    font-family: Raleway;
+    font-style: normal;
+    font-weight: 700;
+    font-size: 20px;
+    line-height: 24px;
+    margin-top: 80px;
+    margin-left: 30px; }
+  .pricing3__price {
+    color: #55DFB4;
+    font-style: normal;
+    font-weight: 300;
+    font-size: 46px;
+    margin-top: -30px;
+    margin-left: 32px; }
+  .pricing3__info {
+    position: relative;
+    top: -40px;
+    left: 27px; }
+  .pricing3__icono3 {
+    margin-left: 135px;
+    position: relative;
+    top: -240px;
+    margin-top: 22px; }
+  .pricing3__item3 {
+    margin-left: -10px;
+    position: relative;
+    top: -240px;
+    left: 12px; }
+  .pricing3__button {
+    background-color: #55DFB4;
+    position: relative;
+    width: 150px;
+    height: 50px;
+    border-radius: 23px;
+    top: -220px;
+    left: 70px; }
 
 /*# sourceMappingURL=styles.css.map */
