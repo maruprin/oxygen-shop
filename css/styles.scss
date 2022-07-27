@@ -118,6 +118,9 @@ body{
 }
 .rating{
     
+    .rating1{
+    position: relative;
+    
     &__item1{
         width: 90px;
         height: 90px;
@@ -125,12 +128,12 @@ body{
         background-color: map-get($colores , "rosaRojo");
         border-radius: 50%;
         margin: 0 auto;
-        margin-bottom: 30px;
+        margin-bottom: 20px;
 }
     &__icon1{
         height: 70px;
-        position: relative;
-        top: -113px;
+        position: absolute;
+        top: 8px;
         left: 50%;
         
     }
@@ -141,6 +144,8 @@ body{
         font-size: 20px;
         text-align: center;
         margin: 0 auto;  
+        margin-bottom: 15px;
+        letter-spacing: 3.28px;
     }
     &__comment1{
         color: map-get($colores , "gris");
@@ -149,25 +154,26 @@ body{
         font-weight: 400;
         font-size: 17px;
         text-align: center;
+        margin-bottom: 40px;
        
     }
 }
 .rating2{
-    width: 375px;
+    position: relative;
     &__item2{
-        margin-left: 140px;
-        width: 70px;
-        height: 70px;
-        padding: 20px;
+        width: 90px;
+        height: 90px;
         border: 1px solid map-get($colores , "celeste");
         background-color: map-get($colores , "celeste");
         border-radius: 50%;
+        margin: 0 auto;
+        margin-bottom: 20px;
 }
     &__icon2{
         height: 50px;
-        position: relative;
-        top: -70px;
-        left: 165px;
+        position: absolute;
+        top: 18px;
+        left:50%;
     }
     &__number2{
         font-family: map-get($fuentes, "titulo" );
@@ -175,8 +181,9 @@ body{
         font-weight: 800;
         font-size: 20px;
         text-align: center;
-        position: relative;
-        top: -75px;   
+        margin: 0 auto;  
+        margin-bottom: 15px;
+        letter-spacing: 3.28px;  
     }
     &__comment2{
         color: map-get($colores , "gris");
@@ -185,26 +192,26 @@ body{
         font-weight: 400;
         font-size: 17px;
         text-align: center;
-        position: relative;
-        top: -80px;
+        margin-bottom: 40px;
     }
 }
 .rating3{
-    width: 375px;
+    position: relative;
+    
     &__item3{
-        margin-left: 140px;
-        width: 70px;
-        height: 70px;
-        padding: 20px;
+        width: 90px;
+        height: 90px;
         border: 1px solid map-get($colores , "verde");
         background-color: map-get($colores , "verde");
         border-radius: 50%;
+        margin: 0 auto;
+        margin-bottom: 20px;
 }
     &__icon3{
         width: 65px;
-        position: relative;
-        top: -75px;
-        left: 190px;
+        position: absolute;
+        top: 10px;
+        left: 50%;
     }
     &__number3{
         font-family: map-get($fuentes, "titulo" );
@@ -212,8 +219,9 @@ body{
         font-weight: 800;
         font-size: 20px;
         text-align: center;
-        position: relative;
-        top: -75px;   
+        margin: 0 auto;  
+        margin-bottom: 15px;
+        letter-spacing: 3.28px;    
     }
     &__comment3{
         color: map-get($colores , "gris");
@@ -222,14 +230,14 @@ body{
         font-weight: 400;
         font-size: 17px;
         text-align: center;
-        position: relative;
-        top: -80px;
+        margin-bottom: 40px;
     }
-}
+}}
+
 .news{
-    width: 375px;
-    height: 1395.66px;
     background-color: map-get($colores, "grisClaro" );
+    padding: 60px;
+    margin-bottom: 40px;
 
     &__block1{
         width: 314px;
@@ -237,9 +245,9 @@ body{
         background:map-get($colores , "blanco" );
         border: 1px solid map-get($colores , "grisMenos" );
         border-radius: 5px;
-       position: relative;
-       top: 40px;
-       left: 25px;
+        margin: 0 auto;
+        margin-bottom: 40px;
+        position: relative;
     }
     &__item1{
         width: 90.12px;
@@ -247,7 +255,7 @@ body{
         background: map-get($colores , "rosaRojo");
         border-radius: 41px;
         transform: rotate(-45deg);
-        position: relative;
+        position: absolute;
         top: 20px;
         left: 170px;
     }
@@ -258,8 +266,8 @@ body{
         background-position: center;
         background-repeat: no-repeat; 
         background-size: cover; 
-        position: relative;
-        top: -50px;
+        position: absolute;
+        top: 40px;
         left: 60px;
     }
     &__titulo1{
@@ -267,14 +275,17 @@ body{
         font-style: normal;
         font-weight: 400;
         font-size: 30px;
-        margin-left: 20px;
-        margin-top: 0px;
+        position: absolute;
+        top: 180px;
+        left: 20px;
     }
     &__texto1{
         font-style: normal;
         font-weight: 400;
         font-size: 14px;
-        margin-left: 20px;
+        position: absolute;
+        top: 260px;
+        left: 20px;
         margin-right: 20px;
     }
 
@@ -284,17 +295,17 @@ body{
         background:map-get($colores , "blanco" );
         border: 1px solid map-get($colores , "grisMenos" );
         border-radius: 5px;
-       position: relative;
-       top: 40px;
-       left: 25px;
-       margin-top: 30px;
+        margin: 0 auto;
+        margin-bottom: 40px;
+        position: relative;
+       
     }
     &__item2{
         width: 131.88px;
         height: 131.7px;
         background: map-get($colores , "celeste");
         border-radius: 50%;
-        position: relative;
+        position: absolute;
         top: 10px;
         left: 90px;
     }
@@ -305,8 +316,8 @@ body{
         background-position: center;
         background-repeat: no-repeat; 
         background-size: cover; 
-        position: relative;
-        top: -110px;
+        position: absolute;
+        top: 20px;
         left: 90px;
     }
     &__titulo2{
@@ -314,59 +325,61 @@ body{
         font-style: normal;
         font-weight: 400;
         font-size: 30px;
-        margin-left: 20px;
-        margin-top: -90px;
-        margin-right: 50px;
+        position: absolute;
+        top: 170px;
+        left: 20px;
+        margin-right: 30px;
     }
     &__texto2{
         font-style: normal;
         font-weight: 400;
         font-size: 14px;
-        margin-left: 20px;
+        position: absolute;
+        top: 265px;
+        left: 25px;
         margin-right: 20px;
-        margin-top: -10px;
+        
     }
 
     &__block3{
         width: 314px;
-        height: 498px;
+        height: 256px;
         background:map-get($colores , "blanco" );
         border: 1px solid map-get($colores , "grisMenos" );
         border-radius: 5px;
-       position: relative;
-       top: 40px;
-       left: 25px;
-       margin-top: 30px;
+        margin: 0 auto;
+        margin-bottom: 40px;
+        position: relative;
     }
      &__titulo3{
         font-family: map-get($fuentes, "titulo" );
         font-style: normal;
         font-weight: 400;
         font-size: 30px;
-        margin-left: 20px;
-        margin-top: 30px;
-        margin-right: 50px;
+        position: absolute;
+        top: 15px;
+        left: 20px;
+        margin-right: 30px;
     }
     &__texto3{
         font-style: normal;
         font-weight: 400;
         font-size: 14px;
-        margin-left: 20px;
-        margin-right: 60px;
-        margin-top: -10px;
+        position: absolute;
+        top: 150px;
+        left: 20px;
+        margin-right: 20px;
     }
     &__item3{
         box-sizing: border-box;
-
         position: absolute;
         width: 314px;
         height: 195px;
         border: 1px solid map-get($colores, "grisMenos" );
         border-radius: 5px;
         background: map-get($colores , "verde");
-        position: relative;
-        top: 34px;
-        left: 0px;
+        position: absolute;
+        top: 250px;
     }
     &__img3{
         width: 250px;
@@ -375,14 +388,13 @@ body{
         background-position: center;
         background-repeat: no-repeat; 
         background-size: cover; 
-        position: relative;
-        top: -135px;
+        position: absolute;
+        top: 280px;
         left: 20px;
     }
    
 }
 .pricing{
-    width: 375px;
 
     &__titulo{
         font-family: map-get($fuentes, "titulo" );
@@ -396,7 +408,7 @@ body{
 }
     .pricing1{
         box-sizing: border-box;
-        position: absolute;
+        position: relative;
         width: 293px;
         height: 251px;
         border: 1px solid map-get($colores , "rosaRojo");
@@ -735,6 +747,15 @@ body{
         &__button{
             width: 440px;
         }
+        &__titulo2{
+            margin-bottom: 90px;
+        }
+    }
+    .rating{
+        display: flex;
+        justify-content: center;
+        gap:150px;
+
     }
 
 }
