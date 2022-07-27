@@ -8,7 +8,8 @@ $colores: (
     "azulFB" : #3B5998,
     "blanco" : white,
     "grisMenos" : #e8e9ed,
-    "grisClaro" : #F7F7F7
+    "grisClaro" : #F7F7F7,
+    "otroGris" : #707070
 );
 
 $fuentes:(
@@ -543,3 +544,156 @@ body{
             left: 70px;
         }
     }
+.questions{
+    width: 375px;
+    position: relative;
+    top: 410px;
+    height: 770px;
+    &__titulo{
+        font-family: map-get($fuentes, "titulo" );
+        font-style: normal;
+        font-weight: 400;
+        font-size: 40px;
+        text-align: center;
+    }
+    &__subtitulo{
+        font-style: normal;
+        font-weight: 400;
+        font-size: 16px;
+        margin-top: -30px;
+        margin-left: 50px;
+    }
+    &__icono1{
+        height: 18px;
+        width: 22px;
+        margin-left: 50px;
+        margin-top: 20px;
+    }
+    &__mail{
+        font-style: normal;
+        font-weight: 500;
+        font-size: 16px;
+        color: map-get($colores, "gris" );
+        margin-top: -25px;
+        margin-left: 90px;
+    }
+    &__icono2{
+        height: 20px;
+        width: 20px;
+        margin-left: 50px;
+        margin-top: 20px;
+    }
+    &__tel{
+        font-style: normal;
+        font-weight: 500;
+        font-size: 16px;
+        color: map-get($colores, "gris" );
+        margin-top: -25px;
+        margin-left: 90px;
+    }
+    &__name{
+        font-style: normal;
+        font-weight: 500;
+        font-size: 11px;
+        line-height: 15px;
+        letter-spacing: 3.28px;
+        color: map-get($colores, "celeste" );
+        margin-left: 50px;
+        margin-top: 50px;
+    }
+    &__inputName{
+        border: none;
+        margin-left: 50px;
+        text-align: center;
+    }
+    hr{
+        width: 312px;
+        margin-left: 50px;
+        margin-top: 0px;
+    }
+    &__email{
+        font-style: normal;
+        font-weight: 500;
+        font-size: 11px;
+        line-height: 15px;
+        letter-spacing: 3.28px;
+        color: map-get($colores, "celeste" );
+        margin-left: 50px;
+        margin-top: 50px;
+    }
+    &__inputEmail{
+        border: none;
+        margin-left: 50px;
+        text-align: center;
+    }
+    &__check{
+        width: 24px;
+        height: 24px;
+        border: 1px solid #95989A;
+        border-radius: 4px;
+        position: relative;
+        top: 40px;
+        left: 45px;
+
+    }
+    &__textPermiso{
+        margin-left: 100px;
+        font-style: normal;
+        font-weight: 400;
+        font-size: 12px;
+        line-height: 16px;
+        color: map-get($colores, "otroGris" );
+        
+    }
+    &__button{
+        width: 226px;
+        height: 57px;
+        color: map-get($colores, "blanco" );
+        background: map-get($colores, "celeste" );
+        box-shadow: 5px 10px 14px rgba(7, 172, 230, 0.29);
+        border-radius: 35px;
+        margin-left: 130px;
+        margin-top: 20px;
+    }
+}
+.footer{
+        width: 375px;
+        height: 89px;
+        background: #F7F7F7;
+        box-shadow: 0px -5px 40px rgba(0, 0, 0, 0.2);
+        position: relative;
+        top: 350px;
+        &__brand{
+            font-family: map-get($fuentes, "titulo" );
+            font-style: normal;
+            font-weight: 300;
+            font-size: 26px;
+            line-height: 30px;
+            color: map-get($colores, "celeste");
+            position: relative;
+            top: 20px;
+            left: 20px;
+        }
+        &__derechos{
+            font-style: normal;
+            font-weight: 400;
+            font-size: 11px;
+            line-height: 15px;
+            color: map-get($colores, "gris" );
+            margin-left: 20px;
+        }
+        &__logo1{
+            width: 24px;
+            height: 24px;
+            position: relative;
+            top: -50px;
+            left: 280px;
+        }
+        &__logo2{
+            width: 24px;
+            height: 24px;
+            position: relative;
+            top: -50px;
+            left: 295px;
+        }
+}

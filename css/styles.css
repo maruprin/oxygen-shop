@@ -444,4 +444,137 @@ body {
     top: -220px;
     left: 70px; }
 
+.questions {
+  width: 375px;
+  position: relative;
+  top: 410px;
+  height: 770px; }
+  .questions__titulo {
+    font-family: Raleway;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 40px;
+    text-align: center; }
+  .questions__subtitulo {
+    font-style: normal;
+    font-weight: 400;
+    font-size: 16px;
+    margin-top: -30px;
+    margin-left: 50px; }
+  .questions__icono1 {
+    height: 18px;
+    width: 22px;
+    margin-left: 50px;
+    margin-top: 20px; }
+  .questions__mail {
+    font-style: normal;
+    font-weight: 500;
+    font-size: 16px;
+    color: #A5A5A5;
+    margin-top: -25px;
+    margin-left: 90px; }
+  .questions__icono2 {
+    height: 20px;
+    width: 20px;
+    margin-left: 50px;
+    margin-top: 20px; }
+  .questions__tel {
+    font-style: normal;
+    font-weight: 500;
+    font-size: 16px;
+    color: #A5A5A5;
+    margin-top: -25px;
+    margin-left: 90px; }
+  .questions__name {
+    font-style: normal;
+    font-weight: 500;
+    font-size: 11px;
+    line-height: 15px;
+    letter-spacing: 3.28px;
+    color: #08A6E4;
+    margin-left: 50px;
+    margin-top: 50px; }
+  .questions__inputName {
+    border: none;
+    margin-left: 50px;
+    text-align: center; }
+  .questions hr {
+    width: 312px;
+    margin-left: 50px;
+    margin-top: 0px; }
+  .questions__email {
+    font-style: normal;
+    font-weight: 500;
+    font-size: 11px;
+    line-height: 15px;
+    letter-spacing: 3.28px;
+    color: #08A6E4;
+    margin-left: 50px;
+    margin-top: 50px; }
+  .questions__inputEmail {
+    border: none;
+    margin-left: 50px;
+    text-align: center; }
+  .questions__check {
+    width: 24px;
+    height: 24px;
+    border: 1px solid #95989A;
+    border-radius: 4px;
+    position: relative;
+    top: 40px;
+    left: 45px; }
+  .questions__textPermiso {
+    margin-left: 100px;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 12px;
+    line-height: 16px;
+    color: #707070; }
+  .questions__button {
+    width: 226px;
+    height: 57px;
+    color: white;
+    background: #08A6E4;
+    box-shadow: 5px 10px 14px rgba(7, 172, 230, 0.29);
+    border-radius: 35px;
+    margin-left: 130px;
+    margin-top: 20px; }
+
+.footer {
+  width: 375px;
+  height: 89px;
+  background: #F7F7F7;
+  box-shadow: 0px -5px 40px rgba(0, 0, 0, 0.2);
+  position: relative;
+  top: 350px; }
+  .footer__brand {
+    font-family: Raleway;
+    font-style: normal;
+    font-weight: 300;
+    font-size: 26px;
+    line-height: 30px;
+    color: #08A6E4;
+    position: relative;
+    top: 20px;
+    left: 20px; }
+  .footer__derechos {
+    font-style: normal;
+    font-weight: 400;
+    font-size: 11px;
+    line-height: 15px;
+    color: #A5A5A5;
+    margin-left: 20px; }
+  .footer__logo1 {
+    width: 24px;
+    height: 24px;
+    position: relative;
+    top: -50px;
+    left: 280px; }
+  .footer__logo2 {
+    width: 24px;
+    height: 24px;
+    position: relative;
+    top: -50px;
+    left: 295px; }
+
 /*# sourceMappingURL=styles.css.map */
