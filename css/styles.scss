@@ -17,56 +17,65 @@ $fuentes:(
     "textos" : "Open sans"
 )
 ;
-//ejemplo de como usar las variables con el map-get
-//p{
-//    color: map-get($colores , "rosaRojo");
-//    font-family: map-get($fuentes, "titulo" );
-//}
+/* Ejemplo de como usar las variables con el map-get
+    p{
+        color: map-get($colores , "rosaRojo");
+        font-family: map-get($fuentes, "titulo" );
+}*/
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
 body{
     font-family: map-get($fuentes, "textos" );
-    width: 375px;
-    height: 4679px;
     background-color: map-get($colores, "blanco" );
+    min-width: 320px;
 }
 .header{
-    width: 375px;
+    display: flex;
     height: 70px;
     box-shadow: 0px 3px 6px rgba(0, 0, 0, 0.29);
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 20px;
+    margin-bottom: 80px;
     &__titulo{
         color: map-get($colores, "celeste" );
         font-family: map-get($fuentes, "titulo" );
         font-style: normal;
         font-weight: 300;
         font-size: 32px;
-        margin-top: 15px;
-        padding-left: 23px;
-        display: inline-block;
     }
     &__menu{
-        display: inline-block;
-        margin-left: 100px;
-        position: relative;
-        top: -5px;
+        width: 5%;
+    }
+    &__link1,&__link2,&__link3,&__link4{
+        display: none;
     }
 }
 
 .shop{
-    height: 1420px;
+    
     &__titulo{
         font-family: map-get($fuentes, "titulo" );
         font-style: normal;
         font-weight: 400;
         font-size: 35px;
-        margin-top: 100px;
-        margin-left: 30%;
+        text-align: center;
+        margin-bottom: 20px;
     }
     &__texto{
         font-style: normal;
         font-weight: 400;
         font-size: 16px;
         text-align: center;
-        width: 250px;
-        margin-left: 20%;
+        width: 60%;
+        display: block;
+        margin: 0 auto;
+        margin-bottom: 30px;
     }
     &__button{
         width: 310px;
@@ -78,13 +87,23 @@ body{
         font-style: normal;
         font-weight: 700;
         font-size: 16px;
-        margin-left: 10%;
-        margin-top: 25px;
-
+        display: block;
+        margin: 0 auto;
+        margin-bottom: 40px;
+        border: none;
     }
+    &__button:hover{
+        background-color: map-get($colores, "blanco" );
+        color:map-get($colores, "celeste" );
+        border: 1px solid map-get($colores, "celeste" );
+    }
+
     &__image{
-        width: 100%; 
-        margin-top: 40px;
+        background-image: url("../assets/img/background.png");
+        height: 267px;
+        background-position: center center;
+        background-size: cover;
+        margin-bottom: 30px;
     }
     &__titulo2{
         font-family: map-get($fuentes, "titulo" );
@@ -92,26 +111,28 @@ body{
         font-weight: 300;
         font-size: 30px;
         text-align: center;
-        width: 300px;
-        margin-left: 10%;
+        width: 60%;
+        margin: 0 auto;
+        margin-bottom: 40px;
     }
 }
 .rating{
-    width: 375px;
+    
     &__item1{
-        margin-left: 140px;
-        width: 45px;
-        height: 45px;
-        padding: 20px;
+        width: 90px;
+        height: 90px;
         border: 1px solid map-get($colores , "rosaRojo");
         background-color: map-get($colores , "rosaRojo");
         border-radius: 50%;
+        margin: 0 auto;
+        margin-bottom: 30px;
 }
     &__icon1{
         height: 70px;
         position: relative;
-        top: -80px;
-        left: 180px;
+        top: -113px;
+        left: 50%;
+        
     }
     &__number1{
         font-family: map-get($fuentes, "titulo" );
@@ -119,8 +140,7 @@ body{
         font-weight: 800;
         font-size: 20px;
         text-align: center;
-        position: relative;
-        top: -75px;   
+        margin: 0 auto;  
     }
     &__comment1{
         color: map-get($colores , "gris");
@@ -129,16 +149,15 @@ body{
         font-weight: 400;
         font-size: 17px;
         text-align: center;
-        position: relative;
-        top: -80px;
+       
     }
 }
 .rating2{
     width: 375px;
     &__item2{
         margin-left: 140px;
-        width: 45px;
-        height: 45px;
+        width: 70px;
+        height: 70px;
         padding: 20px;
         border: 1px solid map-get($colores , "celeste");
         background-color: map-get($colores , "celeste");
@@ -174,8 +193,8 @@ body{
     width: 375px;
     &__item3{
         margin-left: 140px;
-        width: 45px;
-        height: 45px;
+        width: 70px;
+        height: 70px;
         padding: 20px;
         border: 1px solid map-get($colores , "verde");
         background-color: map-get($colores , "verde");
@@ -696,4 +715,26 @@ body{
             top: -50px;
             left: 295px;
         }
+}
+//version desktop
+@media only screen and (min-width: 1000px) {
+    .header{
+        &__menu{
+            display: none;
+        }
+        &__link1,&__link2,&__link3,&__link4{
+            display: inline;
+            text-decoration: none;
+        }
+    }
+
+    .shop{
+        &__image{
+            height: 594px;
+        }
+        &__button{
+            width: 440px;
+        }
+    }
+
 }
