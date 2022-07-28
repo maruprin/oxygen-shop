@@ -54,6 +54,14 @@ body{
     }
     &__link1,&__link2,&__link3,&__link4{
         display: none;
+        color: map-get($colores, "gris" );
+        font-style: normal;
+        font-weight: 600;
+        font-size: 11px;
+        line-height: 15px;
+        text-align: center;
+        letter-spacing: 3.28px;
+        text-transform: uppercase;
     }
 }
 
@@ -239,7 +247,7 @@ body{
     padding: 60px;
     margin-bottom: 40px;
 
-    &__block1{
+    &__block{
         width: 314px;
         height: 370px;
         background:map-get($colores , "blanco" );
@@ -248,7 +256,18 @@ body{
         margin: 0 auto;
         margin-bottom: 40px;
         position: relative;
+        &--separated{
+            height: 252px;
+        }
+       
     }
+    &__contenedor1{
+        margin-top: 40px;
+    }
+    &__contenedor2{
+        margin-top: 35px;
+    }
+    
     &__item1{
         width: 90.12px;
         height: 90.12px;
@@ -266,43 +285,33 @@ body{
         background-position: center;
         background-repeat: no-repeat; 
         background-size: cover; 
-        position: absolute;
-        top: 40px;
-        left: 60px;
+        position: relative;
+        z-index: 1;
+        margin: 0 auto;
     }
-    &__titulo1{
+    &__titulo{
         font-family: map-get($fuentes, "titulo" );
         font-style: normal;
         font-weight: 400;
         font-size: 30px;
-        position: absolute;
-        top: 180px;
-        left: 20px;
+        margin-left: 20px;
     }
-    &__texto1{
+    &__texto{
         font-style: normal;
         font-weight: 400;
         font-size: 14px;
-        position: absolute;
-        top: 260px;
-        left: 20px;
+        margin-top: 15px;
+        margin-left: 20px;
         margin-right: 20px;
+        &--separated{
+            margin-right: 52px;
+        }
+    
     }
     hr{
         display: none;
     }
 
-    &__block2{
-        width: 314px;
-        height: 370px;
-        background:map-get($colores , "blanco" );
-        border: 1px solid map-get($colores , "grisMenos" );
-        border-radius: 5px;
-        margin: 0 auto;
-        margin-bottom: 40px;
-        position: relative;
-       
-    }
     &__item2{
         width: 131.88px;
         height: 131.7px;
@@ -319,60 +328,12 @@ body{
         background-position: center;
         background-repeat: no-repeat; 
         background-size: cover; 
-        position: absolute;
-        top: 20px;
-        left: 90px;
-    }
-    &__titulo2{
-        font-family: map-get($fuentes, "titulo" );
-        font-style: normal;
-        font-weight: 400;
-        font-size: 30px;
-        position: absolute;
-        top: 170px;
-        left: 20px;
-        margin-right: 30px;
-    }
-    &__texto2{
-        font-style: normal;
-        font-weight: 400;
-        font-size: 14px;
-        position: absolute;
-        top: 265px;
-        left: 25px;
-        margin-right: 20px;
-        
-    }
-
-    &__block3{
-        width: 314px;
-        height: 446px;
-        background:map-get($colores , "blanco" );
-        border: 1px solid map-get($colores , "grisMenos" );
-        border-radius: 5px;
-        margin: 0 auto;
-        margin-bottom: 40px;
         position: relative;
+        z-index: 1;
+        margin-left: 90px;
+        margin-top: -20px;
     }
-     &__titulo3{
-        font-family: map-get($fuentes, "titulo" );
-        font-style: normal;
-        font-weight: 400;
-        font-size: 30px;
-        position: absolute;
-        top: 15px;
-        left: 20px;
-        margin-right: 30px;
-    }
-    &__texto3{
-        font-style: normal;
-        font-weight: 400;
-        font-size: 14px;
-        position: absolute;
-        top: 150px;
-        left: 20px;
-        margin-right: 20px;
-    }
+    
     &__item3{
         box-sizing: border-box;
         position: absolute;
@@ -391,9 +352,10 @@ body{
         background-position: center;
         background-repeat: no-repeat; 
         background-size: cover; 
-        position: absolute;
-        top: 280px;
-        left: 20px;
+        position: relative;
+        z-index: 1;
+        margin: 0 auto;
+        margin-top: 50px;
     }
    
 }  
@@ -408,9 +370,6 @@ body{
        
     }
 .pricing{
-
- 
-
     .pricing1{
         box-sizing: border-box;
         position: relative;
@@ -445,11 +404,30 @@ body{
             left: -10px;
             
         }
-        &__item1{
-            margin-left: 140px;
+        ul{
+            list-style: none;
+            margin: 0;
+            padding: 0;
+        }
+        ul li{
+            padding-left: 20px;
             position: relative;
-            top: -178px;
-            left: 14px;
+            margin-bottom: 17px;
+            top: -150px;
+            left: 130px;
+        }
+        ul li::before{
+            content: '';
+            height: 10px;
+            width: 10px;
+            background-image: url('../assets/img/icons/Checkbox.svg');
+            background-position: center center;
+            background-size: cover;
+            position: absolute;
+            top: 6px;
+            left: 2px;
+        }
+        &__item{
             
         }
         &__button{
@@ -458,7 +436,7 @@ body{
             width: 150px;
             height: 50px;
             border-radius: 23px;
-            top: -170px;
+            top: -140px;
             left: 70px;
             border: none;
             color: map-get($colores, "blanco" );
@@ -508,6 +486,29 @@ body{
             left: 20px;
             margin-top: 25px;
             
+        }
+        ul{
+            list-style: none;
+            margin: 0;
+            padding: 0;
+        }
+        ul li{
+            padding-left: 20px;
+            position: relative;
+            margin-bottom: 17px;
+            top: -150px;
+            left: 170px;
+        }
+        ul li::before{
+            content: '';
+            height: 10px;
+            width: 10px;
+            background-image: url('../assets/img/icons/Checkbox.svg');
+            background-position: center center;
+            background-size: cover;
+            position: absolute;
+            top: 6px;
+            left: 2px;
         }
         &__item2{
             position: relative;
@@ -655,10 +656,13 @@ body{
         margin-top: 50px;
     }
     &__inputName{
+        width: 312px;
+        height: 30px;
         border: none;
         margin-left: 50px;
         text-align: center;
     }
+   
     hr{
         width: 312px;
         margin-left: 50px;
@@ -675,6 +679,8 @@ body{
         margin-top: 50px;
     }
     &__inputEmail{
+        width: 312px;
+        height: 30px;
         border: none;
         margin-left: 50px;
         text-align: center;
@@ -760,15 +766,25 @@ body{
             left: 375px;
         }
 }
-//version desktop
+//-------------vversion desktop ------------------------------------------------------------//
 @media only screen and (min-width: 1000px) {
     .header{
+        display: grid;
+        grid-template-columns: 7fr 1fr 1fr 1fr 1fr;
         &__menu{
             display: none;
         }
         &__link1,&__link2,&__link3,&__link4{
             display: inline;
             text-decoration: none;
+            border-bottom: 2px solid map-get($colores, "blanco" );
+            transition: all 300ms ease-in-out;
+            padding: 20px 20px;
+            
+        }
+        &__link1:hover,&__link2:hover,&__link3:hover,&__link4:hover{
+           border-bottom: 2px solid map-get($colores, "celeste");
+           color: map-get($colores, "negro" );
         }
     }
 
@@ -784,14 +800,8 @@ body{
         }
     }
     .news{
-        display: grid;
-        grid-template-columns: 70% 30%;
-        grid-template-rows: 1fr 1fr 1fr;
-        grid-template-areas: 
-                            "block1 block1"
-                            "block2 block2"
-                            "block3 block3"
-        ;
+        display: flex;
+        flex-direction: column;
         /*&__item1{
         width: 90.12px;
         height: 90.12px;
@@ -834,35 +844,47 @@ body{
     hr{
         display: none;
     }*/
-        &__block1{
-            grid-area: block1;
+        &__block{
             width: 90%;
             position: relative;
-        }
-        &__item1{
+            flex-direction: row-reverse;
+        
+        &__contenedor1{
+            
+            display: flex;
+            
+
+         &__item1{
             border-radius: 20px;
             transform: rotate(-45deg);
-            position: absolute;
-            top: 60px;
-            left: 85%;
+           
         }
         &__img1{
             width: 386.44px;
             height: 219px;
-            position: relative;
-            top: 80px;
-            left: 715px;
+         
 
         }
+        }
+        &__contenedor2{
+           
+            display: flex;
+            
+            &__titulo{
+
+            }
+            &__texto{
+
+            }
+        }
+       }
 
         &__block2{
-            grid-area: block2;
             width: 90%;
             position: relative;
         }
 
         &__block3{
-            grid-area: block3;
             width: 90%;
             position: relative;
         }
