@@ -288,6 +288,9 @@ body{
         left: 20px;
         margin-right: 20px;
     }
+    hr{
+        display: none;
+    }
 
     &__block2{
         width: 314px;
@@ -343,7 +346,7 @@ body{
 
     &__block3{
         width: 314px;
-        height: 256px;
+        height: 446px;
         background:map-get($colores , "blanco" );
         border: 1px solid map-get($colores , "grisMenos" );
         border-radius: 5px;
@@ -393,19 +396,21 @@ body{
         left: 20px;
     }
    
-}
-.pricing{
-
-    &__titulo{
+}  
+ .pricing-titulo{
         font-family: map-get($fuentes, "titulo" );
         font-style: normal;
         font-weight: 400;
         font-size: 36px;
         line-height: 42px;
         text-align: center;
+        margin-bottom: 40px;
        
     }
-}
+.pricing{
+
+ 
+
     .pricing1{
         box-sizing: border-box;
         position: relative;
@@ -413,7 +418,8 @@ body{
         height: 251px;
         border: 1px solid map-get($colores , "rosaRojo");
         border-radius: 18px;
-        margin-left: 40px;
+        margin: 0 auto;
+        margin-bottom: 60px;
 
         &__type{
             font-family: map-get($fuentes, "titulo" );
@@ -429,21 +435,20 @@ body{
             font-style: normal;
             font-weight: 300;
             font-size: 46px;
-            margin-top: -30px;
             margin-left: 50px;
 
         }
         &__icono1{
             margin-left: 140px;
             position: relative;
-            top: -200px;
+            top: -155px;
             left: -10px;
             
         }
         &__item1{
             margin-left: 140px;
             position: relative;
-            top: -223px;
+            top: -178px;
             left: 14px;
             
         }
@@ -453,8 +458,15 @@ body{
             width: 150px;
             height: 50px;
             border-radius: 23px;
-            top: -215px;
+            top: -170px;
             left: 70px;
+            border: none;
+            color: map-get($colores, "blanco" );
+        }
+        &__button:hover{
+            background-color: map-get($colores, "blanco" );
+            color:map-get($colores, "rosaRojo" );
+            border: 1px solid map-get($colores, "rosaRojo" );
         }
     }
     .pricing2{
@@ -464,9 +476,9 @@ body{
         height: 277px;
         border: 1px solid map-get($colores , "celeste");
         border-radius: 18px;
-        margin-left: 17px;
-        top: 320px;
         box-shadow: 5px 10px 27px rgba(7, 172, 230, 0.29);
+        margin: 0 auto;
+        margin-bottom: 60px;
 
         &__type{
             font-family: map-get($fuentes, "titulo" );
@@ -482,26 +494,24 @@ body{
             font-style: normal;
             font-weight: 300;
             font-size: 46px;
-            margin-top: -30px;
             margin-left: 40px;
 
         }
         &__info{
             position: relative;
-            top: -40px;
             left: 40px;
         }
         &__icono2{
             margin-left: 140px;
             position: relative;
-            top: -230px;
+            top: -170px;
             left: 20px;
             margin-top: 25px;
             
         }
         &__item2{
             position: relative;
-            top: -230px;
+            top: -170px;
             left: 30px;
             
         }
@@ -511,8 +521,15 @@ body{
             width: 150px;
             height: 50px;
             border-radius: 23px;
-            top: -210px;
+            top: -140px;
             left: 85px;
+            border: none;
+            color: map-get($colores, "blanco" );
+        }
+        &__button:hover{
+            background-color: map-get($colores, "blanco" );
+            color:map-get($colores, "celeste" );
+            border: 1px solid map-get($colores, "celeste" );
         }
     }
 
@@ -523,8 +540,8 @@ body{
         height: 251px;
         border: 1px solid map-get($colores , "verde");
         border-radius: 18px;
-        margin-left: 40px;
-        top: 380px;
+        margin: 0 auto;
+        margin-bottom: 90px;
 
        
 
@@ -534,35 +551,32 @@ body{
             font-weight: 700;
             font-size: 20px;
             line-height: 24px;
-            margin-top: 80px;
-            margin-left: 30px;
+            margin-top: 60px;
+            margin-left: 25px;
         }
         &__price{
             color: map-get($colores , "verde");
             font-style: normal;
             font-weight: 300;
             font-size: 46px;
-            margin-top: -30px;
-            margin-left: 32px;
-
+            margin-left: 30px;
         }
         &__info{
             position: relative;
-            top: -40px;
-            left: 27px;
+            left: 30px;
         }
         &__icono3{
             margin-left: 135px;
             position: relative;
-            top: -240px;
+            top: -160px;
             margin-top: 22px;
             
         }
         &__item3{
             margin-left: -10px;
             position: relative;
-            top: -240px;
-            left: 12px;
+            top: -160px;
+            left: 14px;
             
         }
         &__button{
@@ -571,28 +585,36 @@ body{
             width: 150px;
             height: 50px;
             border-radius: 23px;
-            top: -220px;
+            top: -132px;
             left: 70px;
+            border: none;
+            color: map-get($colores, "blanco" );
+        }
+        &__button:hover{
+            background-color: map-get($colores, "blanco" );
+            color:map-get($colores, "verde" );
+            border: 1px solid map-get($colores, "verde" );
         }
     }
+}
 .questions{
-    width: 375px;
     position: relative;
-    top: 410px;
-    height: 770px;
+    margin-bottom: 20px;
+
     &__titulo{
         font-family: map-get($fuentes, "titulo" );
         font-style: normal;
         font-weight: 400;
         font-size: 40px;
-        text-align: center;
+        text-align: start;
+        margin-left: 40px;
     }
     &__subtitulo{
         font-style: normal;
         font-weight: 400;
-        font-size: 16px;
-        margin-top: -30px;
-        margin-left: 50px;
+        font-size: 16.5px;
+        margin-left: 40px;
+        text-align: start;
     }
     &__icono1{
         height: 18px;
@@ -674,6 +696,8 @@ body{
         font-size: 12px;
         line-height: 16px;
         color: map-get($colores, "otroGris" );
+        padding-right: 60px;
+        margin-bottom: 20px;
         
     }
     &__button{
@@ -685,15 +709,21 @@ body{
         border-radius: 35px;
         margin-left: 130px;
         margin-top: 20px;
+        border: none;
+        margin-bottom: 40px;
+    }
+    &__button:hover{
+        background-color: map-get($colores, "blanco" );
+        color:map-get($colores, "celeste" );
+        border: 1px solid map-get($colores, "celeste" );
     }
 }
-.footer{
-        width: 375px;
+.footer{  
         height: 89px;
         background: #F7F7F7;
         box-shadow: 0px -5px 40px rgba(0, 0, 0, 0.2);
         position: relative;
-        top: 350px;
+        
         &__brand{
             font-family: map-get($fuentes, "titulo" );
             font-style: normal;
@@ -701,7 +731,7 @@ body{
             font-size: 26px;
             line-height: 30px;
             color: map-get($colores, "celeste");
-            position: relative;
+            position: absolute;
             top: 20px;
             left: 20px;
         }
@@ -711,21 +741,23 @@ body{
             font-size: 11px;
             line-height: 15px;
             color: map-get($colores, "gris" );
-            margin-left: 20px;
+            position: absolute;
+            left: 20px;
+            top: 50px;
         }
         &__logo1{
             width: 24px;
             height: 24px;
-            position: relative;
-            top: -50px;
-            left: 280px;
+            position: absolute;
+            top: 35px;
+            left: 330px;
         }
         &__logo2{
             width: 24px;
             height: 24px;
-            position: relative;
-            top: -50px;
-            left: 295px;
+            position: absolute;
+            top: 35px;
+            left: 375px;
         }
 }
 //version desktop
@@ -751,6 +783,90 @@ body{
             margin-bottom: 90px;
         }
     }
+    .news{
+        display: grid;
+        grid-template-columns: 70% 30%;
+        grid-template-rows: 1fr 1fr 1fr;
+        grid-template-areas: 
+                            "block1 block1"
+                            "block2 block2"
+                            "block3 block3"
+        ;
+        /*&__item1{
+        width: 90.12px;
+        height: 90.12px;
+        background: map-get($colores , "rosaRojo");
+        border-radius: 41px;
+        transform: rotate(-45deg);
+        position: absolute;
+        top: 20px;
+        left: 170px;
+    }
+    &__img1{
+        width: 386.44px;
+        height: 219px;
+        background-image: url("../assets/img/macbook.png");
+        background-position: center;
+        background-repeat: no-repeat; 
+        background-size: cover; 
+        position: absolute;
+        top: 40px;
+        left: 60px;
+    }
+    &__titulo1{
+        font-family: map-get($fuentes, "titulo" );
+        font-style: normal;
+        font-weight: 400;
+        font-size: 30px;
+        position: absolute;
+        top: 180px;
+        left: 20px;
+    }
+    &__texto1{
+        font-style: normal;
+        font-weight: 400;
+        font-size: 14px;
+        position: absolute;
+        top: 260px;
+        left: 20px;
+        margin-right: 20px;
+    }
+    hr{
+        display: none;
+    }*/
+        &__block1{
+            grid-area: block1;
+            width: 90%;
+            position: relative;
+        }
+        &__item1{
+            border-radius: 20px;
+            transform: rotate(-45deg);
+            position: absolute;
+            top: 60px;
+            left: 85%;
+        }
+        &__img1{
+            width: 386.44px;
+            height: 219px;
+            position: relative;
+            top: 80px;
+            left: 715px;
+
+        }
+
+        &__block2{
+            grid-area: block2;
+            width: 90%;
+            position: relative;
+        }
+
+        &__block3{
+            grid-area: block3;
+            width: 90%;
+            position: relative;
+        }
+    }
     .rating{
         display: flex;
         justify-content: center;
@@ -758,4 +874,73 @@ body{
 
     }
 
+    /*.pricing1{
+        box-sizing: border-box;
+        position: relative;
+        width: 293px;
+        height: 251px;
+        border: 1px solid map-get($colores , "rosaRojo");
+        border-radius: 18px;
+        margin: 0 auto;
+        margin-bottom: 60px;
+
+        &__type{
+            font-family: map-get($fuentes, "titulo" );
+            font-style: normal;
+            font-weight: 700;
+            font-size: 20px;
+            line-height: 24px;
+            margin-top: 80px;
+            margin-left: 50px;
+        }
+        &__price{
+            color: map-get($colores , "rosaRojo");
+            font-style: normal;
+            font-weight: 300;
+            font-size: 46px;
+            margin-left: 50px;
+
+        }
+        &__icono1{
+            margin-left: 140px;
+            position: relative;
+            top: -155px;
+            left: -10px;
+            
+        }
+        &__item1{
+            margin-left: 140px;
+            position: relative;
+            top: -178px;
+            left: 14px;
+            
+        }
+        &__button{
+            background-color: map-get($colores, "rosaRojo" );
+            position: relative;
+            width: 150px;
+            height: 50px;
+            border-radius: 23px;
+            top: -170px;
+            left: 70px;
+            border: none;
+            color: map-get($colores, "blanco" );
+        }
+        &__button:hover{
+            background-color: map-get($colores, "blanco" );
+            color:map-get($colores, "rosaRojo" );
+            border: 1px solid map-get($colores, "rosaRojo" );
+        }
+    }*/
+
+    .pricing{
+        display: flex;
+        flex-direction: row;
+        .pricing1{
+           
+            width: 372px;
+            height: 461px;
+          
+    }
+    }
 }
