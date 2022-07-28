@@ -336,14 +336,13 @@ body{
     
     &__item3{
         box-sizing: border-box;
-        position: absolute;
         width: 314px;
         height: 195px;
         border: 1px solid map-get($colores, "grisMenos" );
         border-radius: 5px;
         background: map-get($colores , "verde");
-        position: absolute;
-        top: 250px;
+        display: block;
+        position: initial;
     }
     &__img3{
         width: 250px;

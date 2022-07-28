@@ -263,14 +263,13 @@ body {
     margin-top: -20px; }
   .news__item3 {
     box-sizing: border-box;
-    position: absolute;
     width: 314px;
     height: 195px;
     border: 1px solid #e8e9ed;
     border-radius: 5px;
     background: #55DFB4;
-    position: absolute;
-    top: 250px; }
+    display: block;
+    position: initial; }
   .news__img3 {
     width: 250px;
     height: 150.72px;
