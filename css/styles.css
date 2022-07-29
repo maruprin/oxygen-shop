@@ -29,6 +29,8 @@ body {
     font-size: 32px; }
   .header__menu {
     width: 5%; }
+  .header nav {
+    display: none; }
   .header__link1, .header__link2, .header__link3, .header__link4 {
     display: none;
     color: #A5A5A5;
@@ -193,15 +195,12 @@ body {
   margin-bottom: 40px; }
   .news__block {
     width: 314px;
-    height: 370px;
     background: white;
     border: 1px solid #e8e9ed;
     border-radius: 5px;
     margin: 0 auto;
     margin-bottom: 40px;
     position: relative; }
-    .news__block--separated {
-      height: 252px; }
   .news__contenedor1 {
     margin-top: 40px; }
   .news__contenedor2 {
@@ -214,7 +213,7 @@ body {
     transform: rotate(-45deg);
     position: absolute;
     top: 20px;
-    left: 170px; }
+    left: 55%; }
   .news__img1 {
     width: 192.76px;
     height: 109.93px;
@@ -237,7 +236,8 @@ body {
     font-size: 14px;
     margin-top: 15px;
     margin-left: 20px;
-    margin-right: 20px; }
+    margin-right: 20px;
+    padding-bottom: 30px; }
     .news__texto--separated {
       margin-right: 52px; }
   .news hr {
@@ -249,7 +249,7 @@ body {
     border-radius: 50%;
     position: absolute;
     top: 10px;
-    left: 90px; }
+    left: 34%; }
   .news__img2 {
     width: 175px;
     height: 134.99px;
@@ -259,28 +259,15 @@ body {
     background-size: cover;
     position: relative;
     z-index: 1;
-    margin-left: 90px;
+    margin-left: 30%;
     margin-top: -20px; }
-  .news__item3 {
-    box-sizing: border-box;
-    width: 314px;
-    height: 195px;
-    border: 1px solid #e8e9ed;
-    border-radius: 5px;
-    background: #55DFB4;
-    display: block;
-    position: initial; }
   .news__img3 {
-    width: 250px;
-    height: 150.72px;
-    background-image: url("../assets/img/bg-trumpet.png");
-    background-position: center;
-    background-repeat: no-repeat;
-    background-size: cover;
     position: relative;
     z-index: 1;
     margin: 0 auto;
-    margin-top: 50px; }
+    margin-top: 30px;
+    background-color: #55DFB4;
+    padding: 30px 0 10px 0; }
 
 .pricing-titulo {
   font-family: Raleway;
@@ -339,6 +326,8 @@ body {
     position: absolute;
     top: 6px;
     left: 2px; }
+  .pricing .pricing1 ul li.pricing1__item--red::before {
+    background-image: url("../assets/img/icons/Cross.svg"); }
   .pricing .pricing1__button {
     background-color: #FB3B64;
     position: relative;
@@ -406,17 +395,15 @@ body {
     position: absolute;
     top: 6px;
     left: 2px; }
-  .pricing .pricing2__item2 {
-    position: relative;
-    top: -170px;
-    left: 30px; }
+  .pricing .pricing2 ul li.pricing1__item--red::before {
+    background-image: url("../assets/img/icons/Cross.svg"); }
   .pricing .pricing2__button {
     background-color: #08A6E4;
     position: relative;
     width: 150px;
     height: 50px;
     border-radius: 23px;
-    top: -140px;
+    top: -135px;
     left: 85px;
     border: none;
     color: white; }
@@ -455,18 +442,33 @@ body {
     position: relative;
     top: -160px;
     margin-top: 22px; }
-  .pricing .pricing3__item3 {
-    margin-left: -10px;
+  .pricing .pricing3 ul {
+    list-style: none;
+    margin: 0;
+    padding: 0; }
+  .pricing .pricing3 ul li {
+    padding-left: 20px;
     position: relative;
-    top: -160px;
-    left: 14px; }
+    margin-bottom: 17px;
+    top: -145px;
+    left: 130px; }
+  .pricing .pricing3 ul li::before {
+    content: '';
+    height: 10px;
+    width: 10px;
+    background-image: url("../assets/img/icons/Checkbox.svg");
+    background-position: center center;
+    background-size: cover;
+    position: absolute;
+    top: 6px;
+    left: 2px; }
   .pricing .pricing3__button {
     background-color: #55DFB4;
     position: relative;
     width: 150px;
     height: 50px;
     border-radius: 23px;
-    top: -132px;
+    top: -140px;
     left: 70px;
     border: none;
     color: white; }
@@ -490,6 +492,7 @@ body {
     font-weight: 400;
     font-size: 16.5px;
     margin-left: 40px;
+    margin-bottom: 30px;
     text-align: start; }
   .questions__icono1 {
     height: 18px;
@@ -533,7 +536,8 @@ body {
   .questions hr {
     width: 312px;
     margin-left: 50px;
-    margin-top: 0px; }
+    margin-top: 0px;
+    color: #95989a; }
   .questions__email {
     font-style: normal;
     font-weight: 500;
@@ -586,7 +590,13 @@ body {
   height: 89px;
   background: #F7F7F7;
   box-shadow: 0px -5px 40px rgba(0, 0, 0, 0.2);
-  position: relative; }
+  position: relative;
+  display: grid;
+  grid-template-columns: 1fr 1fr; }
+  .footer__contenedor1 {
+    display: flex;
+    flex-direction: column;
+    gap: 5px; }
   .footer__brand {
     font-family: Raleway;
     font-style: normal;
@@ -594,45 +604,47 @@ body {
     font-size: 26px;
     line-height: 30px;
     color: #08A6E4;
-    position: absolute;
-    top: 20px;
-    left: 20px; }
+    margin-left: 10%;
+    margin-top: 15px; }
   .footer__derechos {
     font-style: normal;
     font-weight: 400;
     font-size: 11px;
     line-height: 15px;
     color: #A5A5A5;
-    position: absolute;
-    left: 20px;
-    top: 50px; }
+    margin-left: 10%;
+    margin-top: 0px; }
+  .footer__contenedor2 {
+    display: flex;
+    flex-direction: row;
+    gap: 15px; }
   .footer__logo1 {
     width: 24px;
     height: 24px;
-    position: absolute;
-    top: 35px;
-    left: 330px; }
+    margin-top: 35px;
+    margin-left: 70%; }
   .footer__logo2 {
     width: 24px;
     height: 24px;
-    position: absolute;
-    top: 35px;
-    left: 375px; }
+    margin-top: 35px; }
 
 @media only screen and (min-width: 1000px) {
   .header {
     display: grid;
-    grid-template-columns: 7fr 1fr 1fr 1fr 1fr; }
+    grid-template-columns: 6fr 4fr; }
     .header__menu {
       display: none; }
+    .header nav {
+      display: grid;
+      grid-template-columns: 1fr 1fr 1fr 1fr; }
     .header__link1, .header__link2, .header__link3, .header__link4 {
       display: inline;
       text-decoration: none;
       border-bottom: 2px solid white;
       transition: all 300ms ease-in-out;
-      padding: 20px 20px; }
+      padding: 26px 15px; }
     .header__link1:hover, .header__link2:hover, .header__link3:hover, .header__link4:hover {
-      border-bottom: 2px solid #08A6E4;
+      border-bottom: 4px solid #08A6E4;
       color: black; }
 
   .shop__image {
@@ -642,140 +654,217 @@ body {
   .shop__titulo2 {
     margin-bottom: 90px; }
 
-  .news {
+  .news__block {
     display: flex;
-    flex-direction: column;
-    /*&__item1{
-    width: 90.12px;
-    height: 90.12px;
-    background: map-get($colores , "rosaRojo");
+    flex-direction: row-reverse;
+    width: 100%;
+    align-items: center;
+    justify-content: space-between;
+    max-width: 1124px;
+    padding: 50px; }
+    .news__block--reverse {
+      flex-direction: row; }
+    .news__block--separated {
+      width: 55%;
+      margin-left: 20px;
+      flex-direction: column; }
+  .news__contenedor1 {
+    position: relative;
+    width: 50%; }
+  .news__item1 {
+    width: 180px;
+    height: 180px;
     border-radius: 41px;
-    transform: rotate(-45deg);
-    position: absolute;
-    top: 20px;
-    left: 170px;
-}
-&__img1{
+    top: -25px; }
+  .news__img1 {
     width: 386.44px;
     height: 219px;
-    background-image: url("../assets/img/macbook.png");
-    background-position: center;
-    background-repeat: no-repeat; 
-    background-size: cover; 
+    top: 16px; }
+  .news__titulo {
+    margin-left: 0px;
+    margin-top: -65px;
+    font-size: 36px; }
+  .news__titulo--reverse {
+    margin-right: 74px;
+    margin-left: 123px; }
+  .news__titulo--separated {
+    width: 348px;
+    margin-left: -136px;
+    margin-top: -7px;
+    margin-bottom: 30px; }
+  .news__texto {
+    margin-left: 0px;
+    margin-top: 17px;
+    font-size: 16px;
+    margin-right: 69px; }
+  .news__texto--reverse {
+    margin-right: -25px;
+    margin-left: 123px; }
+  .news__texto--separated {
+    margin-left: -136px;
+    margin-right: -8px; }
+  .news__item2 {
+    width: 320px;
+    height: 320px;
+    left: 0px;
+    top: -46px; }
+  .news__img2 {
+    width: 426px;
+    height: 328px;
+    margin-left: 0%;
+    margin-top: -25px; }
+  .news__img3 {
     position: absolute;
-    top: 40px;
-    left: 60px;
-}
-&__titulo1{
-    font-family: map-get($fuentes, "titulo" );
-    font-style: normal;
-    font-weight: 400;
-    font-size: 30px;
-    position: absolute;
-    top: 180px;
-    left: 20px;
-}
-&__texto1{
-    font-style: normal;
-    font-weight: 400;
-    font-size: 14px;
-    position: absolute;
-    top: 260px;
-    left: 20px;
-    margin-right: 20px;
-}
-hr{
-    display: none;
-}*/ }
-    .news__block {
-      width: 90%;
-      position: relative;
-      flex-direction: row-reverse; }
-      .news__block__contenedor1 {
-        display: flex; }
-        .news__block__contenedor1__item1 {
-          border-radius: 20px;
-          transform: rotate(-45deg); }
-        .news__block__contenedor1__img1 {
-          width: 386.44px;
-          height: 219px; }
-      .news__block__contenedor2 {
-        display: flex; }
-    .news__block2 {
-      width: 90%;
-      position: relative; }
-    .news__block3 {
-      width: 90%;
-      position: relative; }
+    top: -30px;
+    left: 700px;
+    padding: 93px 82px 100px 70px;
+    border-radius: 4px; }
+  .news hr#hr1 {
+    display: block;
+    border: 2px solid #FB3B64;
+    width: 330px; }
+  .news hr#hr2 {
+    display: block;
+    border: 2px solid #08A6E4;
+    width: 330px;
+    margin-left: 123px; }
+  .news hr#hr3 {
+    display: block;
+    border: 2px solid #55DFB4;
+    width: 330px;
+    margin-left: -210px;
+    margin-top: -30px; }
+  .news__contenedor2 {
+    width: 50%; }
 
   .rating {
     display: flex;
     justify-content: center;
     gap: 150px; }
 
-    /*.pricing1{
-        box-sizing: border-box;
-        position: relative;
-        width: 293px;
-        height: 251px;
-        border: 1px solid map-get($colores , "rosaRojo");
-        border-radius: 18px;
-        margin: 0 auto;
-        margin-bottom: 60px;
-
-        &__type{
-            font-family: map-get($fuentes, "titulo" );
-            font-style: normal;
-            font-weight: 700;
-            font-size: 20px;
-            line-height: 24px;
-            margin-top: 80px;
-            margin-left: 50px;
-        }
-        &__price{
-            color: map-get($colores , "rosaRojo");
-            font-style: normal;
-            font-weight: 300;
-            font-size: 46px;
-            margin-left: 50px;
-
-        }
-        &__icono1{
-            margin-left: 140px;
-            position: relative;
-            top: -155px;
-            left: -10px;
-            
-        }
-        &__item1{
-            margin-left: 140px;
-            position: relative;
-            top: -178px;
-            left: 14px;
-            
-        }
-        &__button{
-            background-color: map-get($colores, "rosaRojo" );
-            position: relative;
-            width: 150px;
-            height: 50px;
-            border-radius: 23px;
-            top: -170px;
-            left: 70px;
-            border: none;
-            color: map-get($colores, "blanco" );
-        }
-        &__button:hover{
-            background-color: map-get($colores, "blanco" );
-            color:map-get($colores, "rosaRojo" );
-            border: 1px solid map-get($colores, "rosaRojo" );
-        }
-    }*/
   .pricing {
     display: flex;
-    flex-direction: row; }
+    flex-direction: row;
+    width: 100%;
+    justify-content: center;
+    align-items: center;
+    align-content: center;
+    margin-bottom: 100px; }
     .pricing .pricing1 {
-      width: 372px;
-      height: 461px; } }
+      width: 25%;
+      height: 461px;
+      padding: 30px; }
+      .pricing .pricing1__type {
+        text-align: center;
+        margin: 0 auto;
+        margin-bottom: 15px; }
+      .pricing .pricing1__price {
+        text-align: center;
+        margin: 0 auto; }
+      .pricing .pricing1 ul li {
+        top: 60px;
+        left: 62px; }
+      .pricing .pricing1__button {
+        top: 103px;
+        left: 20%; }
+    .pricing .pricing2 {
+      width: 30%;
+      height: 500px;
+      margin-left: -40px;
+      margin-right: -40px;
+      padding: 30px; }
+      .pricing .pricing2__type {
+        text-align: center;
+        margin: 0 auto;
+        margin-bottom: 15px; }
+      .pricing .pricing2__price {
+        text-align: center;
+        margin: 0 auto; }
+      .pricing .pricing2__info {
+        left: 0;
+        text-align: center; }
+      .pricing .pricing2 ul li {
+        top: 75px;
+        left: 90px; }
+      .pricing .pricing2__button {
+        top: 123px;
+        left: 27%; }
+    .pricing .pricing3 {
+      width: 25%;
+      height: 461px;
+      margin-bottom: 60px;
+      padding: 30px; }
+      .pricing .pricing3__type {
+        text-align: center;
+        margin: 0 auto;
+        margin-bottom: 15px; }
+      .pricing .pricing3__price {
+        text-align: center;
+        margin: 0 auto; }
+      .pricing .pricing3__info {
+        left: 0;
+        text-align: center; }
+      .pricing .pricing3 ul li {
+        top: 60px;
+        left: 62px; }
+      .pricing .pricing3__button {
+        top: 86px;
+        left: 22%; }
+
+  .questions__titulo {
+    margin-left: 19%;
+    margin-top: 30px;
+    font-size: 49px; }
+  .questions__subtitulo {
+    margin-left: 19%;
+    margin-top: 15px;
+    font-size: 16px; }
+  .questions__icono1 {
+    margin-left: 19%; }
+  .questions__mail {
+    margin-top: -26px;
+    margin-left: 22%; }
+  .questions__icono2 {
+    margin-left: 35%;
+    margin-top: 0px;
+    position: relative;
+    top: -21px; }
+  .questions__tel {
+    margin-top: -47px;
+    margin-left: 38%; }
+  .questions__name {
+    margin-left: 53%;
+    margin-top: 0;
+    position: relative;
+    top: -160px; }
+  .questions__inputName {
+    margin-left: 53%;
+    position: relative;
+    top: -152px; }
+  .questions hr {
+    margin-left: 53%;
+    margin-top: 0px;
+    position: relative;
+    top: -154px;
+    margin-bottom: 55px; }
+  .questions__email {
+    margin-left: 53%;
+    margin-top: 0;
+    position: absolute;
+    top: 92px; }
+  .questions__inputEmail {
+    margin-left: 53%;
+    position: relative;
+    top: -153px; }
+  .questions__check {
+    top: -181px;
+    left: 53%; }
+  .questions__textPermiso {
+    padding-right: 159px;
+    margin-left: 56%;
+    margin-top: -212px; }
+  .questions__button {
+    margin-left: 70%;
+    margin-top: 19px; } }
 
 /*# sourceMappingURL=styles.css.map */

@@ -9,7 +9,8 @@ $colores: (
     "blanco" : white,
     "grisMenos" : #e8e9ed,
     "grisClaro" : #F7F7F7,
-    "otroGris" : #707070
+    "otroGris" : #707070,
+    "grisHR" : #95989a
 );
 
 $fuentes:(
@@ -51,6 +52,9 @@ body{
     }
     &__menu{
         width: 5%;
+    }
+    nav{
+        display: none;
     }
     &__link1,&__link2,&__link3,&__link4{
         display: none;
@@ -249,16 +253,12 @@ body{
 
     &__block{
         width: 314px;
-        height: 370px;
         background:map-get($colores , "blanco" );
         border: 1px solid map-get($colores , "grisMenos" );
         border-radius: 5px;
         margin: 0 auto;
         margin-bottom: 40px;
         position: relative;
-        &--separated{
-            height: 252px;
-        }
        
     }
     &__contenedor1{
@@ -276,7 +276,7 @@ body{
         transform: rotate(-45deg);
         position: absolute;
         top: 20px;
-        left: 170px;
+        left: 55%;
     }
     &__img1{
         width: 192.76px;
@@ -303,6 +303,7 @@ body{
         margin-top: 15px;
         margin-left: 20px;
         margin-right: 20px;
+        padding-bottom: 30px;
         &--separated{
             margin-right: 52px;
         }
@@ -319,7 +320,7 @@ body{
         border-radius: 50%;
         position: absolute;
         top: 10px;
-        left: 90px;
+        left: 34%;
     }
     &__img2{
         width: 175px;
@@ -330,31 +331,18 @@ body{
         background-size: cover; 
         position: relative;
         z-index: 1;
-        margin-left: 90px;
+        margin-left: 30%;
         margin-top: -20px;
     }
     
-    &__item3{
-        box-sizing: border-box;
-        width: 314px;
-        height: 195px;
-        border: 1px solid map-get($colores, "grisMenos" );
-        border-radius: 5px;
-        background: map-get($colores , "verde");
-        display: block;
-        position: initial;
-    }
+    
     &__img3{
-        width: 250px;
-        height: 150.72px;
-        background-image: url("../assets/img/bg-trumpet.png");
-        background-position: center;
-        background-repeat: no-repeat; 
-        background-size: cover; 
         position: relative;
         z-index: 1;
         margin: 0 auto;
-        margin-top: 50px;
+        margin-top: 30px;
+        background-color: map-get($colores, "verde" );
+        padding: 30px 0 10px 0;
     }
    
 }  
@@ -426,8 +414,10 @@ body{
             top: 6px;
             left: 2px;
         }
-        &__item{
+        ul li.pricing1__item--red::before{
             
+            background-image: url('../assets/img/icons/Cross.svg');
+           
         }
         &__button{
             background-color: map-get($colores, "rosaRojo" );
@@ -509,11 +499,10 @@ body{
             top: 6px;
             left: 2px;
         }
-        &__item2{
-            position: relative;
-            top: -170px;
-            left: 30px;
+        ul li.pricing1__item--red::before{
             
+            background-image: url('../assets/img/icons/Cross.svg');
+           
         }
         &__button{
             background-color: map-get($colores, "celeste" );
@@ -521,7 +510,7 @@ body{
             width: 150px;
             height: 50px;
             border-radius: 23px;
-            top: -140px;
+            top: -135px;
             left: 85px;
             border: none;
             color: map-get($colores, "blanco" );
@@ -572,12 +561,28 @@ body{
             margin-top: 22px;
             
         }
-        &__item3{
-            margin-left: -10px;
+        ul{
+            list-style: none;
+            margin: 0;
+            padding: 0;
+        }
+        ul li{
+            padding-left: 20px;
             position: relative;
-            top: -160px;
-            left: 14px;
-            
+            margin-bottom: 17px;
+            top: -145px;
+            left: 130px;
+        }
+        ul li::before{
+            content: '';
+            height: 10px;
+            width: 10px;
+            background-image: url('../assets/img/icons/Checkbox.svg');
+            background-position: center center;
+            background-size: cover;
+            position: absolute;
+            top: 6px;
+            left: 2px;
         }
         &__button{
             background-color: map-get($colores, "verde" );
@@ -585,7 +590,7 @@ body{
             width: 150px;
             height: 50px;
             border-radius: 23px;
-            top: -132px;
+            top: -140px;
             left: 70px;
             border: none;
             color: map-get($colores, "blanco" );
@@ -614,6 +619,7 @@ body{
         font-weight: 400;
         font-size: 16.5px;
         margin-left: 40px;
+        margin-bottom: 30px;
         text-align: start;
     }
     &__icono1{
@@ -666,6 +672,7 @@ body{
         width: 312px;
         margin-left: 50px;
         margin-top: 0px;
+        color: map-get($colores, "grisHR" );
     }
     &__email{
         font-style: normal;
@@ -728,7 +735,13 @@ body{
         background: #F7F7F7;
         box-shadow: 0px -5px 40px rgba(0, 0, 0, 0.2);
         position: relative;
-        
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        &__contenedor1{
+            display: flex;
+            flex-direction: column;
+            gap: 5px;
+        }
         &__brand{
             font-family: map-get($fuentes, "titulo" );
             font-style: normal;
@@ -736,9 +749,8 @@ body{
             font-size: 26px;
             line-height: 30px;
             color: map-get($colores, "celeste");
-            position: absolute;
-            top: 20px;
-            left: 20px;
+            margin-left: 10%;
+            margin-top: 15px;
         }
         &__derechos{
             font-style: normal;
@@ -746,43 +758,49 @@ body{
             font-size: 11px;
             line-height: 15px;
             color: map-get($colores, "gris" );
-            position: absolute;
-            left: 20px;
-            top: 50px;
+            margin-left: 10%;
+            margin-top: 0px;
+        }
+        &__contenedor2{
+            display: flex;
+            flex-direction: row;
+            gap: 15px;
         }
         &__logo1{
             width: 24px;
             height: 24px;
-            position: absolute;
-            top: 35px;
-            left: 330px;
+            margin-top: 35px;
+            margin-left: 70%;
         }
         &__logo2{
             width: 24px;
             height: 24px;
-            position: absolute;
-            top: 35px;
-            left: 375px;
+            margin-top: 35px;
         }
 }
-//-------------vversion desktop ------------------------------------------------------------//
+//-------------version desktop ------------------------------------------------------------//
+
 @media only screen and (min-width: 1000px) {
     .header{
         display: grid;
-        grid-template-columns: 7fr 1fr 1fr 1fr 1fr;
+        grid-template-columns: 6fr 4fr;
         &__menu{
             display: none;
+        }
+        nav{
+            display: grid;
+            grid-template-columns: 1fr 1fr 1fr 1fr;
         }
         &__link1,&__link2,&__link3,&__link4{
             display: inline;
             text-decoration: none;
-            border-bottom: 2px solid map-get($colores, "blanco" );
+            border-bottom:2px solid map-get($colores, "blanco" );
             transition: all 300ms ease-in-out;
-            padding: 20px 20px;
+            padding: 26px 15px;
             
         }
         &__link1:hover,&__link2:hover,&__link3:hover,&__link4:hover{
-           border-bottom: 2px solid map-get($colores, "celeste");
+           border-bottom: 4px solid map-get($colores, "celeste");
            color: map-get($colores, "negro" );
         }
     }
@@ -799,95 +817,113 @@ body{
         }
     }
     .news{
-        display: flex;
-        flex-direction: column;
-        /*&__item1{
-        width: 90.12px;
-        height: 90.12px;
-        background: map-get($colores , "rosaRojo");
-        border-radius: 41px;
-        transform: rotate(-45deg);
-        position: absolute;
-        top: 20px;
-        left: 170px;
-    }
-    &__img1{
-        width: 386.44px;
-        height: 219px;
-        background-image: url("../assets/img/macbook.png");
-        background-position: center;
-        background-repeat: no-repeat; 
-        background-size: cover; 
-        position: absolute;
-        top: 40px;
-        left: 60px;
-    }
-    &__titulo1{
-        font-family: map-get($fuentes, "titulo" );
-        font-style: normal;
-        font-weight: 400;
-        font-size: 30px;
-        position: absolute;
-        top: 180px;
-        left: 20px;
-    }
-    &__texto1{
-        font-style: normal;
-        font-weight: 400;
-        font-size: 14px;
-        position: absolute;
-        top: 260px;
-        left: 20px;
-        margin-right: 20px;
-    }
-    hr{
-        display: none;
-    }*/
         &__block{
-            width: 90%;
-            position: relative;
+            display: flex;
             flex-direction: row-reverse;
+            width:100%;
+            align-items: center;
+            justify-content: space-between;
+            max-width: 1124px;
+            padding: 50px;
+            &--reverse{
+                flex-direction: row;
+            }
+            &--separated{
+                width: 55%;
+                margin-left: 20px;
+                flex-direction: column;
+
+            }
+        }
         
         &__contenedor1{
-            
-            display: flex;
-            
-
-         &__item1{
-            border-radius: 20px;
-            transform: rotate(-45deg);
-           
+            position: relative;
+            width: 50%;
+    
+        }
+        &__item1{
+            width: 180px;
+            height: 180px;
+            border-radius: 41px;
+            top: -25px;
         }
         &__img1{
             width: 386.44px;
             height: 219px;
-         
+            top: 16px;
+        }
+        &__titulo{
+            margin-left: 0px;
+            margin-top: -65px;
+            font-size: 36px;
+        }
+        &__titulo--reverse{
+            margin-right: 74px;
+            margin-left: 123px;
+        }
+        &__titulo--separated{
+            width: 348px;
+            margin-left: -136px;
+            margin-top: -7px;
+            margin-bottom: 30px;
 
         }
+
+        &__texto{
+            margin-left: 0px;
+            margin-top: 17px;
+            font-size: 16px;
+            margin-right: 69px;
+        }
+        &__texto--reverse{
+            margin-right: -25px;
+            margin-left: 123px;
+        }
+        &__texto--separated{
+            margin-left: -136px;
+            margin-right: -8px;
+        }
+        &__item2{
+            width: 320px;
+            height: 320px;
+            left: 0px;
+            top: -46px;
+        }
+        &__img2{
+            width: 426px;
+            height: 328px;
+            margin-left: 0%;
+            margin-top: -25px;
+        }
+        &__img3{
+            position: absolute;
+            top: -30px;
+            left: 700px;
+            padding: 93px 82px 100px 70px;
+            border-radius: 4px;
+        }
+        hr#hr1{
+            display: block;
+            border: 2px solid map-get($colores, "rosaRojo" );
+            width: 330px;
+        }
+        hr#hr2{
+            display: block;
+            border: 2px solid map-get($colores, "celeste" );
+            width: 330px;
+            margin-left: 123px;
+        }
+        hr#hr3{
+            display: block;
+            border: 2px solid map-get($colores, "verde" );
+            width: 330px;
+            margin-left: -210px;
+            margin-top: -30px;
         }
         &__contenedor2{
-           
-            display: flex;
-            
-            &__titulo{
-
-            }
-            &__texto{
-
-            }
+            width: 50%;
         }
-       }
-
-        &__block2{
-            width: 90%;
-            position: relative;
-        }
-
-        &__block3{
-            width: 90%;
-            position: relative;
-        }
-    }
+    }     
     .rating{
         display: flex;
         justify-content: center;
@@ -895,73 +931,178 @@ body{
 
     }
 
-    /*.pricing1{
-        box-sizing: border-box;
-        position: relative;
-        width: 293px;
-        height: 251px;
-        border: 1px solid map-get($colores , "rosaRojo");
-        border-radius: 18px;
-        margin: 0 auto;
-        margin-bottom: 60px;
-
-        &__type{
-            font-family: map-get($fuentes, "titulo" );
-            font-style: normal;
-            font-weight: 700;
-            font-size: 20px;
-            line-height: 24px;
-            margin-top: 80px;
-            margin-left: 50px;
-        }
-        &__price{
-            color: map-get($colores , "rosaRojo");
-            font-style: normal;
-            font-weight: 300;
-            font-size: 46px;
-            margin-left: 50px;
-
-        }
-        &__icono1{
-            margin-left: 140px;
-            position: relative;
-            top: -155px;
-            left: -10px;
-            
-        }
-        &__item1{
-            margin-left: 140px;
-            position: relative;
-            top: -178px;
-            left: 14px;
-            
-        }
-        &__button{
-            background-color: map-get($colores, "rosaRojo" );
-            position: relative;
-            width: 150px;
-            height: 50px;
-            border-radius: 23px;
-            top: -170px;
-            left: 70px;
-            border: none;
-            color: map-get($colores, "blanco" );
-        }
-        &__button:hover{
-            background-color: map-get($colores, "blanco" );
-            color:map-get($colores, "rosaRojo" );
-            border: 1px solid map-get($colores, "rosaRojo" );
-        }
-    }*/
-
     .pricing{
         display: flex;
         flex-direction: row;
+        width: 100%;
+        justify-content: center;
+        align-items: center;
+        align-content: center;
+        margin-bottom: 100px;
+        
         .pricing1{
-           
-            width: 372px;
+            width: 25%;
             height: 461px;
-          
+            padding: 30px;
+        
+            &__type{
+                text-align: center;
+                margin: 0 auto;
+                margin-bottom: 15px;
+            }
+            &__price{
+                text-align: center;
+                margin: 0 auto;
+            }
+            &__info{
+
+            }
+            ul li{
+                top: 60px;
+                left: 62px;                   
+            }
+            &__button{
+                top: 103px;
+                left: 20%;
+            }
+               
+            }
+        
+        .pricing2{
+            width: 30%;
+            height: 500px;
+            margin-left: -40px;
+            margin-right: -40px;
+            padding: 30px;
+
+            &__type{
+                text-align: center;
+                margin: 0 auto;
+                margin-bottom: 15px;
+            }
+            &__price{
+                text-align: center;
+                margin: 0 auto;
+            }
+            &__info{
+                left: 0;
+                text-align: center;        
+            }
+            ul li{
+                top: 75px;
+                left: 90px;                 
+            }
+            &__button{
+                top: 123px;
+                left: 27%;
+            }
+               
+        }
+
+        .pricing3{
+            width: 25%;
+            height: 461px;
+            margin-bottom: 60px;
+            padding: 30px;
+
+            &__type{
+                text-align: center;
+                margin: 0 auto;
+                margin-bottom: 15px;
+            }
+            &__price{
+                text-align: center;
+                margin: 0 auto;
+            }
+            &__info{
+                left: 0;
+                text-align: center;        
+            }
+            ul li{
+                top: 60px;
+                left: 62px;                   
+            }
+            &__button{
+                top: 86px;
+                left: 22%;
+            }
+               
+        }
+
+    
     }
+
+    .questions{
+    
+        &__titulo{
+            margin-left: 19%;
+            margin-top: 30px;
+            font-size: 49px;
+        }
+        &__subtitulo{
+            margin-left: 19%;
+            margin-top: 15px;
+            font-size: 16px;
+        }
+        &__icono1{
+            margin-left: 19%;
+        }
+        &__mail{
+            margin-top: -26px;
+            margin-left: 22%;
+        }
+        &__icono2{
+            margin-left: 35%;
+            margin-top: 0px;
+            position: relative;
+            top: -21px;
+        }
+        &__tel{
+            margin-top: -47px;
+            margin-left: 38%;
+        }
+        &__name{
+            margin-left: 53%;
+            margin-top: 0;
+            position: relative;
+            top: -160px;
+        }
+        &__inputName{
+            margin-left: 53%;
+            position: relative;
+            top: -152px;
+        }
+       
+        hr{
+            margin-left: 53%;
+            margin-top: 0px;
+            position: relative;
+            top: -154px;
+            margin-bottom: 55px;
+        }
+        &__email{
+            margin-left: 53%;
+            margin-top: 0;
+            position: absolute;
+            top: 92px;
+        }
+        &__inputEmail{
+            margin-left: 53%;
+            position: relative;
+            top: -153px;
+        }
+        &__check{
+            top: -181px;
+            left: 53%;
+        }
+        &__textPermiso{
+            padding-right: 159px;
+            margin-left: 56%;
+            margin-top: -212px;
+        }
+        &__button{
+            margin-left: 70%;
+            margin-top: 19px;
+        }
     }
 }

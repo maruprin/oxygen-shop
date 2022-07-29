@@ -17,10 +17,13 @@
    <header class="header">
     <h1 class="header__titulo">OXYGENShop</h1>
     <img class="header__menu" src="./assets/img/icons/menu.svg" alt="menu">
-    <a class="header__link1" href="#">WHY US</a>
-    <a class="header__link2" href="#">BENEFITS</a>
-    <a class="header__link3" href="#">PRICES</a>
-    <a class="header__link4" href="#">CONTACT</a>
+    <nav>
+        <a class="header__link1" href="#">WHY US</a>
+        <a class="header__link2" href="#">BENEFITS</a>
+        <a class="header__link3" href="#">PRICES</a>
+        <a class="header__link4" href="#">CONTACT</a>
+    </nav>
+
    </header>
    <main>
     <div class="shop">
@@ -59,7 +62,7 @@
             <div class="news__contenedor2">
                 <h4 class="news__titulo">Be always first</h4>
                 <p class="news__texto">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam</p>
-                <hr>
+                <hr id="hr1">
             </div>
            
         </div>
@@ -69,23 +72,23 @@
                 <div class="news__img2"></div>
              </div>
             <div class="news__contenedor2"> 
-                <h4 class="news__titulo">Your shop is where you are!</h4>
-                <p class="news__texto">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam</p>
-                <hr>
+                <h4 class="news__titulo news__titulo--reverse">Your shop is where you are!</h4>
+                <p class="news__texto news__texto--reverse">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam</p>
+                <hr id="hr2">
             </div>
           
         </div>
         <div class="news__block news__block--separated"> 
             <div class="news__contenedor1">
-                <h4 class="news__titulo">Increase recognition your brand!</h4>
+                <h4 class="news__titulo news__titulo--separated">Increase recognition your brand!</h4>
                 <p class="news__texto news__texto--separated">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam</p>
             </div>
             <div class="news__contenedor2">
-                <div class="news__item3"></div>
-                <div class="news__img3"></div>
+                <div class="news__img3">
+                    <img src="./assets/img/bg-trumpet.png" alt="trompeta">
+                </div>
             </div>
-            
-            <hr>
+            <hr id="hr3">
         </div>
     </div>
      <div class="pricing-titulo">
@@ -99,8 +102,8 @@
                 <li class="pricing1__item">100 MB HDD</li>
                 <li class="pricing1__item">1 Subdomain</li>
                 <li class="pricing1__item">2 E-mails</li>
-                <li class="pricing1__item">Two years license</li>
-                <li class="pricing1__item">Full support</li>
+                <li class="pricing1__item  pricing1__item--red">Two years license</li>
+                <li class="pricing1__item  pricing1__item--red">Full support</li>
             </ul>
             
 
@@ -112,11 +115,11 @@
             <p class="pricing2__price">$25</p>
             <h5 class="pricing2__info">Limited offer</h5>
             <ul>
-                <li class="pricing2__item2">500 MB HDD</li>
-                <li class="pricing2__item2">2 Subdomains</li>
-                <li class="pricing2__item2">5 E-mails</li>
-                <li class="pricing2__item2">One year license</li>
-                <li class="pricing2__item2">Full support</li>
+                <li class="pricing2__item">500 MB HDD</li>
+                <li class="pricing2__item">2 Subdomains</li>
+                <li class="pricing2__item">5 E-mails</li>
+                <li class="pricing2__item">One year license</li>
+                <li class="pricing2__item pricing1__item--red">Full support</li>
             </ul>
             
 
@@ -127,16 +130,14 @@
             <h4 class="pricing3__type">Premium</h4>
             <p class="pricing3__price">$60</p>
             <h5 class="pricing3__info">Limited offer</h5>
-            <img class="pricing3__icono3" src="./assets/img/icons/Checkbox.svg" alt="checkbox">
-            <span class="pricing3__item3">2GB HDD</span>
-            <img class="pricing3__icono3" src="./assets/img/icons/Checkbox.svg" alt="checkbox">
-            <span class="pricing3__item3">5 Subdomains</span>
-            <img class="pricing3__icono3" src="./assets/img/icons/Checkbox.svg" alt="checkbox">
-            <span class="pricing3__item3">20 E-mails</span>
-            <img class="pricing3__icono3" src="./assets/img/icons/Checkbox.svg"alt="checkbox">
-            <span class="pricing3__item3">Two years license</span>
-            <img class="pricing3__icono3" src="./assets/img/icons/Checkbox.svg" alt="checkbox">
-            <span class="pricing3__item3">Full support</span>
+            <ul>
+                <li class="pricing3__item3">2GB HDD</li>
+                <li class="pricing3__item3">5 Subdomains</li>
+                <li class="pricing3__item3">20 E-mails</li>
+                <li class="pricing3__item3">Two years license</li>
+                <li class="pricing3__item3">Full support</li>
+            </ul>
+            
             <button class="pricing3__button">Begin</button>
         </div>
     </div>
@@ -160,10 +161,15 @@
    </main>
    <footer>
     <div class="footer">
-        <p class="footer__brand">OXYGENShop</p>
-        <p class="footer__derechos">© 2022 OXYGEN, All Rights Reserved</p>
-        <img class="footer__logo1" src="./assets/img/icons/twitter.svg" alt="twitter">
-        <img class="footer__logo2" src="./assets/img/icons/facebook.svg" alt="facebook">
+        <div class="footer__contenedor1">
+            <p class="footer__brand">OXYGENShop</p>
+            <p class="footer__derechos">© 2022 OXYGEN, All Rights Reserved</p>
+        </div>
+        <div class="footer__contenedor2">
+            <img class="footer__logo1" src="./assets/img/icons/twitter.svg" alt="twitter">
+            <img class="footer__logo2" src="./assets/img/icons/facebook.svg" alt="facebook">
+        </div>
+        
     </div>
    </footer>
 </body>
