@@ -12,12 +12,15 @@
 <link href="https://fonts.googleapis.com/css2?family=Edu+NSW+ACT+Foundation:wght@500&family=Noto+Sans:ital,wght@0,400;0,500;1,300;1,400&family=Open+Sans:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;1,300;1,400;1,500;1,600;1,700;1,800&family=PT+Sans:ital,wght@0,400;0,700;1,400;1,700&family=Poppins:ital,wght@0,600;0,700;0,800;0,900;1,500;1,600;1,700;1,800;1,900&family=Raleway:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet"> 
     <link rel="stylesheet" href="./css/styles.css">
     <title>Oxygen Shop</title>
+    <script src="./js/main.js" defer></script> 
 </head>
 <body>
    <header class="header">
+    <div id="scroll" class="header__barraScroll">
+    </div>
     <h1 class="header__titulo">OXYGENShop</h1>
-    <img class="header__menu" src="./assets/img/icons/menu.svg" alt="menu">
-    <nav>
+    <img id="menuIcon" class="header__menu" src="./assets/img/icons/menu.svg" alt="menu">
+    <nav id="menu">
         <a class="header__link1" href="#">WHY US</a>
         <a class="header__link2" href="#">BENEFITS</a>
         <a class="header__link3" href="#">PRICES</a>
@@ -26,6 +29,7 @@
 
    </header>
    <main>
+    <div id="upBTN" class="irArriba">go up</div>
     <div class="shop">
         <h2 class="shop__titulo">Sell More!</h2>
         <p class="shop__texto">Open shop on our platform and increase your sales</p>
