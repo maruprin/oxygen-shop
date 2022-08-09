@@ -114,7 +114,7 @@ body{
     height: 50px;
     border: 1px solid map-get($colores, 'verde' );
     border-radius: 50%;
-    padding: 4px;
+    padding: 2px;
     padding-top: 12px;
     background-color: map-get($colores, 'verde' );
     color: map-get($colores, 'blanco' );
@@ -840,6 +840,7 @@ body{
             margin-top: 35px;
         }
 }
+
 //-------------version desktop ------------------------------------------------------------//
 
 @media only screen and (min-width: 1000px) {
