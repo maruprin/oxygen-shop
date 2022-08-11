@@ -152,6 +152,7 @@
         <p class="questions__mail">info@bestshop.xyz</p>
         <img class="questions__icono2"src="./assets/img/icons/phone.svg" alt="phone">
         <p class="questions__tel">123 456 789</p>
+    <form id="form">
         <p class="questions__name">NAME</p>
         <input id="inputName" class="questions__inputName" type="text" name="name">
         <hr id="hrName">
@@ -160,7 +161,8 @@
         <hr id="hrEmail">
         <input id="inputCheck" class="questions__check"type="checkbox" value="permiso">
         <p id="inputTextCheck" class="questions__textPermiso">I hereby give consent for my personal data included in my application to be processed for the purposes of the recruitment process under the European Parliament’s and Council of the European Union Regulation on the Protection of Natural Persons as of 27 April 2016, with regard to the processing of personal data and on the free movement of such data, and repealing Directive 95/46/EC (Data Protection Directive)</p>
-        <button id="btnSend" class="questions__button">Send</button>
+        <button id="btnSend" type="submit" class="questions__button">Send</button>
+    </form>
     </div>
    </main>
    <footer>
@@ -176,5 +178,17 @@
         
     </div>
    </footer>
+     <div id="popup" class="popup">
+        <div id="closeModal" class="popup__close">×</div>
+         <form id="form-newsletter" class="popup__form">
+            <p class="popup__title">Subscribe to our newsletter</p>
+             <label class="poppup__email">Email: </label>
+             <input class="popup__inputEmail" type="email"  id="inputEmailNewsletter" required>
+             <input type="checkbox" id="inputCheckboxNewsletter" class="popup__checkbox" required>
+             <p class="popup__inputTextNewsletter" id="textoCheckboxPopup">I hereby give consent for my personal data included in my application to be processed for the purposes of the recruitment process under the European Parliament’s and Council of the European Union Regulation on the Protection of Natural Persons as of 27 April 2016, with regard to the processing of personal data and on the free movement of such data, and repealing Directive 95/46/EC (Data Protection Directive)</p>
+             <button id="btnSubmit" type="submit" class="popup__btnSubmit">Send</button>
+        </form>
+    </div>
+   
 </body>
 </html>
