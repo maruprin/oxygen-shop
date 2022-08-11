@@ -840,6 +840,27 @@ body{
             margin-top: 35px;
         }
 }
+.popup{
+    display:none;
+    position: absolute;
+    top: 250px;
+    left: 25%;
+    text-align: center;
+    width: 50%;
+    background-color: map-get($colores, 'grisMenos' );
+    padding: 25px;
+    border-radius: 10px;
+    &__close{
+        font-size: 15px;
+    }
+    .visible{
+    display : 'block';
+    position: 'fixed';
+    top : 200px;
+    z-index: 1000;
+}
+}
+
 
 //-------------version desktop ------------------------------------------------------------//
 

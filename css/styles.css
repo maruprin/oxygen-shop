@@ -784,6 +784,27 @@ body {
   margin-top: 35px;
 }
 
+.popup {
+  display: none;
+  position: absolute;
+  top: 250px;
+  left: 25%;
+  text-align: center;
+  width: 50%;
+  background-color: #e8e9ed;
+  padding: 25px;
+  border-radius: 10px;
+}
+.popup__close {
+  font-size: 15px;
+}
+.popup .visible {
+  display: "block";
+  position: "fixed";
+  top: 200px;
+  z-index: 1000;
+}
+
 @media only screen and (min-width: 1000px) {
   .header {
     display: grid;
