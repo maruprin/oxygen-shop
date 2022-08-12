@@ -10,8 +10,8 @@ window.onscroll = function captureScroll() {
   //console.log("Vertical: " + window.scrollY);
   let max = document.body.scrollHeight - innerHeight;
   barra.style.width = `${(window.scrollY / max) * 100}%`;
+  scrolPopup ();
 };
-
 
 document.getElementById("upBTN").addEventListener("click", subir);
 
@@ -20,12 +20,6 @@ function subir(){
     window.scrollTo({top:0, behavior:'smooth'});
   },200)
 }
-
-
-
-
-
-
 
 document.getElementById("inputName").addEventListener("change", validacionName);
   function validacionName() {
@@ -57,10 +51,14 @@ function validacionCkeckBox() {
   
     let inputCheck = document.getElementById('inputCheck');
     let inputTextCheck = document.getElementById('inputTextCheck');
+    let msjError = document.getElementById('msjError')
+    msjError.innerHTML = ''
       if(inputCheck.checked === false){
         inputTextCheck.style.color = 'red';
-    console.log('MEumplo')
-    inputTextCheck.innerHTML += '<br><br>* Este campo obligatorio'
+        msjError.style.color = 'red';
+    console.log('Me cumplo')
+
+    msjError.innerHTML = '<br><br>* Este campo obligatorio'
     
   }
   else{
@@ -98,115 +96,190 @@ form.addEventListener("submit", async () =>{
 })
 
 // creación de popup/modal
+function hide (){
+  let modal = document.getElementById('popup');
+modal.style.display = "none";
+}
 
 //la ventana modal aparece despues de 5 segundos 
- setTimeout(()=>{
-  let modal = document.getElementById('popup');
-  modal.style.display = 'block';
- },5000)
+
+ const showNewsletterModal = () => {
+  localStorage.setItem("showNewsletter", true);}
+
+if (typeof(Storage) !== "undefined") {
+  // 1) ¿Le tengo que mostrar la modal?
+  if(!localStorage.getItem("showNewsletter")) {
+    
+    // Sí... --> Mostrar la ventana modal (dentro de 5 segundos)
+    setTimeout(() => {
+      let modal = document.getElementById('popup');
+      modal.style.display = 'block';
+    }, 5000);
+
+    //aparece modal con scroll del 25%
+
+    function scrolPopup () {
+      let ventanaModal = document.getElementById('popup');
+      const longitud = Math.round(
+        (100 * window.scrollY) / (document.body.clientHeight - window.innerHeight)
+      );
+      totalScreen = `${longitud}%`;
+
+      if (longitud == 25) {
+        ventanaModal.style.display = 'block'
+        ventanaModal.style.position = 'fixed'
+        ventanaModal.style.top = '200px';
+        ventanaModal.style.zIndex = 2000;
+      }
+    };
+  }
 
 //cerrar la ventana con X
 document.getElementById("closeModal").addEventListener("click",()=>{ 
-  let modal = document.getElementById('popup');
-  modal.style.display = "none"; });
+  hide();
+  showNewsletterModal();
+});
+
 
 //cerrar la ventana con escape
 document.body.addEventListener('keydown', (event)=>{
-  let modal = document.getElementById('popup');
+  
   if (event.key==='Escape'){
-    modal.style.display = "none";
+    hide();
   }
+  showNewsletterModal();
 })
 
 //cerrar la ventana haciendo click fuera 
-let modal = document.getElementById('popup');
+
 document.body.addEventListener('click',(e)=>{
   if(!e.target.className.includes('popup')){
-    modal.style.display = 'none';
+    hide();
   }
+  showNewsletterModal();
 })
-
-
-//aparece modal con scroll del 25%
-/*let window =window.onscroll
-window = function puntoScroll() {
-  let scrollTot = document.body.scrollHeight - innerHeight;
-  let unCuarto = scrollTot/4
-  let ventanaModal = document.getElementById('popup');
-  console.log(Math.round(window.scrollY)== unCuarto)
-  console.log(Math.round(window.scrollY))
-  if(Math.round(window.scrollY)== unCuarto){
-   ventanaModal.style.display = 'block'
-   console.log('meejecuto')
   }
-};*/
 
-window.onscroll = function () {
-  let ventanaModal = document.getElementById('popup');
-  const longitud = Math.round(
-    (100 * window.scrollY) / (document.body.clientHeight - window.innerHeight)
-  );
-  totalScreen = `${longitud}%`;
-
-  if (longitud == 25) {
-    ventanaModal.style.display = 'block'
-    ventanaModal.style.position = 'fixed'
-    ventanaModal.style.top = '200px';
-    ventanaModal.style.zIndex = 2000;
-  }
-};
 
 // validacion del email y checkbox
 
- document.getElementById("inputEmailNewsletter").addEventListener("change", validarEmail = () => {
+ document.getElementById("inputEmailNewsletter").addEventListener("change", validarEmail);
+
+function validarEmail () {
   let emailContenido = document.getElementById('inputEmailNewsletter').value;
   let emailInp = document.getElementById('inputEmailNewsletter')
       if(/^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/.test(emailContenido)){
         emailInp.style.border = '1px solid #42eb63';
         console.log('ME cumplo')
+        return true;
       }
       else{
         emailInp.style.border = '1px solid red';
         console.log('NO me cumplo')
+        return false;
       }
-      });
-
+}
 function validarCkeckBox() {
   let inputCB = document.getElementById('inputCheckboxNewsletter');
   let inputCBText = document.getElementById('textoCheckboxPopup');
     if(!inputCB.checked){
       inputCBText.style.color = 'red';
       console.log('entro aqui')
-}
-else{
-  inputCBText.style.color = '#42eb63';
-}
+      return false;
+    }
+    else{
+      inputCBText.style.color = '#42eb63';
+      return true;
+    }
 } 
 
-validarEmail();
-validarCkeckBox();
-
-/*function validacion () {
-
-}
-
-
-formulario.addEventListener("submit", validacion)*/
 let formulario = document.getElementById('form-newsletter')
-//envio de datos por POST
+formulario.addEventListener("submit", async (e) => {
+  e.preventDefault();
 
-formulario.addEventListener("submit", async () =>{
-  let dataEmail = document.getElementById('inputEmailNewsletter').value;
+  if( validarEmail() && validarCkeckBox()) {
+    showNewsletterModal();
+
+    let dataEmail = document.getElementById('inputEmailNewsletter').value;
   let url = 'https://jsonplaceholder.typicode.com/posts';
 
-  const data = JSON.stringify({email: dataEmail});
- try{
-  const response = await fetch(url,{method:'POST',body:data} )
+  const allData = JSON.stringify({email: dataEmail});
+    try{
+  const response = await fetch(url,{method:'POST',body:allData} )
   if (response.ok){
     const jsonResponse = await response.json();
+    hide();
     console.log('enviado')
   }}
-  catch(error) {
+    catch(error) {
     console.log(error)
   }
+  }
 })
+
+//conversor de moneda
+
+const urlChange = 'https://cdn.jsdelivr.net/gh/fawazahmed0/currency-api@1/latest/currencies/usd.json';
+
+let euro;
+let pounds;
+
+const apiMoney = async (url) => {
+  const response = await fetch(url, {
+    method: "GET",
+  });
+
+  try {
+    if (response.ok) {
+      //console.log(response)
+      let json = await response.json();
+      euro = json.usd["eur"];
+      pounds = json.usd["gbp"];
+      //console.log(euro,pounds)
+      return euro, pounds;
+      
+    }
+  } catch (error) {
+    console.log(error);
+  }
+};
+
+apiMoney(urlChange);
+
+
+document.getElementById("priceBasic").innerHTML = '$' + 0;
+document.getElementById("priceProfessional").innerHTML = '$' + 25;
+document.getElementById("pricePremium").innerHTML = '$' + 60;
+
+let select = document.getElementById('pricingSelector');
+
+//select[0] = gbp
+//select[1] = euro
+//select[2] = usd
+
+
+select.addEventListener('change', ()=>{
+
+  let indice = select.selectedIndex;
+  let priceBasic = document.getElementById("priceBasic").innerHTML;
+  let priceProfessional = document.getElementById("priceProfessional").innerHTML;
+  let pricePremium = document.getElementById("pricePremium").innerHTML;
+
+  switch (indice) {
+    case 0:
+      document.getElementById("priceBasic").innerHTML = '£' + Math.round(0 * pounds);
+      document.getElementById("priceProfessional").innerHTML = '£' + Math.round(25 * pounds);
+      document.getElementById("pricePremium").innerHTML = '£' + Math.round(60 * pounds);
+      break;
+    case 1:
+      document.getElementById("priceBasic").innerHTML = Math.round(0 * euro) + '€';
+      document.getElementById("priceProfessional").innerHTML = Math.round(25 * euro) + '€';
+      document.getElementById("pricePremium").innerHTML = Math.round(60 * euro) + '€';
+      break;
+    case 2:
+      document.getElementById("priceBasic").innerHTML = '$' + 0;
+      document.getElementById("priceProfessional").innerHTML = '$' + 25;
+      document.getElementById("pricePremium").innerHTML = '$' + 60;
+  }
+})
+
