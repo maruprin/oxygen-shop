@@ -99,9 +99,16 @@
             Pricing
      </div>
     <div class="pricing">
+        <div class="pricing__currency" >
+            <select name="selectMoneda" class="pricing__currency--select" id="pricingSelector">
+              <option value="gbp" id="gbp-option">GBP - ₤</option>
+              <option value="eur" id="eur-option">EUR - €</option>
+              <option value="usd" id="usd-option" selected>USD - $</option>
+            </select>
+          </div>
         <div class="pricing1">
             <h4 class="pricing1__type">Basic</h4>
-            <p class="pricing1__price">$0</p>
+            <p id="priceBasic" class="pricing1__price"></p>
             <ul>
                 <li class="pricing1__item">100 MB HDD</li>
                 <li class="pricing1__item">1 Subdomain</li>
@@ -116,7 +123,7 @@
 
         <div class="pricing2">
             <h4 class="pricing2__type">Professional</h4>
-            <p class="pricing2__price">$25</p>
+            <p id="priceProfessional" class="pricing2__price"></p>
             <h5 class="pricing2__info">Limited offer</h5>
             <ul>
                 <li class="pricing2__item">500 MB HDD</li>
@@ -132,7 +139,7 @@
 
         <div class="pricing3">
             <h4 class="pricing3__type">Premium</h4>
-            <p class="pricing3__price">$60</p>
+            <p id="pricePremium" class="pricing3__price"></p>
             <h5 class="pricing3__info">Limited offer</h5>
             <ul>
                 <li class="pricing3__item3">2GB HDD</li>
@@ -160,7 +167,7 @@
         <input id="inputEmail" class="questions__inputEmail" type="email" name="email">
         <hr id="hrEmail">
         <input id="inputCheck" class="questions__check"type="checkbox" value="permiso">
-        <p id="inputTextCheck" class="questions__textPermiso">I hereby give consent for my personal data included in my application to be processed for the purposes of the recruitment process under the European Parliament’s and Council of the European Union Regulation on the Protection of Natural Persons as of 27 April 2016, with regard to the processing of personal data and on the free movement of such data, and repealing Directive 95/46/EC (Data Protection Directive)</p>
+        <p id="inputTextCheck" class="questions__textPermiso">I hereby give consent for my personal data included in my application to be processed for the purposes of the recruitment process under the European Parliament’s and Council of the European Union Regulation on the Protection of Natural Persons as of 27 April 2016, with regard to the processing of personal data and on the free movement of such data, and repealing Directive 95/46/EC (Data Protection Directive) <p id="msjError" class="questions__error"> </p></p>
         <button id="btnSend" type="submit" class="questions__button">Send</button>
     </form>
     </div>
@@ -183,8 +190,8 @@
          <form id="form-newsletter" class="popup__form">
             <p class="popup__title">Subscribe to our newsletter</p>
              <label class="poppup__email">Email: </label>
-             <input class="popup__inputEmail" type="email"  id="inputEmailNewsletter" required>
-             <input type="checkbox" id="inputCheckboxNewsletter" class="popup__checkbox" required>
+             <input class="popup__inputEmail" type="email"  id="inputEmailNewsletter">
+             <input type="checkbox" id="inputCheckboxNewsletter" class="popup__checkbox">
              <p class="popup__inputTextNewsletter" id="textoCheckboxPopup">I hereby give consent for my personal data included in my application to be processed for the purposes of the recruitment process under the European Parliament’s and Council of the European Union Regulation on the Protection of Natural Persons as of 27 April 2016, with regard to the processing of personal data and on the free movement of such data, and repealing Directive 95/46/EC (Data Protection Directive)</p>
              <button id="btnSubmit" type="submit" class="popup__btnSubmit">Send</button>
         </form>

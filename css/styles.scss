@@ -10,7 +10,8 @@ $colores: (
     "grisMenos" : #e8e9ed,
     "grisClaro" : #F7F7F7,
     "otroGris" : #707070,
-    "grisHR" : #95989a
+    "grisHR" : #95989a,
+    "verdeClaro" : #b0fae3,
 );
 
 $fuentes:(
@@ -419,6 +420,16 @@ body{
        
     }
 .pricing{
+    &__currency{
+        width: 40px;
+        margin: 0 auto;
+    }
+    &__currency--select{
+        background-color: map-get($colores, 'verdeClaro' );
+        background-color: #b0fae3;
+        border-radius: 5px;
+        padding: 5px;
+    }
     .pricing1{
         box-sizing: border-box;
         position: relative;
@@ -771,8 +782,14 @@ body{
         line-height: 16px;
         color: map-get($colores, "otroGris" );
         padding-right: 60px;
-        margin-bottom: 20px;
+        margin-bottom: 5px;
         
+    }
+    &__error{
+        margin-left: 60%;
+        font-style: normal;
+        font-weight: 400;
+        font-size: 12px;
     }
     &__button{
         width: 226px;
