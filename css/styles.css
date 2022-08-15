@@ -41,7 +41,7 @@ body {
   font-size: 32px;
 }
 .header__menu {
-  width: 5%;
+  width: 30px;
 }
 .header nav {
   display: none;
