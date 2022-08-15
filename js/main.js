@@ -116,22 +116,7 @@ if (typeof(Storage) !== "undefined") {
       modal.style.display = 'block';
     }, 5000);
 
-    //aparece modal con scroll del 25%
-
-    function scrolPopup () {
-      let ventanaModal = document.getElementById('popup');
-      const longitud = Math.round(
-        (100 * window.scrollY) / (document.body.clientHeight - window.innerHeight)
-      );
-      totalScreen = `${longitud}%`;
-
-      if (longitud == 25) {
-        ventanaModal.style.display = 'block'
-        ventanaModal.style.position = 'fixed'
-        ventanaModal.style.top = '200px';
-        ventanaModal.style.zIndex = 2000;
-      }
-    };
+    
   }
 
 //cerrar la ventana con X
@@ -160,6 +145,22 @@ document.body.addEventListener('click',(e)=>{
 })
   }
 
+//aparece modal con scroll del 25%
+
+function scrolPopup () {
+  let ventanaModal = document.getElementById('popup');
+  const longitud = Math.round(
+    (100 * window.scrollY) / (document.body.clientHeight - window.innerHeight)
+  );
+  totalScreen = `${longitud}%`;
+
+  if (longitud == 25) {
+    ventanaModal.style.display = 'block'
+    ventanaModal.style.position = 'fixed'
+    ventanaModal.style.top = '200px';
+    ventanaModal.style.zIndex = 2000;
+  }
+};
 
 // validacion del email y checkbox
 
@@ -282,4 +283,106 @@ select.addEventListener('change', ()=>{
       document.getElementById("pricePremium").innerHTML = '$' + 60;
   }
 })
+
+//Crear un ‘Slider’ con esta funcionalidad (botones prev/next, puntos para las imágenes individuales, avanza automáticamente): 
+//Después de la sección de precios. El HTML será un <div> con el id ‘slider’, que contiene varios elementos <img />. El JS Será una clase ‘Slider’, cuyo constructor acepta 1 parámetro, un string con el ID del elemento principal (‘slider’). Puedes obtener imágenes de https://librestock.com/. 
+
+class Slider {
+  constructor(imagenPrincipal){
+    this.imagenPrincipal = imagenPrincipal;
+  }
+}
+// pasar el slider con botones bolita
+
+let botones = document.querySelectorAll(".slider__btn");
+for(i=0;i<botones.length;i++){
+  
+  botones[i].addEventListener('click', (e)=>{
+    const imagenes = document.querySelectorAll('.slider__sliderContainer__imgSlider')
+    console.log(imagenes)
+    for(i=0;i<imagenes.length;i++){
+       if(e.target.value == i){
+      imagenes[i].classList.add('slider__sliderContainer__show')
+    }else{
+      imagenes[i].classList.remove('slider__sliderContainer__show')
+    }
+    }
+  }) 
+  
+}
+//pasar imagenes slider con flechas
+
+document.getElementById('arrowLeft').addEventListener('click',()=>{
+  console.log('permiso, voy a la izquierda')
+  const imagenes = document.querySelectorAll('.slider__getId')
+  let currentIndex;
+  let indexToShow;
+  for(i=0;i<imagenes.length;i++){
+    let claseIMG = imagenes[i].getAttribute('class');
+    let selectIMG= claseIMG.includes('slider__sliderContainer__show')
+      if(selectIMG){
+        currentIndex = i;
+      }
+  }
+  if(currentIndex == 0){
+    indexToShow = imagenes.length-1;
+  }
+  else{
+    indexToShow = currentIndex - 1;
+  }
+for(i=0;i<imagenes.length;i++){
+  if(i==indexToShow){
+     imagenes[i].classList.add('slider__sliderContainer__show')
+  }
+  else{
+    imagenes[i].classList.remove('slider__sliderContainer__show')
+  }
+ 
+}
+ 
+
+
+})
+
+
+
+let pasarDerecha = () =>{
+  console.log('permiso, voy a la derecha')
+  const imagenes = document.querySelectorAll('.slider__getId')
+  let currentIndex;
+  let indexToShow;
+  for(i=0;i<imagenes.length;i++){
+    let claseIMG = imagenes[i].getAttribute('class');
+    let selectIMG= claseIMG.includes('slider__sliderContainer__show')
+      if(selectIMG){
+        currentIndex = i;
+      }
+  }
+  if(currentIndex == imagenes.length-1){
+    indexToShow = 0;
+  }
+  else{
+    indexToShow = currentIndex + 1;
+  }
+for(i=0;i<imagenes.length;i++){
+  if(i==indexToShow){
+     imagenes[i].classList.add('slider__sliderContainer__show')
+  }
+  else{
+    imagenes[i].classList.remove('slider__sliderContainer__show')
+  }
+ 
+}
+}
+document.getElementById('arrowRight').addEventListener('click',pasarDerecha)
+
+const imagenes = document.querySelectorAll('.slider__getId')
+
+
+
+ // setTimeout(pasarDerecha,2000) 
+  setInterval(pasarDerecha,4000)
+
+   
+
 
