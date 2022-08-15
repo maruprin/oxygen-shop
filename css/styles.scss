@@ -409,6 +409,76 @@ body{
     }
    
 }  
+.slider{
+    width: 100%;
+    margin-bottom: 150px;
+
+    &__sliderContainer{
+    position: relative;
+    background: white;
+    max-width: 750px;
+    width: 100%;
+    height: 450px;
+    margin: 0 auto;
+    margin-bottom: 20px;
+
+        &__imgSlider{
+            position: absolute;
+            object-fit: cover;
+            opacity: 0;
+            height: 100%;
+            width: 100%;
+            transition: 400ms ease-in;
+        }
+        &__show{
+            position: absolute;
+            object-fit: cover;
+            opacity: 1;
+            height: 100%;
+            width: 100%;
+            transition: 400ms ease-in;
+        }
+        &__arrowRight{
+            font-size: 40px;
+            z-index: 100;
+            position: absolute;
+            color: white;
+            top: 200px;
+            left: 94%;
+        }
+        &__arrowLeft{
+            font-size: 40px;
+            z-index: 100;
+            position: absolute;
+            color: white;
+            top: 200px;
+            left: 0%;
+        }
+        &__arrowLeft:hover{
+            color: map-get($colores, 'rosaRojo' );
+        }
+        &__arrowRight:hover{
+            color: map-get($colores, 'rosaRojo' );
+        }
+
+    }
+    &__btnContainer{
+        width: 120px;
+        margin: 0 auto;
+    }
+    &__btn{
+        width: 15px;
+        height: 15px;
+        border-radius: 50%;
+        background-color: map-get($colores, 'gris' );
+        margin-left: 10px;
+        border: none;
+    }
+    &__btn:hover{
+        background-color: map-get($colores, 'celeste' );
+    }
+}
+
  .pricing-titulo{
         font-family: map-get($fuentes, "titulo" );
         font-style: normal;
@@ -417,12 +487,12 @@ body{
         line-height: 42px;
         text-align: center;
         margin-bottom: 40px;
-       
     }
 .pricing{
     &__currency{
         width: 40px;
         margin: 0 auto;
+        margin-bottom: 30px;
     }
     &__currency--select{
         background-color: map-get($colores, 'verdeClaro' );
