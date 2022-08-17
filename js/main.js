@@ -336,7 +336,6 @@ document.getElementById('arrowLeft').addEventListener('click',()=>{
 })
 
 let pasarDerecha = () =>{
-//console.log('permiso, voy a la derecha')
   const imagenes = document.querySelectorAll('.slider__getId')
   let currentIndex;
   let indexToShow;
