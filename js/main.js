@@ -4,7 +4,7 @@ document.getElementById("menuIcon").addEventListener("click", aparece);
 function aparece() {
   document.getElementById("menu").classList.toggle('open');
   if(document.getElementById('menu').getAttribute("class")=="open"){
-    document.getElementById("menuIcon").src="/assets/img/icons/x-solid.svg";
+    document.getElementById("menuIcon").src="assets/img/icons/x-solid.svg";
     document.getElementById("menuIcon").style.width = '30px';
   }
   else{
