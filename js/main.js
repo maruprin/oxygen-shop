@@ -8,7 +8,7 @@ function aparece() {
     document.getElementById("menuIcon").style.width = '30px';
   }
   else{
-    document.getElementById("menuIcon").src="/assets/img/icons/menu.svg";
+    document.getElementById("menuIcon").src="assets/img/icons/menu.svg";
   }
 }
 // barra de scroll
