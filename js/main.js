@@ -32,32 +32,31 @@ function subir(){
 }
 
 //validacion de formulario
+
 document.getElementById("inputName").addEventListener("change", validacionName);
 function validacionName() {
   let inputName = document.getElementById('inputName').value;
-  let hrName = document.getElementById('hrName');
+  let inputNameBorder = document.getElementById('inputName')
   if(inputName.length > 200 || inputName.length < 2){
-    hrName.style.color = 'red';
-    console.log('mecumplo')
+    inputNameBorder.style.borderBottom = '2px solid #fb3b64'
     return false;
   }
   else{
-    hrName.style.color = '#42eb63';
-    console.log('nomecumplo')
+    inputNameBorder.style.borderBottom = '2px solid #42eb63'
     return true;
   }
 }
 document.getElementById("inputEmail").addEventListener("change", validacionEmail);
 function validacionEmail() {
   let inputEmail = document.getElementById('inputEmail').value;
-  let hrEmail = document.getElementById('hrEmail');
+  let inputEmailBorder = document.getElementById('inputEmail')
   if(/^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/.test(inputEmail)){
-    hrEmail.style.color = '#42eb63';
+    inputEmailBorder.style.borderBottom = '2px solid #42eb63'
     console.log('ME cumplo')
     return true;
   }
   else{
-    hrEmail.style.color = 'red';
+    inputEmailBorder.style.borderBottom = '2px solid #fb3b64'
     console.log('NO me cumplo')
     return false;
   }
@@ -69,8 +68,8 @@ function validacionCkeckBox() {
   let msjError = document.getElementById('msjError')
   msjError.innerHTML = ''
   if(inputCheck.checked === false){
-    inputTextCheck.style.color = 'red';
-    msjError.style.color = 'red';
+    inputTextCheck.style.color = '#fb3b64';
+    msjError.style.color = '#fb3b64';
     msjError.innerHTML = '<br><br>* Este campo obligatorio'
     return false;
   }

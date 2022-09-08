@@ -27,14 +27,14 @@ body {
 .header__barraScroll {
   width: 0;
   height: 10px;
-  background-color: #FB3B64;
+  background-color: #fb3b64;
   position: fixed;
   z-index: 100;
   top: 0px;
   left: 0px;
 }
 .header__titulo {
-  color: #08A6E4;
+  color: #08a6e4;
   font-family: Raleway;
   font-style: normal;
   font-weight: 300;
@@ -47,7 +47,7 @@ body {
   display: none;
 }
 .header__link1, .header__link2, .header__link3, .header__link4 {
-  color: #A5A5A5;
+  color: #a5a5a5;
   font-style: normal;
   font-weight: 600;
   font-size: 11px;
@@ -68,7 +68,7 @@ body {
 }
 .header__link1, .header__link2, .header__link3, .header__link4 {
   display: block;
-  color: #A5A5A5;
+  color: #a5a5a5;
   font-style: normal;
   font-weight: 600;
   font-size: 11px;
@@ -89,11 +89,11 @@ body {
 .irArriba {
   width: 50px;
   height: 50px;
-  border: 1px solid #55DFB4;
+  border: 1px solid #55dfb4;
   border-radius: 50%;
   padding: 2px;
   padding-top: 12px;
-  background-color: #55DFB4;
+  background-color: #55dfb4;
   color: white;
   font-family: "Raleway";
   font-size: 15px;
@@ -105,8 +105,8 @@ body {
 }
 
 .irArriba:hover {
-  background-color: #FB3B64;
-  border: 1px solid #FB3B64;
+  background-color: #fb3b64;
+  border: 1px solid #fb3b64;
 }
 
 .shop__titulo {
@@ -130,7 +130,7 @@ body {
 .shop__button {
   width: 310px;
   height: 67px;
-  background-color: #08A6E4;
+  background-color: #08a6e4;
   box-shadow: 5px 10px 14px rgba(7, 172, 230, 0.29);
   border-radius: 40px;
   color: white;
@@ -144,8 +144,8 @@ body {
 }
 .shop__button:hover {
   background-color: white;
-  color: #08A6E4;
-  border: 1px solid #08A6E4;
+  color: #08a6e4;
+  border: 1px solid #08a6e4;
 }
 .shop__image {
   background-image: url("../assets/img/background.png");
@@ -171,8 +171,8 @@ body {
 .rating .rating1__item1 {
   width: 90px;
   height: 90px;
-  border: 1px solid #FB3B64;
-  background-color: #FB3B64;
+  border: 1px solid #fb3b64;
+  background-color: #fb3b64;
   border-radius: 50%;
   margin: 0 auto;
   margin-bottom: 20px;
@@ -194,7 +194,7 @@ body {
   letter-spacing: 3.28px;
 }
 .rating .rating1__comment1 {
-  color: #A5A5A5;
+  color: #a5a5a5;
   font-family: Raleway;
   font-style: normal;
   font-weight: 400;
@@ -208,8 +208,8 @@ body {
 .rating .rating2__item2 {
   width: 90px;
   height: 90px;
-  border: 1px solid #08A6E4;
-  background-color: #08A6E4;
+  border: 1px solid #08a6e4;
+  background-color: #08a6e4;
   border-radius: 50%;
   margin: 0 auto;
   margin-bottom: 20px;
@@ -231,7 +231,7 @@ body {
   letter-spacing: 3.28px;
 }
 .rating .rating2__comment2 {
-  color: #A5A5A5;
+  color: #a5a5a5;
   font-family: Raleway;
   font-style: normal;
   font-weight: 400;
@@ -245,8 +245,8 @@ body {
 .rating .rating3__item3 {
   width: 90px;
   height: 90px;
-  border: 1px solid #55DFB4;
-  background-color: #55DFB4;
+  border: 1px solid #55dfb4;
+  background-color: #55dfb4;
   border-radius: 50%;
   margin: 0 auto;
   margin-bottom: 20px;
@@ -268,7 +268,7 @@ body {
   letter-spacing: 3.28px;
 }
 .rating .rating3__comment3 {
-  color: #A5A5A5;
+  color: #a5a5a5;
   font-family: Raleway;
   font-style: normal;
   font-weight: 400;
@@ -278,8 +278,9 @@ body {
 }
 
 .news {
-  background-color: #F7F7F7;
+  background-color: #f7f7f7;
   padding: 60px;
+  margin: 0 auto;
   margin-bottom: 40px;
 }
 .news__block {
@@ -300,7 +301,7 @@ body {
 .news__item1 {
   width: 90.12px;
   height: 90.12px;
-  background: #FB3B64;
+  background: #fb3b64;
   border-radius: 41px;
   transform: rotate(-45deg);
   position: absolute;
@@ -343,7 +344,7 @@ body {
 .news__item2 {
   width: 131.88px;
   height: 131.7px;
-  background: #08A6E4;
+  background: #08a6e4;
   border-radius: 50%;
   position: absolute;
   top: 10px;
@@ -366,7 +367,7 @@ body {
   z-index: 1;
   margin: 0 auto;
   margin-top: 30px;
-  background-color: #55DFB4;
+  background-color: #55dfb4;
   padding: 30px 0 10px 0;
 }
 
@@ -418,10 +419,10 @@ body {
   left: 0%;
 }
 .slider__sliderContainer__arrowLeft:hover {
-  color: #FB3B64;
+  color: #fb3b64;
 }
 .slider__sliderContainer__arrowRight:hover {
-  color: #FB3B64;
+  color: #fb3b64;
 }
 .slider__btnContainer {
   width: 120px;
@@ -431,12 +432,12 @@ body {
   width: 15px;
   height: 15px;
   border-radius: 50%;
-  background-color: #A5A5A5;
+  background-color: #a5a5a5;
   margin-left: 10px;
   border: none;
 }
 .slider__btn:hover {
-  background-color: #08A6E4;
+  background-color: #08a6e4;
 }
 
 .pricing-titulo {
@@ -446,26 +447,26 @@ body {
   font-size: 36px;
   line-height: 42px;
   text-align: center;
-  margin-bottom: 40px;
+  margin-bottom: 20px;
 }
 
-.pricing__currency {
-  width: 40px;
-  margin: 0 auto;
-  margin-bottom: 30px;
+.pricing-currency {
+  width: 80px;
+  margin: 0px auto;
+  margin-bottom: 40px;
 }
-.pricing__currency--select {
-  background-color: #b0fae3;
+.pricing-currency__select {
   background-color: #b0fae3;
   border-radius: 5px;
   padding: 5px;
 }
+
 .pricing .pricing1 {
   box-sizing: border-box;
   position: relative;
-  width: 293px;
+  width: 300px;
   height: 251px;
-  border: 1px solid #FB3B64;
+  border: 1px solid #fb3b64;
   border-radius: 18px;
   margin: 0 auto;
   margin-bottom: 60px;
@@ -480,7 +481,7 @@ body {
   margin-left: 50px;
 }
 .pricing .pricing1__price {
-  color: #FB3B64;
+  color: #fb3b64;
   font-style: normal;
   font-weight: 300;
   font-size: 46px;
@@ -519,29 +520,32 @@ body {
   background-image: url("../assets/img/icons/Cross.svg");
 }
 .pricing .pricing1__button {
-  background-color: #FB3B64;
+  background-color: #fb3b64;
   position: relative;
   width: 150px;
   height: 50px;
   border-radius: 23px;
   top: -140px;
-  left: 70px;
+  left: 75px;
   border: none;
   color: white;
 }
 .pricing .pricing1__button:hover {
   background-color: white;
-  color: #FB3B64;
-  border: 1px solid #FB3B64;
+  color: #fb3b64;
+  border: 1px solid #fb3b64;
+}
+.pricing .pricing1:hover {
+  transform: scale(1.05);
+  box-shadow: 5px 10px 27px rgba(251, 59, 100, 0.4);
 }
 .pricing .pricing2 {
   box-sizing: border-box;
   position: relative;
-  width: 339px;
-  height: 277px;
-  border: 1px solid #08A6E4;
+  width: 300px;
+  height: 251px;
+  border: 1px solid #08a6e4;
   border-radius: 18px;
-  box-shadow: 5px 10px 27px rgba(7, 172, 230, 0.29);
   margin: 0 auto;
   margin-bottom: 60px;
 }
@@ -552,10 +556,10 @@ body {
   font-size: 20px;
   line-height: 24px;
   margin-top: 80px;
-  margin-left: 25px;
+  margin-left: 15px;
 }
 .pricing .pricing2__price {
-  color: #08A6E4;
+  color: #08a6e4;
   font-style: normal;
   font-weight: 300;
   font-size: 46px;
@@ -581,8 +585,8 @@ body {
   padding-left: 20px;
   position: relative;
   margin-bottom: 17px;
-  top: -150px;
-  left: 170px;
+  top: -157px;
+  left: 144px;
 }
 .pricing .pricing2 ul li::before {
   content: "";
@@ -599,27 +603,31 @@ body {
   background-image: url("../assets/img/icons/Cross.svg");
 }
 .pricing .pricing2__button {
-  background-color: #08A6E4;
+  background-color: #08a6e4;
   position: relative;
   width: 150px;
   height: 50px;
   border-radius: 23px;
-  top: -135px;
-  left: 85px;
+  top: -164px;
+  left: 75px;
   border: none;
   color: white;
 }
 .pricing .pricing2__button:hover {
   background-color: white;
-  color: #08A6E4;
-  border: 1px solid #08A6E4;
+  color: #08a6e4;
+  border: 1px solid #08a6e4;
+}
+.pricing .pricing2:hover {
+  transform: scale(1.05);
+  box-shadow: 5px 10px 27px rgba(8, 166, 228, 0.4);
 }
 .pricing .pricing3 {
   box-sizing: border-box;
   position: relative;
-  width: 293px;
+  width: 300px;
   height: 251px;
-  border: 1px solid #55DFB4;
+  border: 1px solid #55dfb4;
   border-radius: 18px;
   margin: 0 auto;
   margin-bottom: 90px;
@@ -634,7 +642,7 @@ body {
   margin-left: 25px;
 }
 .pricing .pricing3__price {
-  color: #55DFB4;
+  color: #55dfb4;
   font-style: normal;
   font-weight: 300;
   font-size: 46px;
@@ -674,20 +682,24 @@ body {
   left: 2px;
 }
 .pricing .pricing3__button {
-  background-color: #55DFB4;
+  background-color: #55dfb4;
   position: relative;
   width: 150px;
   height: 50px;
   border-radius: 23px;
   top: -140px;
-  left: 70px;
+  left: 75px;
   border: none;
   color: white;
 }
 .pricing .pricing3__button:hover {
   background-color: white;
-  color: #55DFB4;
-  border: 1px solid #55DFB4;
+  color: #55dfb4;
+  border: 1px solid #55dfb4;
+}
+.pricing .pricing3:hover {
+  transform: scale(1.05);
+  box-shadow: 5px 10px 27px rgba(85, 223, 180, 0.4);
 }
 
 .questions {
@@ -720,7 +732,7 @@ body {
   font-style: normal;
   font-weight: 500;
   font-size: 16px;
-  color: #A5A5A5;
+  color: #a5a5a5;
   margin-top: -25px;
   margin-left: 90px;
 }
@@ -734,7 +746,7 @@ body {
   font-style: normal;
   font-weight: 500;
   font-size: 16px;
-  color: #A5A5A5;
+  color: #a5a5a5;
   margin-top: -25px;
   margin-left: 90px;
 }
@@ -744,7 +756,7 @@ body {
   font-size: 11px;
   line-height: 15px;
   letter-spacing: 3.28px;
-  color: #08A6E4;
+  color: #08a6e4;
   margin-left: 50px;
   margin-top: 50px;
 }
@@ -754,12 +766,13 @@ body {
   border: none;
   margin-left: 50px;
   text-align: center;
+  border-bottom: 3px solid #a5a5a5;
+  margin-bottom: 0px;
 }
-.questions hr {
-  width: 312px;
-  margin-left: 50px;
-  margin-top: 0px;
-  color: #95989a;
+.questions__inputName:focus-visible {
+  border: 0;
+  outline: none;
+  border-bottom: 3px solid #fb3b64;
 }
 .questions__email {
   font-style: normal;
@@ -767,9 +780,9 @@ body {
   font-size: 11px;
   line-height: 15px;
   letter-spacing: 3.28px;
-  color: #08A6E4;
+  color: #08a6e4;
   margin-left: 50px;
-  margin-top: 50px;
+  margin-top: 30px;
 }
 .questions__inputEmail {
   width: 312px;
@@ -777,15 +790,21 @@ body {
   border: none;
   margin-left: 50px;
   text-align: center;
+  border-bottom: 2px solid #a5a5a5;
+}
+.questions__inputEmail:focus-visible {
+  border: 0;
+  outline: none;
+  border-bottom: 2px solid #fb3b64;
 }
 .questions__check {
   width: 24px;
   height: 24px;
-  border: 1px solid #95989A;
+  border: 1px solid #95989a;
   border-radius: 4px;
-  position: relative;
-  top: 40px;
-  left: 45px;
+  margin-top: 30px;
+  display: block;
+  margin-left: 50px;
 }
 .questions__textPermiso {
   margin-left: 100px;
@@ -796,34 +815,36 @@ body {
   color: #707070;
   padding-right: 60px;
   margin-bottom: 5px;
+  margin-top: -27px;
 }
 .questions__error {
-  margin-left: 60%;
+  margin-left: 40%;
   font-style: normal;
   font-weight: 400;
   font-size: 12px;
+  margin-top: -20px;
 }
 .questions__button {
   width: 226px;
   height: 57px;
   color: white;
-  background: #08A6E4;
+  background: #08a6e4;
   box-shadow: 5px 10px 14px rgba(7, 172, 230, 0.29);
   border-radius: 35px;
-  margin-left: 130px;
-  margin-top: 20px;
+  margin-left: 25%;
+  margin-top: 60px;
   border: none;
   margin-bottom: 40px;
 }
 .questions__button:hover {
   background-color: white;
-  color: #08A6E4;
-  border: 1px solid #08A6E4;
+  color: #08a6e4;
+  border: 1px solid #08a6e4;
 }
 
 .footer {
   height: 89px;
-  background: #F7F7F7;
+  background: #f7f7f7;
   box-shadow: 0px -5px 40px rgba(0, 0, 0, 0.2);
   position: relative;
   display: grid;
@@ -840,7 +861,7 @@ body {
   font-weight: 300;
   font-size: 26px;
   line-height: 30px;
-  color: #08A6E4;
+  color: #08a6e4;
   margin-left: 10%;
   margin-top: 15px;
 }
@@ -849,7 +870,7 @@ body {
   font-weight: 400;
   font-size: 11px;
   line-height: 15px;
-  color: #A5A5A5;
+  color: #a5a5a5;
   margin-left: 10%;
   margin-top: 0px;
 }
@@ -858,16 +879,23 @@ body {
   flex-direction: row;
   gap: 15px;
 }
-.footer__logo1 {
-  width: 24px;
-  height: 24px;
-  margin-top: 35px;
-  margin-left: 70%;
+.footer__link1 {
+  margin-left: 60%;
 }
-.footer__logo2 {
+.footer__link1--logo1 {
+  width: 30px;
+  height: 30px;
+  margin-top: 35px;
+  margin-left: 60%;
+  color: #08a6e4;
+}
+.footer__link2 {
+  margin-left: 5%;
+}
+.footer__link2--logo2 {
   width: 24px;
   height: 24px;
-  margin-top: 35px;
+  margin-top: 37px;
 }
 
 .popup {
@@ -913,7 +941,7 @@ body {
     text-align: center;
   }
   .header__link1:hover, .header__link2:hover, .header__link3:hover, .header__link4:hover {
-    border-bottom: 4px solid #08A6E4;
+    border-bottom: 4px solid #08a6e4;
     color: black;
   }
   .irArriba {
@@ -1010,18 +1038,18 @@ body {
   }
   .news hr#hr1 {
     display: block;
-    border: 2px solid #FB3B64;
+    border: 2px solid #fb3b64;
     width: 330px;
   }
   .news hr#hr2 {
     display: block;
-    border: 2px solid #08A6E4;
+    border: 2px solid #08a6e4;
     width: 330px;
     margin-left: 123px;
   }
   .news hr#hr3 {
     display: block;
-    border: 2px solid #55DFB4;
+    border: 2px solid #55dfb4;
     width: 330px;
     margin-left: -210px;
     margin-top: -30px;
@@ -1063,11 +1091,11 @@ body {
   }
   .pricing .pricing1__button {
     top: 103px;
-    left: 20%;
+    left: 32%;
   }
   .pricing .pricing2 {
-    width: 30%;
-    height: 500px;
+    width: 25%;
+    height: 461px;
     margin-left: -40px;
     margin-right: -40px;
     padding: 30px;
@@ -1090,8 +1118,8 @@ body {
     left: 90px;
   }
   .pricing .pricing2__button {
-    top: 123px;
-    left: 27%;
+    top: 80px;
+    left: 32%;
   }
   .pricing .pricing3 {
     width: 25%;
@@ -1118,7 +1146,7 @@ body {
   }
   .pricing .pricing3__button {
     top: 86px;
-    left: 22%;
+    left: 32%;
   }
   .questions__titulo {
     margin-left: 19%;
@@ -1134,17 +1162,17 @@ body {
     margin-left: 19%;
   }
   .questions__mail {
-    margin-top: -26px;
-    margin-left: 22%;
+    margin-top: -28px;
+    margin-left: 21.5%;
   }
   .questions__icono2 {
-    margin-left: 35%;
+    margin-left: 36%;
     margin-top: 0px;
     position: relative;
     top: -21px;
   }
   .questions__tel {
-    margin-top: -47px;
+    margin-top: -48px;
     margin-left: 38%;
   }
   .questions__name {
@@ -1158,13 +1186,6 @@ body {
     position: relative;
     top: -152px;
   }
-  .questions hr {
-    margin-left: 53%;
-    margin-top: 0px;
-    position: relative;
-    top: -154px;
-    margin-bottom: 55px;
-  }
   .questions__email {
     margin-left: 53%;
     margin-top: 0;
@@ -1174,19 +1195,39 @@ body {
   .questions__inputEmail {
     margin-left: 53%;
     position: relative;
-    top: -153px;
+    top: -100px;
   }
   .questions__check {
-    top: -181px;
-    left: 53%;
+    margin-top: -40px;
+    margin-left: 53%;
   }
   .questions__textPermiso {
-    padding-right: 159px;
+    padding-right: 230px;
     margin-left: 56%;
-    margin-top: -212px;
+    margin-top: -30px;
+  }
+  .questions__error {
+    margin-left: 60%;
   }
   .questions__button {
     margin-left: 70%;
-    margin-top: 19px;
+    margin-top: 59px;
+  }
+  .footer__link1 {
+    margin-left: 75%;
+  }
+  .footer__link1--logo1 {
+    width: 40px;
+    height: 40px;
+    margin-top: 25px;
+    margin-left: 80%;
+  }
+  .footer__link2 {
+    margin-left: 4%;
+  }
+  .footer__link2--logo2 {
+    width: 30px;
+    height: 30px;
+    margin-top: 30px;
   }
 }/*# sourceMappingURL=styles.css.map */

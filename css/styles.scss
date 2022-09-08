@@ -1,24 +1,23 @@
 $colores: (
-    "casiBlanco" : #E5E5E5,
-    "celeste" : #08A6E4,
-    "rosaRojo" : #FB3B64,
-    "verde" : #55DFB4,
-    "negro" : black,
-    "gris" : #A5A5A5,
-    "azulFB" : #3B5998,
-    "blanco" : white,
-    "grisMenos" : #e8e9ed,
-    "grisClaro" : #F7F7F7,
-    "otroGris" : #707070,
-    "grisHR" : #95989a,
-    "verdeClaro" : #b0fae3,
+  "casiBlanco": #e5e5e5,
+  "celeste": #08a6e4,
+  "rosaRojo": #fb3b64,
+  "verde": #55dfb4,
+  "negro": black,
+  "gris": #a5a5a5,
+  "azulFB": #3b5998,
+  "blanco": white,
+  "grisMenos": #e8e9ed,
+  "grisClaro": #f7f7f7,
+  "otroGris": #707070,
+  "grisHR": #95989a,
+  "verdeClaro": #b0fae3,
 );
 
-$fuentes:(
-    "titulo" : Raleway,
-    "textos" : "Open sans"
-)
-;
+$fuentes: (
+  "titulo": Raleway,
+  "textos": "Open sans",
+);
 /* Ejemplo de como usar las variables con el map-get
     p{
         color: map-get($colores , "rosaRojo");
@@ -26,63 +25,66 @@ $fuentes:(
 }*/
 
 * {
-    box-sizing: border-box;
-    margin: 0;
-    padding: 0;
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
 }
 
-body{
-    font-family: map-get($fuentes, "textos" );
-    background-color: map-get($colores, "blanco" );
-    min-width: 320px;
+body {
+  font-family: map-get($fuentes, "textos");
+  background-color: map-get($colores, "blanco");
+  min-width: 320px;
 }
-.header{
-    display: flex;
-    height: 70px;
-    box-shadow: 0px 3px 6px rgba(0, 0, 0, 0.29);
-    align-items: center;
-    justify-content: space-between;
-    padding: 0 20px;
-    margin-bottom: 80px;
-    &__barraScroll{
-        width: 0;
-        height: 10px;
-        background-color: map-get($colores, 'rosaRojo' );
-        position: fixed;
-        z-index: 100;
-        top: 0px;
-        left: 0px;
-    }
-    &__titulo{
-        color: map-get($colores, "celeste" );
-        font-family: map-get($fuentes, "titulo" );
-        font-style: normal;
-        font-weight: 300;
-        font-size: 32px;
-    }
-    &__menu{
-        width: 30px;
-    }
-    //&__menuOpen{
-    //    src: url('/assets/img/icons/x-solid.svg');
-    //    color: map-get($colores, "gris" );
-    //}
-    nav{
-        display: none;
-    }
-    &__link1,&__link2,&__link3,&__link4{
-        color: map-get($colores, "gris" );
-        font-style: normal;
-        font-weight: 600;
-        font-size: 11px;
-        line-height: 15px;
-        text-align: center;
-        letter-spacing: 3.28px;
-        text-transform: uppercase;
-    }
+.header {
+  display: flex;
+  height: 70px;
+  box-shadow: 0px 3px 6px rgba(0, 0, 0, 0.29);
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 20px;
+  margin-bottom: 80px;
+  &__barraScroll {
+    width: 0;
+    height: 10px;
+    background-color: map-get($colores, "rosaRojo");
+    position: fixed;
+    z-index: 100;
+    top: 0px;
+    left: 0px;
+  }
+  &__titulo {
+    color: map-get($colores, "celeste");
+    font-family: map-get($fuentes, "titulo");
+    font-style: normal;
+    font-weight: 300;
+    font-size: 32px;
+  }
+  &__menu {
+    width: 30px;
+  }
+  //&__menuOpen{
+  //    src: url('/assets/img/icons/x-solid.svg');
+  //    color: map-get($colores, "gris" );
+  //}
+  nav {
+    display: none;
+  }
+  &__link1,
+  &__link2,
+  &__link3,
+  &__link4 {
+    color: map-get($colores, "gris");
+    font-style: normal;
+    font-weight: 600;
+    font-size: 11px;
+    line-height: 15px;
+    text-align: center;
+    letter-spacing: 3.28px;
+    text-transform: uppercase;
+  }
 }
-.header{
-    nav.open{
+.header {
+  nav.open {
     display: block;
     width: 100%;
     position: absolute;
@@ -90,11 +92,14 @@ body{
     background: white;
     box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.29);
     left: 0px;
-}
+  }
 
-    &__link1,&__link2,&__link3,&__link4{
+  &__link1,
+  &__link2,
+  &__link3,
+  &__link4 {
     display: block;
-    color: map-get($colores, "gris" );
+    color: map-get($colores, "gris");
     font-style: normal;
     font-weight: 600;
     font-size: 11px;
@@ -106,316 +111,313 @@ body{
     margin-bottom: 26px;
     margin-top: 18px;
     margin-left: 5%;
-}
-&__link1:hover,&__link2:hover,&__link3:hover,&__link4:hover{
-    color: map-get($colores, "negro" );
+  }
+  &__link1:hover,
+  &__link2:hover,
+  &__link3:hover,
+  &__link4:hover {
+    color: map-get($colores, "negro");
     font-weight: 700;
- }
+  }
 }
-.irArriba{
-    width: 50px;
-    height: 50px;
-    border: 1px solid map-get($colores, 'verde' );
-    border-radius: 50%;
-    padding: 2px;
-    padding-top: 12px;
-    background-color: map-get($colores, 'verde' );
-    color: map-get($colores, 'blanco' );
-    font-family: 'Raleway';
-    font-size: 15px;
-    position: fixed;
+.irArriba {
+  width: 50px;
+  height: 50px;
+  border: 1px solid map-get($colores, "verde");
+  border-radius: 50%;
+  padding: 2px;
+  padding-top: 12px;
+  background-color: map-get($colores, "verde");
+  color: map-get($colores, "blanco");
+  font-family: "Raleway";
+  font-size: 15px;
+  position: fixed;
+  text-align: center;
+  left: 85%;
+  top: 85%;
+  z-index: 110;
+}
+.irArriba:hover {
+  background-color: map-get($colores, "rosaRojo");
+  border: 1px solid map-get($colores, "rosaRojo");
+}
+
+.shop {
+  &__titulo {
+    font-family: map-get($fuentes, "titulo");
+    font-style: normal;
+    font-weight: 400;
+    font-size: 35px;
     text-align: center;
-    left: 85%;
-    top: 85%;
-    z-index: 110;
-}
-.irArriba:hover{
-    background-color: map-get($colores, 'rosaRojo' );
-    border: 1px solid map-get($colores, 'rosaRojo' );
-}
-
-.shop{
-    
-    &__titulo{
-        font-family: map-get($fuentes, "titulo" );
-        font-style: normal;
-        font-weight: 400;
-        font-size: 35px;
-        text-align: center;
-        margin-bottom: 20px;
-    }
-    &__texto{
-        font-style: normal;
-        font-weight: 400;
-        font-size: 16px;
-        text-align: center;
-        width: 60%;
-        display: block;
-        margin: 0 auto;
-        margin-bottom: 30px;
-    }
-    &__button{
-        width: 310px;
-        height: 67px;
-        background-color: map-get($colores, "celeste" );
-        box-shadow: 5px 10px 14px rgba(7, 172, 230, 0.29);
-        border-radius: 40px;
-        color: map-get($colores, "blanco" );
-        font-style: normal;
-        font-weight: 700;
-        font-size: 16px;
-        display: block;
-        margin: 0 auto;
-        margin-bottom: 40px;
-        border: none;
-    }
-    &__button:hover{
-        background-color: map-get($colores, "blanco" );
-        color:map-get($colores, "celeste" );
-        border: 1px solid map-get($colores, "celeste" );
-    }
-
-    &__image{
-        background-image: url("../assets/img/background.png");
-        height: 267px;
-        background-position: center center;
-        background-size: cover;
-        margin-bottom: 30px;
-    }
-    &__titulo2{
-        font-family: map-get($fuentes, "titulo" );
-        font-style: normal;
-        font-weight: 300;
-        font-size: 30px;
-        text-align: center;
-        width: 60%;
-        margin: 0 auto;
-        margin-bottom: 40px;
-    }
-}
-.rating{
-    
-    .rating1{
-    position: relative;
-    
-    &__item1{
-        width: 90px;
-        height: 90px;
-        border: 1px solid map-get($colores , "rosaRojo");
-        background-color: map-get($colores , "rosaRojo");
-        border-radius: 50%;
-        margin: 0 auto;
-        margin-bottom: 20px;
-}
-    &__icon1{
-        height: 70px;
-        position: absolute;
-        top: 8px;
-        left: 50%;
-        
-    }
-    &__number1{
-        font-family: map-get($fuentes, "titulo" );
-        font-style: normal;
-        font-weight: 800;
-        font-size: 20px;
-        text-align: center;
-        margin: 0 auto;  
-        margin-bottom: 15px;
-        letter-spacing: 3.28px;
-    }
-    &__comment1{
-        color: map-get($colores , "gris");
-        font-family: map-get($fuentes, "titulo" );
-        font-style: normal;
-        font-weight: 400;
-        font-size: 17px;
-        text-align: center;
-        margin-bottom: 40px;
-       
-    }
-}
-.rating2{
-    position: relative;
-    &__item2{
-        width: 90px;
-        height: 90px;
-        border: 1px solid map-get($colores , "celeste");
-        background-color: map-get($colores , "celeste");
-        border-radius: 50%;
-        margin: 0 auto;
-        margin-bottom: 20px;
-}
-    &__icon2{
-        height: 50px;
-        position: absolute;
-        top: 18px;
-        left:50%;
-    }
-    &__number2{
-        font-family: map-get($fuentes, "titulo" );
-        font-style: normal;
-        font-weight: 800;
-        font-size: 20px;
-        text-align: center;
-        margin: 0 auto;  
-        margin-bottom: 15px;
-        letter-spacing: 3.28px;  
-    }
-    &__comment2{
-        color: map-get($colores , "gris");
-        font-family: map-get($fuentes, "titulo" );
-        font-style: normal;
-        font-weight: 400;
-        font-size: 17px;
-        text-align: center;
-        margin-bottom: 40px;
-    }
-}
-.rating3{
-    position: relative;
-    
-    &__item3{
-        width: 90px;
-        height: 90px;
-        border: 1px solid map-get($colores , "verde");
-        background-color: map-get($colores , "verde");
-        border-radius: 50%;
-        margin: 0 auto;
-        margin-bottom: 20px;
-}
-    &__icon3{
-        width: 65px;
-        position: absolute;
-        top: 10px;
-        left: 50%;
-    }
-    &__number3{
-        font-family: map-get($fuentes, "titulo" );
-        font-style: normal;
-        font-weight: 800;
-        font-size: 20px;
-        text-align: center;
-        margin: 0 auto;  
-        margin-bottom: 15px;
-        letter-spacing: 3.28px;    
-    }
-    &__comment3{
-        color: map-get($colores , "gris");
-        font-family: map-get($fuentes, "titulo" );
-        font-style: normal;
-        font-weight: 400;
-        font-size: 17px;
-        text-align: center;
-        margin-bottom: 40px;
-    }
-}}
-
-.news{
-    background-color: map-get($colores, "grisClaro" );
-    padding: 60px;
+    margin-bottom: 20px;
+  }
+  &__texto {
+    font-style: normal;
+    font-weight: 400;
+    font-size: 16px;
+    text-align: center;
+    width: 60%;
+    display: block;
+    margin: 0 auto;
+    margin-bottom: 30px;
+  }
+  &__button {
+    width: 310px;
+    height: 67px;
+    background-color: map-get($colores, "celeste");
+    box-shadow: 5px 10px 14px rgba(7, 172, 230, 0.29);
+    border-radius: 40px;
+    color: map-get($colores, "blanco");
+    font-style: normal;
+    font-weight: 700;
+    font-size: 16px;
+    display: block;
+    margin: 0 auto;
     margin-bottom: 40px;
+    border: none;
+  }
+  &__button:hover {
+    background-color: map-get($colores, "blanco");
+    color: map-get($colores, "celeste");
+    border: 1px solid map-get($colores, "celeste");
+  }
 
-    &__block{
-        width: 314px;
-        background:map-get($colores , "blanco" );
-        border: 1px solid map-get($colores , "grisMenos" );
-        border-radius: 5px;
-        margin: 0 auto;
-        margin-bottom: 40px;
-        position: relative;
-       
-    }
-    &__contenedor1{
-        margin-top: 40px;
-    }
-    &__contenedor2{
-        margin-top: 35px;
-    }
-    
-    &__item1{
-        width: 90.12px;
-        height: 90.12px;
-        background: map-get($colores , "rosaRojo");
-        border-radius: 41px;
-        transform: rotate(-45deg);
-        position: absolute;
-        top: 20px;
-        left: 55%;
-    }
-    &__img1{
-        width: 192.76px;
-        height: 109.93px;
-        background-image: url("../assets/img/macbook.png");
-        background-position: center;
-        background-repeat: no-repeat; 
-        background-size: cover; 
-        position: relative;
-        z-index: 1;
-        margin: 0 auto;
-    }
-    &__titulo{
-        font-family: map-get($fuentes, "titulo" );
-        font-style: normal;
-        font-weight: 400;
-        font-size: 30px;
-        margin-left: 20px;
-    }
-    &__texto{
-        font-style: normal;
-        font-weight: 400;
-        font-size: 14px;
-        margin-top: 15px;
-        margin-left: 20px;
-        margin-right: 20px;
-        padding-bottom: 30px;
-        &--separated{
-            margin-right: 52px;
-        }
-    
-    }
-    hr{
-        display: none;
-    }
+  &__image {
+    background-image: url("../assets/img/background.png");
+    height: 267px;
+    background-position: center center;
+    background-size: cover;
+    margin-bottom: 30px;
+  }
+  &__titulo2 {
+    font-family: map-get($fuentes, "titulo");
+    font-style: normal;
+    font-weight: 300;
+    font-size: 30px;
+    text-align: center;
+    width: 60%;
+    margin: 0 auto;
+    margin-bottom: 40px;
+  }
+}
+.rating {
+  .rating1 {
+    position: relative;
 
-    &__item2{
-        width: 131.88px;
-        height: 131.7px;
-        background: map-get($colores , "celeste");
-        border-radius: 50%;
-        position: absolute;
-        top: 10px;
-        left: 34%;
+    &__item1 {
+      width: 90px;
+      height: 90px;
+      border: 1px solid map-get($colores, "rosaRojo");
+      background-color: map-get($colores, "rosaRojo");
+      border-radius: 50%;
+      margin: 0 auto;
+      margin-bottom: 20px;
     }
-    &__img2{
-        width: 175px;
-        height: 134.99px;
-        background-image: url("../assets/img/iphone.png");
-        background-position: center;
-        background-repeat: no-repeat; 
-        background-size: cover; 
-        position: relative;
-        z-index: 1;
-        margin-left: 30%;
-        margin-top: -20px;
+    &__icon1 {
+      height: 70px;
+      position: absolute;
+      top: 8px;
+      left: 50%;
     }
-    
-    
-    &__img3{
-        position: relative;
-        z-index: 1;
-        margin: 0 auto;
-        margin-top: 30px;
-        background-color: map-get($colores, "verde" );
-        padding: 30px 0 10px 0;
+    &__number1 {
+      font-family: map-get($fuentes, "titulo");
+      font-style: normal;
+      font-weight: 800;
+      font-size: 20px;
+      text-align: center;
+      margin: 0 auto;
+      margin-bottom: 15px;
+      letter-spacing: 3.28px;
     }
-   
-}  
-.slider{
-    width: 100%;
-    margin-bottom: 150px;
+    &__comment1 {
+      color: map-get($colores, "gris");
+      font-family: map-get($fuentes, "titulo");
+      font-style: normal;
+      font-weight: 400;
+      font-size: 17px;
+      text-align: center;
+      margin-bottom: 40px;
+    }
+  }
+  .rating2 {
+    position: relative;
+    &__item2 {
+      width: 90px;
+      height: 90px;
+      border: 1px solid map-get($colores, "celeste");
+      background-color: map-get($colores, "celeste");
+      border-radius: 50%;
+      margin: 0 auto;
+      margin-bottom: 20px;
+    }
+    &__icon2 {
+      height: 50px;
+      position: absolute;
+      top: 18px;
+      left: 50%;
+    }
+    &__number2 {
+      font-family: map-get($fuentes, "titulo");
+      font-style: normal;
+      font-weight: 800;
+      font-size: 20px;
+      text-align: center;
+      margin: 0 auto;
+      margin-bottom: 15px;
+      letter-spacing: 3.28px;
+    }
+    &__comment2 {
+      color: map-get($colores, "gris");
+      font-family: map-get($fuentes, "titulo");
+      font-style: normal;
+      font-weight: 400;
+      font-size: 17px;
+      text-align: center;
+      margin-bottom: 40px;
+    }
+  }
+  .rating3 {
+    position: relative;
 
-    &__sliderContainer{
+    &__item3 {
+      width: 90px;
+      height: 90px;
+      border: 1px solid map-get($colores, "verde");
+      background-color: map-get($colores, "verde");
+      border-radius: 50%;
+      margin: 0 auto;
+      margin-bottom: 20px;
+    }
+    &__icon3 {
+      width: 65px;
+      position: absolute;
+      top: 10px;
+      left: 50%;
+    }
+    &__number3 {
+      font-family: map-get($fuentes, "titulo");
+      font-style: normal;
+      font-weight: 800;
+      font-size: 20px;
+      text-align: center;
+      margin: 0 auto;
+      margin-bottom: 15px;
+      letter-spacing: 3.28px;
+    }
+    &__comment3 {
+      color: map-get($colores, "gris");
+      font-family: map-get($fuentes, "titulo");
+      font-style: normal;
+      font-weight: 400;
+      font-size: 17px;
+      text-align: center;
+      margin-bottom: 40px;
+    }
+  }
+}
+
+.news {
+  background-color: map-get($colores, "grisClaro");
+  padding: 60px;
+  margin: 0 auto;
+  margin-bottom: 40px;
+
+  &__block {
+    width: 314px;
+    background: map-get($colores, "blanco");
+    border: 1px solid map-get($colores, "grisMenos");
+    border-radius: 5px;
+    margin: 0 auto;
+    margin-bottom: 40px;
+    position: relative;
+  }
+  &__contenedor1 {
+    margin-top: 40px;
+  }
+  &__contenedor2 {
+    margin-top: 35px;
+  }
+
+  &__item1 {
+    width: 90.12px;
+    height: 90.12px;
+    background: map-get($colores, "rosaRojo");
+    border-radius: 41px;
+    transform: rotate(-45deg);
+    position: absolute;
+    top: 20px;
+    left: 55%;
+  }
+  &__img1 {
+    width: 192.76px;
+    height: 109.93px;
+    background-image: url("../assets/img/macbook.png");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    position: relative;
+    z-index: 1;
+    margin: 0 auto;
+  }
+  &__titulo {
+    font-family: map-get($fuentes, "titulo");
+    font-style: normal;
+    font-weight: 400;
+    font-size: 30px;
+    margin-left: 20px;
+  }
+  &__texto {
+    font-style: normal;
+    font-weight: 400;
+    font-size: 14px;
+    margin-top: 15px;
+    margin-left: 20px;
+    margin-right: 20px;
+    padding-bottom: 30px;
+    &--separated {
+      margin-right: 52px;
+    }
+  }
+  hr {
+    display: none;
+  }
+
+  &__item2 {
+    width: 131.88px;
+    height: 131.7px;
+    background: map-get($colores, "celeste");
+    border-radius: 50%;
+    position: absolute;
+    top: 10px;
+    left: 34%;
+  }
+  &__img2 {
+    width: 175px;
+    height: 134.99px;
+    background-image: url("../assets/img/iphone.png");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    position: relative;
+    z-index: 1;
+    margin-left: 30%;
+    margin-top: -20px;
+  }
+
+  &__img3 {
+    position: relative;
+    z-index: 1;
+    margin: 0 auto;
+    margin-top: 30px;
+    background-color: map-get($colores, "verde");
+    padding: 30px 0 10px 0;
+  }
+}
+.slider {
+  width: 100%;
+  margin-bottom: 150px;
+
+  &__sliderContainer {
     position: relative;
     background: white;
     max-width: 750px;
@@ -424,861 +426,884 @@ body{
     margin: 0 auto;
     margin-bottom: 20px;
 
-        &__imgSlider{
-            position: absolute;
-            object-fit: cover;
-            opacity: 0;
-            height: 100%;
-            width: 100%;
-            transition: 400ms ease-in;
-        }
-        &__show{
-            position: absolute;
-            object-fit: cover;
-            opacity: 1;
-            height: 100%;
-            width: 100%;
-            transition: 400ms ease-in;
-        }
-        &__arrowRight{
-            font-size: 40px;
-            z-index: 100;
-            position: absolute;
-            color: white;
-            top: 200px;
-            left: 94%;
-        }
-        &__arrowLeft{
-            font-size: 40px;
-            z-index: 100;
-            position: absolute;
-            color: white;
-            top: 200px;
-            left: 0%;
-        }
-        &__arrowLeft:hover{
-            color: map-get($colores, 'rosaRojo' );
-        }
-        &__arrowRight:hover{
-            color: map-get($colores, 'rosaRojo' );
-        }
-
+    &__imgSlider {
+      position: absolute;
+      object-fit: cover;
+      opacity: 0;
+      height: 100%;
+      width: 100%;
+      transition: 400ms ease-in;
     }
-    &__btnContainer{
-        width: 120px;
-        margin: 0 auto;
+    &__show {
+      position: absolute;
+      object-fit: cover;
+      opacity: 1;
+      height: 100%;
+      width: 100%;
+      transition: 400ms ease-in;
     }
-    &__btn{
-        width: 15px;
-        height: 15px;
-        border-radius: 50%;
-        background-color: map-get($colores, 'gris' );
-        margin-left: 10px;
-        border: none;
+    &__arrowRight {
+      font-size: 40px;
+      z-index: 100;
+      position: absolute;
+      color: white;
+      top: 200px;
+      left: 94%;
     }
-    &__btn:hover{
-        background-color: map-get($colores, 'celeste' );
+    &__arrowLeft {
+      font-size: 40px;
+      z-index: 100;
+      position: absolute;
+      color: white;
+      top: 200px;
+      left: 0%;
     }
+    &__arrowLeft:hover {
+      color: map-get($colores, "rosaRojo");
+    }
+    &__arrowRight:hover {
+      color: map-get($colores, "rosaRojo");
+    }
+  }
+  &__btnContainer {
+    width: 120px;
+    margin: 0 auto;
+  }
+  &__btn {
+    width: 15px;
+    height: 15px;
+    border-radius: 50%;
+    background-color: map-get($colores, "gris");
+    margin-left: 10px;
+    border: none;
+  }
+  &__btn:hover {
+    background-color: map-get($colores, "celeste");
+  }
 }
 
- .pricing-titulo{
-        font-family: map-get($fuentes, "titulo" );
-        font-style: normal;
-        font-weight: 400;
-        font-size: 36px;
-        line-height: 42px;
-        text-align: center;
-        margin-bottom: 40px;
-    }
-.pricing{
-    &__currency{
-        width: 40px;
-        margin: 0 auto;
-        margin-bottom: 30px;
-    }
-    &__currency--select{
-        background-color: map-get($colores, 'verdeClaro' );
-        background-color: #b0fae3;
-        border-radius: 5px;
-        padding: 5px;
-    }
-    .pricing1{
-        box-sizing: border-box;
-        position: relative;
-        width: 293px;
-        height: 251px;
-        border: 1px solid map-get($colores , "rosaRojo");
-        border-radius: 18px;
-        margin: 0 auto;
-        margin-bottom: 60px;
-
-        &__type{
-            font-family: map-get($fuentes, "titulo" );
-            font-style: normal;
-            font-weight: 700;
-            font-size: 20px;
-            line-height: 24px;
-            margin-top: 80px;
-            margin-left: 50px;
-        }
-        &__price{
-            color: map-get($colores , "rosaRojo");
-            font-style: normal;
-            font-weight: 300;
-            font-size: 46px;
-            margin-left: 50px;
-
-        }
-        &__icono1{
-            margin-left: 140px;
-            position: relative;
-            top: -155px;
-            left: -10px;
-            
-        }
-        ul{
-            list-style: none;
-            margin: 0;
-            padding: 0;
-        }
-        ul li{
-            padding-left: 20px;
-            position: relative;
-            margin-bottom: 17px;
-            top: -150px;
-            left: 130px;
-        }
-        ul li::before{
-            content: '';
-            height: 10px;
-            width: 10px;
-            background-image: url('../assets/img/icons/Checkbox.svg');
-            background-position: center center;
-            background-size: cover;
-            position: absolute;
-            top: 6px;
-            left: 2px;
-        }
-        ul li.pricing1__item--red::before{
-            
-            background-image: url('../assets/img/icons/Cross.svg');
-           
-        }
-        &__button{
-            background-color: map-get($colores, "rosaRojo" );
-            position: relative;
-            width: 150px;
-            height: 50px;
-            border-radius: 23px;
-            top: -140px;
-            left: 70px;
-            border: none;
-            color: map-get($colores, "blanco" );
-        }
-        &__button:hover{
-            background-color: map-get($colores, "blanco" );
-            color:map-get($colores, "rosaRojo" );
-            border: 1px solid map-get($colores, "rosaRojo" );
-        }
-    }
-    .pricing2{
-        box-sizing: border-box;
-        position: relative;
-        width: 339px;
-        height: 277px;
-        border: 1px solid map-get($colores , "celeste");
-        border-radius: 18px;
-        box-shadow: 5px 10px 27px rgba(7, 172, 230, 0.29);
-        margin: 0 auto;
-        margin-bottom: 60px;
-
-        &__type{
-            font-family: map-get($fuentes, "titulo" );
-            font-style: normal;
-            font-weight: 700;
-            font-size: 20px;
-            line-height: 24px;
-            margin-top: 80px;
-            margin-left: 25px;
-        }
-        &__price{
-            color: map-get($colores , "celeste");
-            font-style: normal;
-            font-weight: 300;
-            font-size: 46px;
-            margin-left: 40px;
-
-        }
-        &__info{
-            position: relative;
-            left: 40px;
-        }
-        &__icono2{
-            margin-left: 140px;
-            position: relative;
-            top: -170px;
-            left: 20px;
-            margin-top: 25px;
-            
-        }
-        ul{
-            list-style: none;
-            margin: 0;
-            padding: 0;
-        }
-        ul li{
-            padding-left: 20px;
-            position: relative;
-            margin-bottom: 17px;
-            top: -150px;
-            left: 170px;
-        }
-        ul li::before{
-            content: '';
-            height: 10px;
-            width: 10px;
-            background-image: url('../assets/img/icons/Checkbox.svg');
-            background-position: center center;
-            background-size: cover;
-            position: absolute;
-            top: 6px;
-            left: 2px;
-        }
-        ul li.pricing1__item--red::before{
-            
-            background-image: url('../assets/img/icons/Cross.svg');
-           
-        }
-        &__button{
-            background-color: map-get($colores, "celeste" );
-            position: relative;
-            width: 150px;
-            height: 50px;
-            border-radius: 23px;
-            top: -135px;
-            left: 85px;
-            border: none;
-            color: map-get($colores, "blanco" );
-        }
-        &__button:hover{
-            background-color: map-get($colores, "blanco" );
-            color:map-get($colores, "celeste" );
-            border: 1px solid map-get($colores, "celeste" );
-        }
-    }
-
-    .pricing3{
-        box-sizing: border-box;
-        position: relative;
-        width: 293px;
-        height: 251px;
-        border: 1px solid map-get($colores , "verde");
-        border-radius: 18px;
-        margin: 0 auto;
-        margin-bottom: 90px;
-
-       
-
-        &__type{
-            font-family: map-get($fuentes, "titulo" );
-            font-style: normal;
-            font-weight: 700;
-            font-size: 20px;
-            line-height: 24px;
-            margin-top: 60px;
-            margin-left: 25px;
-        }
-        &__price{
-            color: map-get($colores , "verde");
-            font-style: normal;
-            font-weight: 300;
-            font-size: 46px;
-            margin-left: 30px;
-        }
-        &__info{
-            position: relative;
-            left: 30px;
-        }
-        &__icono3{
-            margin-left: 135px;
-            position: relative;
-            top: -160px;
-            margin-top: 22px;
-            
-        }
-        ul{
-            list-style: none;
-            margin: 0;
-            padding: 0;
-        }
-        ul li{
-            padding-left: 20px;
-            position: relative;
-            margin-bottom: 17px;
-            top: -145px;
-            left: 130px;
-        }
-        ul li::before{
-            content: '';
-            height: 10px;
-            width: 10px;
-            background-image: url('../assets/img/icons/Checkbox.svg');
-            background-position: center center;
-            background-size: cover;
-            position: absolute;
-            top: 6px;
-            left: 2px;
-        }
-        &__button{
-            background-color: map-get($colores, "verde" );
-            position: relative;
-            width: 150px;
-            height: 50px;
-            border-radius: 23px;
-            top: -140px;
-            left: 70px;
-            border: none;
-            color: map-get($colores, "blanco" );
-        }
-        &__button:hover{
-            background-color: map-get($colores, "blanco" );
-            color:map-get($colores, "verde" );
-            border: 1px solid map-get($colores, "verde" );
-        }
-    }
+.pricing-titulo {
+  font-family: map-get($fuentes, "titulo");
+  font-style: normal;
+  font-weight: 400;
+  font-size: 36px;
+  line-height: 42px;
+  text-align: center;
+  margin-bottom: 20px;
 }
-.questions{
+.pricing-currency {
+  width: 80px;
+  margin: 0px auto;
+  margin-bottom: 40px;
+
+  &__select {
+    background-color: map-get($colores, "verdeClaro");
+    border-radius: 5px;
+    padding: 5px;
+  }
+}
+.pricing {
+  .pricing1 {
+    box-sizing: border-box;
     position: relative;
-    margin-bottom: 20px;
+    width: 300px;
+    height: 251px;
+    border: 1px solid map-get($colores, "rosaRojo");
+    border-radius: 18px;
+    margin: 0 auto;
+    margin-bottom: 60px;
 
-    &__titulo{
-        font-family: map-get($fuentes, "titulo" );
-        font-style: normal;
-        font-weight: 400;
-        font-size: 40px;
-        text-align: start;
-        margin-left: 40px;
+    &__type {
+      font-family: map-get($fuentes, "titulo");
+      font-style: normal;
+      font-weight: 700;
+      font-size: 20px;
+      line-height: 24px;
+      margin-top: 80px;
+      margin-left: 50px;
     }
-    &__subtitulo{
-        font-style: normal;
-        font-weight: 400;
-        font-size: 16.5px;
-        margin-left: 40px;
-        margin-bottom: 30px;
-        text-align: start;
+    &__price {
+      color: map-get($colores, "rosaRojo");
+      font-style: normal;
+      font-weight: 300;
+      font-size: 46px;
+      margin-left: 50px;
     }
-    &__icono1{
-        height: 18px;
-        width: 22px;
-        margin-left: 50px;
-        margin-top: 20px;
+    &__icono1 {
+      margin-left: 140px;
+      position: relative;
+      top: -155px;
+      left: -10px;
     }
-    &__mail{
-        font-style: normal;
-        font-weight: 500;
-        font-size: 16px;
-        color: map-get($colores, "gris" );
-        margin-top: -25px;
-        margin-left: 90px;
+    ul {
+      list-style: none;
+      margin: 0;
+      padding: 0;
     }
-    &__icono2{
-        height: 20px;
-        width: 20px;
-        margin-left: 50px;
-        margin-top: 20px;
+    ul li {
+      padding-left: 20px;
+      position: relative;
+      margin-bottom: 17px;
+      top: -150px;
+      left: 130px;
     }
-    &__tel{
-        font-style: normal;
-        font-weight: 500;
-        font-size: 16px;
-        color: map-get($colores, "gris" );
-        margin-top: -25px;
-        margin-left: 90px;
+    ul li::before {
+      content: "";
+      height: 10px;
+      width: 10px;
+      background-image: url("../assets/img/icons/Checkbox.svg");
+      background-position: center center;
+      background-size: cover;
+      position: absolute;
+      top: 6px;
+      left: 2px;
     }
-    &__name{
-        font-style: normal;
-        font-weight: 500;
-        font-size: 11px;
-        line-height: 15px;
-        letter-spacing: 3.28px;
-        color: map-get($colores, "celeste" );
-        margin-left: 50px;
-        margin-top: 50px;
+    ul li.pricing1__item--red::before {
+      background-image: url("../assets/img/icons/Cross.svg");
     }
-    &__inputName{
-        width: 312px;
-        height: 30px;
-        border: none;
-        margin-left: 50px;
-        text-align: center;
+    &__button {
+      background-color: map-get($colores, "rosaRojo");
+      position: relative;
+      width: 150px;
+      height: 50px;
+      border-radius: 23px;
+      top: -140px;
+      left: 75px;
+      border: none;
+      color: map-get($colores, "blanco");
     }
-   
-    hr{
-        width: 312px;
-        margin-left: 50px;
-        margin-top: 0px;
-        color: map-get($colores, "grisHR" );
+    &__button:hover {
+      background-color: map-get($colores, "blanco");
+      color: map-get($colores, "rosaRojo");
+      border: 1px solid map-get($colores, "rosaRojo");
     }
-    &__email{
-        font-style: normal;
-        font-weight: 500;
-        font-size: 11px;
-        line-height: 15px;
-        letter-spacing: 3.28px;
-        color: map-get($colores, "celeste" );
-        margin-left: 50px;
-        margin-top: 50px;
-    }
-    &__inputEmail{
-        width: 312px;
-        height: 30px;
-        border: none;
-        margin-left: 50px;
-        text-align: center;
-    }
-    &__check{
-        width: 24px;
-        height: 24px;
-        border: 1px solid #95989A;
-        border-radius: 4px;
-        position: relative;
-        top: 40px;
-        left: 45px;
+  }
+  .pricing1:hover {
+    transform: scale(1.05);
+    box-shadow: 5px 10px 27px rgba(251, 59, 100,0.4);
+  }
+  .pricing2 {
+    box-sizing: border-box;
+    position: relative;
+    width: 300px;
+    height: 251px;
+    border: 1px solid map-get($colores, "celeste");
+    border-radius: 18px;
+    margin: 0 auto;
+    margin-bottom: 60px;
 
+    &__type {
+      font-family: map-get($fuentes, "titulo");
+      font-style: normal;
+      font-weight: 700;
+      font-size: 20px;
+      line-height: 24px;
+      margin-top: 80px;
+      margin-left: 15px;
     }
-    &__textPermiso{
-        margin-left: 100px;
-        font-style: normal;
-        font-weight: 400;
-        font-size: 12px;
-        line-height: 16px;
-        color: map-get($colores, "otroGris" );
-        padding-right: 60px;
-        margin-bottom: 5px;
-        
+    &__price {
+      color: map-get($colores, "celeste");
+      font-style: normal;
+      font-weight: 300;
+      font-size: 46px;
+      margin-left: 40px;
     }
-    &__error{
-        margin-left: 60%;
-        font-style: normal;
-        font-weight: 400;
-        font-size: 12px;
+    &__info {
+      position: relative;
+      left: 40px;
     }
-    &__button{
-        width: 226px;
-        height: 57px;
-        color: map-get($colores, "blanco" );
-        background: map-get($colores, "celeste" );
-        box-shadow: 5px 10px 14px rgba(7, 172, 230, 0.29);
-        border-radius: 35px;
-        margin-left: 130px;
-        margin-top: 20px;
-        border: none;
-        margin-bottom: 40px;
+    &__icono2 {
+      margin-left: 140px;
+      position: relative;
+      top: -170px;
+      left: 20px;
+      margin-top: 25px;
     }
-    &__button:hover{
-        background-color: map-get($colores, "blanco" );
-        color:map-get($colores, "celeste" );
-        border: 1px solid map-get($colores, "celeste" );
+    ul {
+      list-style: none;
+      margin: 0;
+      padding: 0;
     }
+    ul li {
+      padding-left: 20px;
+      position: relative;
+      margin-bottom: 17px;
+      top: -157px;
+      left: 144px;
+    }
+    ul li::before {
+      content: "";
+      height: 10px;
+      width: 10px;
+      background-image: url("../assets/img/icons/Checkbox.svg");
+      background-position: center center;
+      background-size: cover;
+      position: absolute;
+      top: 6px;
+      left: 2px;
+    }
+    ul li.pricing1__item--red::before {
+      background-image: url("../assets/img/icons/Cross.svg");
+    }
+    &__button {
+      background-color: map-get($colores, "celeste");
+      position: relative;
+      width: 150px;
+      height: 50px;
+      border-radius: 23px;
+      top: -164px;
+      left: 75px;
+      border: none;
+      color: map-get($colores, "blanco");
+    }
+    &__button:hover {
+      background-color: map-get($colores, "blanco");
+      color: map-get($colores, "celeste");
+      border: 1px solid map-get($colores, "celeste");
+    }
+  }
+  .pricing2:hover {
+    transform: scale(1.05);
+    box-shadow: 5px 10px 27px rgba(8, 166, 228,0.4);
+  }
+  .pricing3 {
+    box-sizing: border-box;
+    position: relative;
+    width: 300px;
+    height: 251px;
+    border: 1px solid map-get($colores, "verde");
+    border-radius: 18px;
+    margin: 0 auto;
+    margin-bottom: 90px;
+
+    &__type {
+      font-family: map-get($fuentes, "titulo");
+      font-style: normal;
+      font-weight: 700;
+      font-size: 20px;
+      line-height: 24px;
+      margin-top: 60px;
+      margin-left: 25px;
+    }
+    &__price {
+      color: map-get($colores, "verde");
+      font-style: normal;
+      font-weight: 300;
+      font-size: 46px;
+      margin-left: 30px;
+    }
+    &__info {
+      position: relative;
+      left: 30px;
+    }
+    &__icono3 {
+      margin-left: 135px;
+      position: relative;
+      top: -160px;
+      margin-top: 22px;
+    }
+    ul {
+      list-style: none;
+      margin: 0;
+      padding: 0;
+    }
+    ul li {
+      padding-left: 20px;
+      position: relative;
+      margin-bottom: 17px;
+      top: -145px;
+      left: 130px;
+    }
+    ul li::before {
+      content: "";
+      height: 10px;
+      width: 10px;
+      background-image: url("../assets/img/icons/Checkbox.svg");
+      background-position: center center;
+      background-size: cover;
+      position: absolute;
+      top: 6px;
+      left: 2px;
+    }
+    &__button {
+      background-color: map-get($colores, "verde");
+      position: relative;
+      width: 150px;
+      height: 50px;
+      border-radius: 23px;
+      top: -140px;
+      left: 75px;
+      border: none;
+      color: map-get($colores, "blanco");
+    }
+    &__button:hover {
+      background-color: map-get($colores, "blanco");
+      color: map-get($colores, "verde");
+      border: 1px solid map-get($colores, "verde");
+    }
+  }
+  .pricing3:hover {
+    transform: scale(1.05);
+    box-shadow: 5px 10px 27px rgba(85, 223, 180,0.4);
+  }
 }
-.footer{  
-        height: 89px;
-        background: #F7F7F7;
-        box-shadow: 0px -5px 40px rgba(0, 0, 0, 0.2);
-        position: relative;
-        display: grid;
-        grid-template-columns: 1fr 1fr;
-        &__contenedor1{
-            display: flex;
-            flex-direction: column;
-            gap: 5px;
-        }
-        &__brand{
-            font-family: map-get($fuentes, "titulo" );
-            font-style: normal;
-            font-weight: 300;
-            font-size: 26px;
-            line-height: 30px;
-            color: map-get($colores, "celeste");
-            margin-left: 10%;
-            margin-top: 15px;
-        }
-        &__derechos{
-            font-style: normal;
-            font-weight: 400;
-            font-size: 11px;
-            line-height: 15px;
-            color: map-get($colores, "gris" );
-            margin-left: 10%;
-            margin-top: 0px;
-        }
-        &__contenedor2{
-            display: flex;
-            flex-direction: row;
-            gap: 15px;
-        }
-        &__logo1{
-            width: 24px;
-            height: 24px;
-            margin-top: 35px;
-            margin-left: 70%;
-        }
-        &__logo2{
-            width: 24px;
-            height: 24px;
-            margin-top: 35px;
-        }
-}
-.popup{
-    display:none;
-    position: absolute;
-    top: 250px;
-    left: 25%;
+.questions {
+  position: relative;
+  margin-bottom: 20px;
+
+  &__titulo {
+    font-family: map-get($fuentes, "titulo");
+    font-style: normal;
+    font-weight: 400;
+    font-size: 40px;
+    text-align: start;
+    margin-left: 40px;
+  }
+  &__subtitulo {
+    font-style: normal;
+    font-weight: 400;
+    font-size: 16.5px;
+    margin-left: 40px;
+    margin-bottom: 30px;
+    text-align: start;
+  }
+  &__icono1 {
+    height: 18px;
+    width: 22px;
+    margin-left: 50px;
+    margin-top: 20px;
+  }
+  &__mail {
+    font-style: normal;
+    font-weight: 500;
+    font-size: 16px;
+    color: map-get($colores, "gris");
+    margin-top: -25px;
+    margin-left: 90px;
+  }
+  &__icono2 {
+    height: 20px;
+    width: 20px;
+    margin-left: 50px;
+    margin-top: 20px;
+  }
+  &__tel {
+    font-style: normal;
+    font-weight: 500;
+    font-size: 16px;
+    color: map-get($colores, "gris");
+    margin-top: -25px;
+    margin-left: 90px;
+  }
+  &__name {
+    font-style: normal;
+    font-weight: 500;
+    font-size: 11px;
+    line-height: 15px;
+    letter-spacing: 3.28px;
+    color: map-get($colores, "celeste");
+    margin-left: 50px;
+    margin-top: 50px;
+  }
+  &__inputName {
+    width: 312px;
+    height: 30px;
+    border: none;
+    margin-left: 50px;
     text-align: center;
-    width: 50%;
-    background-color: map-get($colores, 'grisMenos' );
-    padding: 25px;
-    border-radius: 10px;
-    &__close{
-        font-size: 15px;
-    }
-    .visible{
-    display : 'block';
-    position: 'fixed';
-    top : 200px;
+    border-bottom: 3px solid map-get($colores, 'gris' );
+    margin-bottom: 0px;
+  }
+  &__inputName:focus-visible {
+    border: 0;
+    outline: none;
+    border-bottom: 3px solid map-get($colores, 'rosaRojo' );
+  }
+
+  &__email {
+    font-style: normal;
+    font-weight: 500;
+    font-size: 11px;
+    line-height: 15px;
+    letter-spacing: 3.28px;
+    color: map-get($colores, "celeste");
+    margin-left: 50px;
+    margin-top: 30px;
+  }
+  &__inputEmail {
+    width: 312px;
+    height: 30px;
+    border: none;
+    margin-left: 50px;
+    text-align: center;
+    border-bottom: 2px solid map-get($colores, 'gris' );
+  }
+  
+  &__inputEmail:focus-visible {
+    border: 0;
+    outline: none;
+    border-bottom: 2px solid map-get($colores, 'rosaRojo' );
+  }
+  &__check {
+    width: 24px;
+    height: 24px;
+    border: 1px solid #95989a;
+    border-radius: 4px;
+    margin-top: 30px;
+    display: block;
+    margin-left: 50px;
+  }
+  &__textPermiso {
+    margin-left: 100px;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 12px;
+    line-height: 16px;
+    color: map-get($colores, "otroGris");
+    padding-right: 60px;
+    margin-bottom: 5px;
+    margin-top: -27px;
+  }
+  &__error {
+    margin-left: 40%;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 12px;
+    margin-top: -20px;
+  }
+  &__button {
+    width: 226px;
+    height: 57px;
+    color: map-get($colores, "blanco");
+    background: map-get($colores, "celeste");
+    box-shadow: 5px 10px 14px rgba(7, 172, 230, 0.29);
+    border-radius: 35px;
+    margin-left: 25%;
+    margin-top: 60px;
+    border: none;
+    margin-bottom: 40px;
+  }
+  &__button:hover {
+    background-color: map-get($colores, "blanco");
+    color: map-get($colores, "celeste");
+    border: 1px solid map-get($colores, "celeste");
+  }
+}
+.footer {
+  height: 89px;
+  background: #f7f7f7;
+  box-shadow: 0px -5px 40px rgba(0, 0, 0, 0.2);
+  position: relative;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  &__contenedor1 {
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+  }
+  &__brand {
+    font-family: map-get($fuentes, "titulo");
+    font-style: normal;
+    font-weight: 300;
+    font-size: 26px;
+    line-height: 30px;
+    color: map-get($colores, "celeste");
+    margin-left: 10%;
+    margin-top: 15px;
+  }
+  &__derechos {
+    font-style: normal;
+    font-weight: 400;
+    font-size: 11px;
+    line-height: 15px;
+    color: map-get($colores, "gris");
+    margin-left: 10%;
+    margin-top: 0px;
+  }
+  &__contenedor2 {
+    display: flex;
+    flex-direction: row;
+    gap: 15px;
+  }
+  &__link1{
+    margin-left: 60%;
+  }
+  &__link1--logo1 {
+    width: 30px;
+    height: 30px;
+    margin-top: 35px;
+    margin-left: 60%;
+    color: #08a6e4;
+  }
+  &__link2{
+    margin-left: 5%;
+  }
+  &__link2--logo2 {
+    width: 24px;
+    height: 24px;
+    margin-top: 37px;
+  }
+}
+.popup {
+  display: none;
+  position: absolute;
+  top: 250px;
+  left: 25%;
+  text-align: center;
+  width: 50%;
+  background-color: map-get($colores, "grisMenos");
+  padding: 25px;
+  border-radius: 10px;
+  &__close {
+    font-size: 15px;
+  }
+  .visible {
+    display: "block";
+    position: "fixed";
+    top: 200px;
     z-index: 1000;
+  }
 }
-}
-
-
 //-------------version desktop ------------------------------------------------------------//
-
 @media only screen and (min-width: 1000px) {
-    .header{
-        display: grid;
-        grid-template-columns: 6fr 4fr;
-        &__menu{
-            display: none;
-        }
-        nav{
-            display: grid;
-            grid-template-columns: 1fr 1fr 1fr 1fr;
-        }
-        &__link1,&__link2,&__link3,&__link4{
-            display: inline;
-            text-decoration: none;
-            border-bottom:2px solid map-get($colores, "blanco" );
-            transition: all 300ms ease-in-out;
-            padding: 26px 15px;
-            margin-top: 0px;
-            text-align: center;
-            
-        }
-        &__link1:hover,&__link2:hover,&__link3:hover,&__link4:hover{
-           border-bottom: 4px solid map-get($colores, "celeste");
-           color: map-get($colores, "negro" );
-        }
+  .header {
+    display: grid;
+    grid-template-columns: 6fr 4fr;
+    &__menu {
+      display: none;
     }
-
-    .irArriba{
-        left: 95%;  
+    nav {
+      display: grid;
+      grid-template-columns: 1fr 1fr 1fr 1fr;
     }
-
-    .shop{
-        &__image{
-            height: 594px;
-        }
-        &__button{
-            width: 440px;
-        }
-        &__titulo2{
-            margin-bottom: 90px;
-        }
+    &__link1,
+    &__link2,
+    &__link3,
+    &__link4 {
+      display: inline;
+      text-decoration: none;
+      border-bottom: 2px solid map-get($colores, "blanco");
+      transition: all 300ms ease-in-out;
+      padding: 26px 15px;
+      margin-top: 0px;
+      text-align: center;
     }
-    .news{
-        &__block{
-            display: flex;
-            flex-direction: row-reverse;
-            width:100%;
-            align-items: center;
-            justify-content: space-between;
-            max-width: 1124px;
-            padding: 50px;
-            &--reverse{
-                flex-direction: row;
-            }
-            &--separated{
-                width: 55%;
-                margin-left: 20px;
-                flex-direction: column;
-
-            }
-        }
-        
-        &__contenedor1{
-            position: relative;
-            width: 50%;
-    
-        }
-        &__item1{
-            width: 180px;
-            height: 180px;
-            border-radius: 41px;
-            top: -25px;
-        }
-        &__img1{
-            width: 386.44px;
-            height: 219px;
-            top: 16px;
-        }
-        &__titulo{
-            margin-left: 0px;
-            margin-top: -65px;
-            font-size: 36px;
-        }
-        &__titulo--reverse{
-            margin-right: 74px;
-            margin-left: 123px;
-        }
-        &__titulo--separated{
-            width: 348px;
-            margin-left: -136px;
-            margin-top: -7px;
-            margin-bottom: 30px;
-
-        }
-
-        &__texto{
-            margin-left: 0px;
-            margin-top: 17px;
-            font-size: 16px;
-            margin-right: 69px;
-        }
-        &__texto--reverse{
-            margin-right: -25px;
-            margin-left: 123px;
-        }
-        &__texto--separated{
-            margin-left: -136px;
-            margin-right: -8px;
-        }
-        &__item2{
-            width: 320px;
-            height: 320px;
-            left: 0px;
-            top: -46px;
-        }
-        &__img2{
-            width: 426px;
-            height: 328px;
-            margin-left: 0%;
-            margin-top: -25px;
-        }
-        &__img3{
-            position: absolute;
-            top: -30px;
-            left: 700px;
-            padding: 93px 82px 100px 70px;
-            border-radius: 4px;
-        }
-        hr#hr1{
-            display: block;
-            border: 2px solid map-get($colores, "rosaRojo" );
-            width: 330px;
-        }
-        hr#hr2{
-            display: block;
-            border: 2px solid map-get($colores, "celeste" );
-            width: 330px;
-            margin-left: 123px;
-        }
-        hr#hr3{
-            display: block;
-            border: 2px solid map-get($colores, "verde" );
-            width: 330px;
-            margin-left: -210px;
-            margin-top: -30px;
-        }
-        &__contenedor2{
-            width: 50%;
-        }
-    }     
-    .rating{
-        display: flex;
-        justify-content: center;
-        gap:150px;
-
+    &__link1:hover,
+    &__link2:hover,
+    &__link3:hover,
+    &__link4:hover {
+      border-bottom: 4px solid map-get($colores, "celeste");
+      color: map-get($colores, "negro");
     }
+  }
 
-    .pricing{
-        display: flex;
+  .irArriba {
+    left: 95%;
+  }
+
+  .shop {
+    &__image {
+      height: 594px;
+    }
+    &__button {
+      width: 440px;
+    }
+    &__titulo2 {
+      margin-bottom: 90px;
+    }
+  }
+  .news {
+    &__block {
+      display: flex;
+      flex-direction: row-reverse;
+      width: 100%;
+      align-items: center;
+      justify-content: space-between;
+      max-width: 1124px;
+      padding: 50px;
+      &--reverse {
         flex-direction: row;
-        width: 100%;
-        justify-content: center;
-        align-items: center;
-        align-content: center;
-        margin-bottom: 100px;
-        
-        .pricing1{
-            width: 25%;
-            height: 461px;
-            padding: 30px;
-        
-            &__type{
-                text-align: center;
-                margin: 0 auto;
-                margin-bottom: 15px;
-            }
-            &__price{
-                text-align: center;
-                margin: 0 auto;
-            }
-            ul li{
-                top: 60px;
-                left: 62px;                   
-            }
-            &__button{
-                top: 103px;
-                left: 20%;
-            }
-               
-            }
-        
-        .pricing2{
-            width: 30%;
-            height: 500px;
-            margin-left: -40px;
-            margin-right: -40px;
-            padding: 30px;
-
-            &__type{
-                text-align: center;
-                margin: 0 auto;
-                margin-bottom: 15px;
-            }
-            &__price{
-                text-align: center;
-                margin: 0 auto;
-            }
-            &__info{
-                left: 0;
-                text-align: center;        
-            }
-            ul li{
-                top: 75px;
-                left: 90px;                 
-            }
-            &__button{
-                top: 123px;
-                left: 27%;
-            }
-               
-        }
-
-        .pricing3{
-            width: 25%;
-            height: 461px;
-            margin-bottom: 60px;
-            padding: 30px;
-
-            &__type{
-                text-align: center;
-                margin: 0 auto;
-                margin-bottom: 15px;
-            }
-            &__price{
-                text-align: center;
-                margin: 0 auto;
-            }
-            &__info{
-                left: 0;
-                text-align: center;        
-            }
-            ul li{
-                top: 60px;
-                left: 62px;                   
-            }
-            &__button{
-                top: 86px;
-                left: 22%;
-            }
-               
-        }
-
-    
+      }
+      &--separated {
+        width: 55%;
+        margin-left: 20px;
+        flex-direction: column;
+      }
     }
 
-    .questions{
+    &__contenedor1 {
+      position: relative;
+      width: 50%;
+    }
+    &__item1 {
+      width: 180px;
+      height: 180px;
+      border-radius: 41px;
+      top: -25px;
+    }
+    &__img1 {
+      width: 386.44px;
+      height: 219px;
+      top: 16px;
+    }
+    &__titulo {
+      margin-left: 0px;
+      margin-top: -65px;
+      font-size: 36px;
+    }
+    &__titulo--reverse {
+      margin-right: 74px;
+      margin-left: 123px;
+    }
+    &__titulo--separated {
+      width: 348px;
+      margin-left: -136px;
+      margin-top: -7px;
+      margin-bottom: 30px;
+    }
+
+    &__texto {
+      margin-left: 0px;
+      margin-top: 17px;
+      font-size: 16px;
+      margin-right: 69px;
+    }
+    &__texto--reverse {
+      margin-right: -25px;
+      margin-left: 123px;
+    }
+    &__texto--separated {
+      margin-left: -136px;
+      margin-right: -8px;
+    }
+    &__item2 {
+      width: 320px;
+      height: 320px;
+      left: 0px;
+      top: -46px;
+    }
+    &__img2 {
+      width: 426px;
+      height: 328px;
+      margin-left: 0%;
+      margin-top: -25px;
+    }
+    &__img3 {
+      position: absolute;
+      top: -30px;
+      left: 700px;
+      padding: 93px 82px 100px 70px;
+      border-radius: 4px;
+    }
+    hr#hr1 {
+      display: block;
+      border: 2px solid map-get($colores, "rosaRojo");
+      width: 330px;
+    }
+    hr#hr2 {
+      display: block;
+      border: 2px solid map-get($colores, "celeste");
+      width: 330px;
+      margin-left: 123px;
+    }
+    hr#hr3 {
+      display: block;
+      border: 2px solid map-get($colores, "verde");
+      width: 330px;
+      margin-left: -210px;
+      margin-top: -30px;
+    }
+    &__contenedor2 {
+      width: 50%;
+    }
+  }
+  .rating {
+    display: flex;
+    justify-content: center;
+    gap: 150px;
+  }
+
+  .pricing {
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    justify-content: center;
+    align-items: center;
+    align-content: center;
+    margin-bottom: 100px;
+
+    .pricing1 {
+      width: 25%;
+      height: 461px;
+      padding: 30px;
+
+      &__type {
+        text-align: center;
+        margin: 0 auto;
+        margin-bottom: 15px;
+      }
+      &__price {
+        text-align: center;
+        margin: 0 auto;
+      }
+      ul li {
+        top: 60px;
+        left: 62px;
+      }
+      &__button {
+        top: 103px;
+        left: 32%;
+      }
+    }
+
+    .pricing2 {
+      width: 25%;
+      height: 461px;
+      margin-left: -40px;
+      margin-right: -40px;
+      padding: 30px;
+
+      &__type {
+        text-align: center;
+        margin: 0 auto;
+        margin-bottom: 15px;
+      }
+      &__price {
+        text-align: center;
+        margin: 0 auto;
+      }
+      &__info {
+        left: 0;
+        text-align: center;
+      }
+      ul li {
+        top: 75px;
+        left: 90px;
+      }
+      &__button {
+        top: 80px;
+        left: 32%;
+      }
+    }
+
+    .pricing3 {
+      width: 25%;
+      height: 461px;
+      margin-bottom: 60px;
+      padding: 30px;
+
+      &__type {
+        text-align: center;
+        margin: 0 auto;
+        margin-bottom: 15px;
+      }
+      &__price {
+        text-align: center;
+        margin: 0 auto;
+      }
+      &__info {
+        left: 0;
+        text-align: center;
+      }
+      ul li {
+        top: 60px;
+        left: 62px;
+      }
+      &__button {
+        top: 86px;
+        left: 32%;
+      }
+    }
+  }
+
+  .questions {
+    &__titulo {
+      margin-left: 19%;
+      margin-top: 30px;
+      font-size: 49px;
+    }
+    &__subtitulo {
+      margin-left: 19%;
+      margin-top: 15px;
+      font-size: 16px;
+    }
+    &__icono1 {
+      margin-left: 19%;
+    }
+    &__mail {
+      margin-top: -28px;
+      margin-left: 21.5%;
+    }
+    &__icono2 {
+      margin-left: 36%;
+      margin-top: 0px;
+      position: relative;
+      top: -21px;
+    }
+    &__tel {
+      margin-top: -48px;
+      margin-left: 38%;
+    }
+    &__name {
+      margin-left: 53%;
+      margin-top: 0;
+      position: relative;
+      top: -160px;
+    }
+    &__inputName {
+      margin-left: 53%;
+      position: relative;
+      top: -152px;
+    }
+
+    &__email {
+      margin-left: 53%;
+      margin-top: 0;
+      position: absolute;
+      top: 92px;
+    }
+    &__inputEmail {
+      margin-left: 53%;
+      position: relative;
+      top: -100px;
+    }
+    &__check {
+      margin-top: -40px;
+      margin-left: 53%;
+    }
+    &__textPermiso {
+      padding-right: 230px;
+      margin-left: 56%;
+      margin-top: -30px;
+    }
+    &__error {
+        margin-left: 60%;
     
-        &__titulo{
-            margin-left: 19%;
-            margin-top: 30px;
-            font-size: 49px;
-        }
-        &__subtitulo{
-            margin-left: 19%;
-            margin-top: 15px;
-            font-size: 16px;
-        }
-        &__icono1{
-            margin-left: 19%;
-        }
-        &__mail{
-            margin-top: -26px;
-            margin-left: 22%;
-        }
-        &__icono2{
-            margin-left: 35%;
-            margin-top: 0px;
-            position: relative;
-            top: -21px;
-        }
-        &__tel{
-            margin-top: -47px;
-            margin-left: 38%;
-        }
-        &__name{
-            margin-left: 53%;
-            margin-top: 0;
-            position: relative;
-            top: -160px;
-        }
-        &__inputName{
-            margin-left: 53%;
-            position: relative;
-            top: -152px;
-        }
+      }
+    &__button {
+      margin-left: 70%;
+      margin-top: 59px;
+    }
+  }
+  .footer {
+    &__link1{
+        margin-left: 75%;
+      }
+      &__link1--logo1 {
+        width: 40px;
+        height: 40px;
+        margin-top: 25px;
+        margin-left: 80%;
        
-        hr{
-            margin-left: 53%;
-            margin-top: 0px;
-            position: relative;
-            top: -154px;
-            margin-bottom: 55px;
-        }
-        &__email{
-            margin-left: 53%;
-            margin-top: 0;
-            position: absolute;
-            top: 92px;
-        }
-        &__inputEmail{
-            margin-left: 53%;
-            position: relative;
-            top: -153px;
-        }
-        &__check{
-            top: -181px;
-            left: 53%;
-        }
-        &__textPermiso{
-            padding-right: 159px;
-            margin-left: 56%;
-            margin-top: -212px;
-        }
-        &__button{
-            margin-left: 70%;
-            margin-top: 19px;
-        }
-    }
+      }
+      &__link2{
+        margin-left: 4%;
+      }
+      &__link2--logo2 {
+        width: 30px;
+        height: 30px;
+        margin-top: 30px;
+      }
+  }
 }
+
