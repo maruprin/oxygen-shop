@@ -174,21 +174,27 @@
     <section id="contact" class="questions">
         <p class="questions__titulo">Any questions?</p>
         <p class="questions__subtitulo">Leave your email addres or call us!</p>
-        <img class="questions__icono1" src="./assets/img/icons/mail.svg" alt="mail">
-        <p class="questions__mail">mariana.diprimio@gmail.com</p>
-        <img class="questions__icono2"src="./assets/img/icons/phone.svg" alt="phone">
-        <p class="questions__tel">665 690 823</p>
-    <form id="form">
-        <p class="questions__name">NAME</p>
-        <input id="inputName" class="questions__inputName" type="text" name="name">
-        <!-- <hr id="hrName"> -->
-        <P class="questions__email">EMAIL</P>
-        <input id="inputEmail" class="questions__inputEmail" type="email" name="email">
-        <!-- <hr id="hrEmail"> -->
-        <input id="inputCheck" class="questions__check"type="checkbox" value="permiso">
-        <p id="inputTextCheck" class="questions__textPermiso">I hereby give consent for my personal data included in my application to be processed for the purposes of the recruitment process under the European Parliament’s and Council of the European Union Regulation on the Protection of Natural Persons as of 27 April 2016, with regard to the processing of personal data and on the free movement of such data, and repealing Directive 95/46/EC (Data Protection Directive) <p id="msjError" class="questions__error"> </p></p>
-        <button id="btnSend" type="submit" class="questions__button">Send</button>
-    </form>
+        <div class="questions__container">
+            <div class="questions__container--item">
+                <img class="questions__icono1" src="./assets/img/icons/mail.svg" alt="mail">
+                <p class="questions__mail">mariana.diprimio@gmail.com</p>
+            </div>
+            <div class="questions__container--item">
+                <img class="questions__icono2"src="./assets/img/icons/phone.svg" alt="phone">
+                <p class="questions__tel">665 690 823</p>
+             </div>
+        </div>
+        <form id="form">
+            <p class="questions__name">NAME</p>
+            <input id="inputName" class="questions__inputName" type="text" name="name">
+            <!-- <hr id="hrName"> -->
+            <P class="questions__email">EMAIL</P>
+            <input id="inputEmail" class="questions__inputEmail" type="email" name="email">
+            <!-- <hr id="hrEmail"> -->
+            <input id="inputCheck" class="questions__check"type="checkbox" value="permiso">
+            <p id="inputTextCheck" class="questions__textPermiso">I hereby give consent for my personal data included in my application to be processed for the purposes of the recruitment process under the European Parliament’s and Council of the European Union Regulation on the Protection of Natural Persons as of 27 April 2016, with regard to the processing of personal data and on the free movement of such data, and repealing Directive 95/46/EC (Data Protection Directive) <p id="msjError" class="questions__error"> </p></p>
+            <button id="btnSend" type="submit" class="questions__button">Send</button>
+        </form>
     </section>
    </main>
    <footer>

@@ -722,33 +722,36 @@ body {
   margin-bottom: 30px;
   text-align: start;
 }
+.questions__container {
+  margin-left: 12%;
+  display: flex;
+  gap: 15px;
+  flex-direction: column;
+}
+.questions__container--item {
+  display: flex;
+  gap: 10px;
+  align-items: self-end;
+}
 .questions__icono1 {
   height: 18px;
   width: 22px;
-  margin-left: 50px;
-  margin-top: 20px;
 }
 .questions__mail {
   font-style: normal;
   font-weight: 500;
   font-size: 16px;
   color: #a5a5a5;
-  margin-top: -25px;
-  margin-left: 90px;
 }
 .questions__icono2 {
   height: 20px;
   width: 20px;
-  margin-left: 50px;
-  margin-top: 20px;
 }
 .questions__tel {
   font-style: normal;
   font-weight: 500;
   font-size: 16px;
   color: #a5a5a5;
-  margin-top: -25px;
-  margin-left: 90px;
 }
 .questions__name {
   font-style: normal;
@@ -766,13 +769,13 @@ body {
   border: none;
   margin-left: 50px;
   text-align: center;
-  border-bottom: 3px solid #a5a5a5;
+  border-bottom: 2px solid #a5a5a5;
   margin-bottom: 0px;
 }
 .questions__inputName:focus-visible {
   border: 0;
   outline: none;
-  border-bottom: 3px solid #fb3b64;
+  border-bottom: 2px solid #fb3b64;
 }
 .questions__email {
   font-style: normal;
@@ -945,7 +948,7 @@ body {
     color: black;
   }
   .irArriba {
-    left: 95%;
+    left: 93%;
   }
   .shop__image {
     height: 594px;
@@ -970,7 +973,6 @@ body {
   }
   .news__block--separated {
     width: 55%;
-    margin-left: 20px;
     flex-direction: column;
   }
   .news__contenedor1 {
@@ -1158,28 +1160,21 @@ body {
     margin-top: 15px;
     font-size: 16px;
   }
-  .questions__icono1 {
+  .questions__container {
     margin-left: 19%;
+    display: flex;
+    gap: 15px;
   }
-  .questions__mail {
-    margin-top: -28px;
-    margin-left: 21.5%;
-  }
-  .questions__icono2 {
-    margin-left: 36%;
-    margin-top: 0px;
-    position: relative;
-    top: -21px;
-  }
-  .questions__tel {
-    margin-top: -48px;
-    margin-left: 38%;
+  .questions__container--item {
+    display: flex;
+    gap: 10px;
+    align-items: self-end;
   }
   .questions__name {
     margin-left: 53%;
     margin-top: 0;
     position: relative;
-    top: -160px;
+    top: -152px;
   }
   .questions__inputName {
     margin-left: 53%;
@@ -1188,9 +1183,9 @@ body {
   }
   .questions__email {
     margin-left: 53%;
-    margin-top: 0;
+    margin-top: 36px;
     position: absolute;
-    top: 92px;
+    top: 84px;
   }
   .questions__inputEmail {
     margin-left: 53%;
@@ -1202,7 +1197,7 @@ body {
     margin-left: 53%;
   }
   .questions__textPermiso {
-    padding-right: 230px;
+    padding-right: 350px;
     margin-left: 56%;
     margin-top: -30px;
   }
@@ -1210,7 +1205,7 @@ body {
     margin-left: 60%;
   }
   .questions__button {
-    margin-left: 70%;
+    margin-left: 59%;
     margin-top: 59px;
   }
   .footer__link1 {

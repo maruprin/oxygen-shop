@@ -767,33 +767,36 @@ body {
     margin-bottom: 30px;
     text-align: start;
   }
+  &__container{
+    margin-left: 12%;
+    display: flex;
+    gap: 15px;
+    flex-direction: column;
+    &--item{
+      display: flex;
+      gap: 10px;
+      align-items: self-end;
+    }
+  }
   &__icono1 {
     height: 18px;
     width: 22px;
-    margin-left: 50px;
-    margin-top: 20px;
   }
   &__mail {
     font-style: normal;
     font-weight: 500;
     font-size: 16px;
     color: map-get($colores, "gris");
-    margin-top: -25px;
-    margin-left: 90px;
   }
   &__icono2 {
     height: 20px;
     width: 20px;
-    margin-left: 50px;
-    margin-top: 20px;
   }
   &__tel {
     font-style: normal;
     font-weight: 500;
     font-size: 16px;
     color: map-get($colores, "gris");
-    margin-top: -25px;
-    margin-left: 90px;
   }
   &__name {
     font-style: normal;
@@ -811,13 +814,13 @@ body {
     border: none;
     margin-left: 50px;
     text-align: center;
-    border-bottom: 3px solid map-get($colores, 'gris' );
+    border-bottom: 2px solid map-get($colores, 'gris' );
     margin-bottom: 0px;
   }
   &__inputName:focus-visible {
     border: 0;
     outline: none;
-    border-bottom: 3px solid map-get($colores, 'rosaRojo' );
+    border-bottom: 2px solid map-get($colores, 'rosaRojo' );
   }
 
   &__email {
@@ -998,7 +1001,7 @@ body {
   }
 
   .irArriba {
-    left: 95%;
+    left: 93%;
   }
 
   .shop {
@@ -1026,7 +1029,6 @@ body {
       }
       &--separated {
         width: 55%;
-        margin-left: 20px;
         flex-direction: column;
       }
     }
@@ -1227,28 +1229,21 @@ body {
       margin-top: 15px;
       font-size: 16px;
     }
-    &__icono1 {
+    &__container{
       margin-left: 19%;
-    }
-    &__mail {
-      margin-top: -28px;
-      margin-left: 21.5%;
-    }
-    &__icono2 {
-      margin-left: 36%;
-      margin-top: 0px;
-      position: relative;
-      top: -21px;
-    }
-    &__tel {
-      margin-top: -48px;
-      margin-left: 38%;
+      display: flex;
+      gap: 15px;
+      &--item{
+        display: flex;
+        gap: 10px;
+        align-items: self-end;
+      }
     }
     &__name {
       margin-left: 53%;
       margin-top: 0;
       position: relative;
-      top: -160px;
+      top: -152px;
     }
     &__inputName {
       margin-left: 53%;
@@ -1258,9 +1253,9 @@ body {
 
     &__email {
       margin-left: 53%;
-      margin-top: 0;
+      margin-top: 36px;
       position: absolute;
-      top: 92px;
+      top: 84px;
     }
     &__inputEmail {
       margin-left: 53%;
@@ -1272,7 +1267,7 @@ body {
       margin-left: 53%;
     }
     &__textPermiso {
-      padding-right: 230px;
+      padding-right: 350px;
       margin-left: 56%;
       margin-top: -30px;
     }
@@ -1281,7 +1276,7 @@ body {
     
       }
     &__button {
-      margin-left: 70%;
+      margin-left: 59%;
       margin-top: 59px;
     }
   }

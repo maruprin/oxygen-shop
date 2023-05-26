@@ -285,11 +285,6 @@ select.addEventListener('change', ()=>{
 })
 
 // Slider
-class Slider {
-  constructor(imagenPrincipal){
-    this.imagenPrincipal = imagenPrincipal;
-  }
-}
 // pasar el slider con botones bolita
 let botones = document.querySelectorAll(".slider__btn");
 for(i=0;i<botones.length;i++){ 
